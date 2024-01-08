@@ -1,4 +1,4 @@
-/* Arithmetic Operators en JS:
+/* Arithmetic Operators in JS:
     + addicion
     - subtraction
     - multiplication
