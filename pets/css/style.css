@@ -1,0 +1,99 @@
+body{
+    margin: 2%;
+    border: 2px solid black;
+    background-image: url('../img/fondo2.jpg');
+}
+
+nav a{
+  display: inline-grid;
+  font-weight: bold;
+  padding: 7px 0;
+  color: #FFFFFF;
+  background-color: rgba(189, 77, 27, 0.6);
+  width: 77px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+nav {
+  text-align: center;
+}
+
+.active{
+  background: #a33939;
+}
+
+/*When mouse hovers over link*/
+nav a:hover{  
+    background: #FAFAFA;
+    color: #a33939;
+    border: 2px solid black;
+}
+
+/*When user tabs to this link*/
+nav a:focus{ 
+    background: #B3B3B3;
+    color: #a33939;
+}
+
+/*When user clicks and holds mouse button on this link*/
+nav a:active{ 
+    border: 3px solid #000000;
+}
+
+
+
+#image{
+    line-height:750px;
+    float: none;
+    width: 350px;
+    height: 350px;
+    border: 2px solid black;
+    margin: 0 auto;
+    background-color: #FAFAFA;
+    background-image: url('');
+    background-repeat: no-repeat;
+    color:#000000;
+    text-align: center;
+    background-size: 100%;
+    margin-bottom:25px;
+    font-size: 118%;
+}
+
+.preview{
+    width: 11%;
+    padding: 1%;
+    margin-top: 0%;
+    border: 2px solid black;
+}
+
+.pets {
+  width: 120%;
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-bottom: 1%;
+}
+
+img{
+    width:16%;
+}
+
+h2 {
+  margin-left: 7%;
+}
+
+/* Usando el contenedor padre (container) hago que el contenedor hijo (row) quede centrado */
+#container{
+  text-align: center;
+}
+#row {
+  margin: 0px auto;
+}
+
+footer {
+  background-color: #000000;
+  color: #B5B2B2;
+  height: 90px;
+  text-align: center;
+  line-height: 18px;
+}

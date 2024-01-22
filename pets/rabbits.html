@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mascotas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src = "js/message.js"></script>
+  </head>
+<body onload="setDate()">
+  <div class = "pets"><img src = "img/pets.jpg" alt="Perros"></div>
+    <div>
+      <nav>
+        <a href="index.html">Dogs</a>
+        <a href="cats.html">Cats</a>
+        <a href="rabbits.html" class = "active">Rabbits</a>
+      </nav>
+    </div>
+  <div id = "image">
+    Hover over an image to display the alt text.
+  </div>
+  <br>
+  <h2>Rabbits</h2>
+  <div id = "container">
+    <div id = "row">
+  <img class = "preview" alt = "Conejo gigante continental" src = "https://t1.ea.ltmcdn.com/es/razas/8/3/7/conejo-gigante-continental_738_0_300_square.webp" onmouseover = "upDate(this)" onmouseout = "unDo()">
+  
+  <img class = "preview" alt = "Conejo mini lion lop" src = "https://t1.ea.ltmcdn.com/es/razas/6/1/8/conejo-mini-lion-lop_816_0_300_square.webp" onmouseover = "upDate(this)" onmouseout = "unDo()">
+
+  <img class = "preview" alt = "Conejo blanco de florida" src = "https://t1.ea.ltmcdn.com/es/razas/6/8/6/conejo-blanco-de-florida_686_0_300_square.webp" onmouseover = "upDate(this)" onmouseout = "unDo()">
+
+  <img class = "preview" alt = "Conejo californiano" src = "https://t2.ea.ltmcdn.com/es/razas/4/8/6/conejo-californiano_684_0_300_square.webp" onmouseover = "upDate(this)" onmouseout = "unDo()">
+  
+  <img class = "preview" alt = "Conejo angora" src = "https://t2.ea.ltmcdn.com/es/razas/0/8/6/conejo-angora_680_0_300_square.webp" onmouseover = "upDate(this)" onmouseout = "unDo()">
+  
+  <img class = "preview" alt = "American Chinchilla" src = "https://t2.ea.ltmcdn.com/es/razas/3/0/5/american-chinchilla_503_0_300_square.webp" onmouseover = "upDate(this)" onmouseout = "unDo()">
+  </div>
+</div>
+<br><br>
+<p> The current date is <span id = "date"></span></p>
+  <footer>
+    <p>Copyright &copy; 2022</p>
+    <p>Vicente Escobar</p>
+    <p>Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

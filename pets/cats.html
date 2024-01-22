@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mascotas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src = "js/message.js"></script> 
+  </head>
+<body onload="setDate()">
+  <div class = "pets"><img src = "img/pets.jpg" alt="Perros"></div>
+    <div>
+      <nav>
+        <a href="index.html">Dogs</a>
+        <a href="cats.html" class = "active">Cats</a>
+        <a href="rabbits.html">Rabbits</a>
+      </nav>
+    </div>
+  <div id = "image">
+    Hover over an image to display the alt text.
+  </div>
+  <h2>Cats</h2>
+  <div id = "container">
+    <div id = "row">
+  <img class = "preview" alt = "Gato persa" src = "https://t2.ea.ltmcdn.com/es/razas/1/8/1/gato-persa_181_0_300_square.webp" onmouseover = "upDate(this)" onmouseout = "unDo()">
+  
+  <img class = "preview" alt = "Himalayo" src = "https://t2.ea.ltmcdn.com/es/razas/8/9/1/himalayo_198_0_300_square.webp" onmouseover = "upDate(this)" onmouseout = "unDo()">
+
+  <img class = "preview" alt = "Gato thai o siamés tradicional" src = "https://t2.ea.ltmcdn.com/es/razas/3/5/8/gato-thai-o-siames-tradicional_853_0_300_square.webp" onmouseover = "upDate(this)" onmouseout = "unDo()">
+
+  <img class = "preview" alt = "Gato angora turco" src = "https://t1.ea.ltmcdn.com/es/razas/3/8/1/gato-angora-turco_183_0_300_square.webp" onmouseover = "upDate(this)" onmouseout = "unDo()">
+  
+  <img class = "preview" alt = "Gato sphynx o esfinge" src = "https://t2.ea.ltmcdn.com/es/razas/3/0/2/gato-sphynx-o-esfinge_203_0_300_square.webp" onmouseover = "upDate(this)" onmouseout = "unDo()">
+  
+  <img class = "preview" alt = "Gato selkirk rex" src = "https://t2.ea.ltmcdn.com/es/razas/6/3/6/gato-selkirk-rex_636_0_300_square.webp" onmouseover = "upDate(this)" onmouseout = "unDo()">
+  </div>
+</div>
+<br><br>
+<p> The current date is <span id = "date"></span></p>
+  <footer>
+    <p>Copyright &copy; 2022</p>
+    <p>Vicente Escobar</p>
+    <p>Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mascotas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src = "js/message.js"></script>
+  </head>
+<body onload="setDate()">
+  <div class = "pets"><img src = "img/pets.jpg" alt="Perros"></div>
+  <div>
+    <nav>
+      <a href="index.html" class = "active">Dogs</a>
+      <a href="cats.html">Cats</a>
+      <a href="rabbits.html">Rabbits</a>
+    </nav>
+  </div>
+  <div id = "image">
+    Hover over an image to display the alt text.
+  </div>
+  <h2>Dogs</h2>
+  <div id = "container">
+    <div id = "row">
+  <img class = "preview" alt = "Alaskan Malamute" src = "https://breed-assets.wisdompanel.com/dog/alaskan-malamute/Alaskan_Malamute2.png" onmouseover = "upDate(this)" onmouseout = "unDo()">
+  
+  <img class = "preview" alt = "Bichon Frise" src = "https://t2.ea.ltmcdn.com/es/razas/6/0/0/bichon-frise_6_0_300_square.webp" onmouseover = "upDate(this)" onmouseout = "unDo()">
+
+  <img class = "preview" alt = "Chow Chow" src = "https://t1.ea.ltmcdn.com/es/razas/7/5/0/chow-chow_57_0_300_square.webp" onmouseover = "upDate(this)" onmouseout = "unDo()">
+
+  <img class = "preview" alt = "Boerboel" src = "https://t2.ea.ltmcdn.com/es/razas/7/7/1/boerboel_177_0_300_square.webp" onmouseover = "upDate(this)" onmouseout = "unDo()">
+  
+  <img class = "preview" alt = "Rotweiler" src = "https://t1.ea.ltmcdn.com/es/razas/2/1/1/rottweiler_112_0_300_square.webp" onmouseover = "upDate(this)" onmouseout = "unDo()">
+  
+  <img class = "preview" alt = "Pit Bull Terrier Americano" src = "https://t1.ea.ltmcdn.com/es/razas/0/7/0/pit-bull-terrier-americano_70_0_300_square.webp" onmouseover = "upDate(this)" onmouseout = "unDo()">
+  </div>
+</div>
+<br><br>
+<p> The current date is <span id = "date"></span></p>
+  <footer>
+    <p>Copyright &copy; 2022</p>
+    <p>Vicente Escobar</p>
+    <p>Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
