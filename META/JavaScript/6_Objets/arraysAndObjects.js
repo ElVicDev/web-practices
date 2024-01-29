@@ -12,6 +12,9 @@
     8 - Utilizando la notación de puntos, asigne una propiedad covertible 
         al objeto favCar y dele un valor booleano de su elección.
     9 - Utilice la consola para registrar todo el objeto favCar.
+
+    * Utilizar la sintaxis literal de objeto {}.
+    * Utilizar la sintaxis literal de array [].
 */
 
 var clothes = [];
@@ -28,21 +31,6 @@ console.log(clothes);
 clothes.push("cinturón");
 console.log(clothes);
 
-console.log(clothes[2]);
-
-var favCar = {};
-favCar.color = "red";
-favCar.convertible = true;
-console.log(favCar);
-
-var clothes = [];
-clothes.push("gray t-shirt"); // 1st item of clothing
-clothes.push("blue t-shirt"); // 2nd item of clothing
-clothes.push("yellow t-shirt"); // 3rd item of clothing
-clothes.push("slippers"); // 4th item of clothing
-clothes.push("old jeans"); // 5th item of clothing
-clothes.pop();
-clothes.push("green scarf");
 console.log(clothes[2]);
 
 var favCar = {};
