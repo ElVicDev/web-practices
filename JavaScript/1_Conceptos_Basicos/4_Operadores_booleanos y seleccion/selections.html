@@ -8,9 +8,30 @@
 <body>
     <h1>Testing Selections</h1>
     <script>
-        var red = true;
-        var blue = false;
-        if(red){
+        var red = true; // The statement is true
+        var blue = false; // The statement is false!
+
+        /*  La siguiente variable (green) no ha sido definida (undefined) y por lo tanto 
+            al evaluarla con IF nos devolverá The statement is false!
+        */
+        var green;
+
+        /*
+        var green = null; // The statement is false!
+        var green = 0; // The statement is false!
+        var green = 1; // The statement is true
+        var green = 100; // The statement is true
+        var green = -100; // The statement is true
+        */
+
+        /*  Por lo tanto podemos determinar lo siguiente:
+            false da como resultado false
+            null da como resultado false
+            0 da como resultado false
+            Todos los demás números diferentes a 0 y las cadenas daran como resultado True
+        */
+
+        if(green){ // Aquí podemos colocar las variables que definimos anteriormente para evaluarlas.
             console.log("The statement is true");
         } else {
             console.log("The statement is false!");
