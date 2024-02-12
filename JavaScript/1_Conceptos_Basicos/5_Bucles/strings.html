@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+    <h1>Strings as Arrays</h1>
+    <h2>Remember, in JavaScript, a string can be treated like an array.</h2>
+    <script>
+        var statement = "A string can be treated like an array";
+        for (var i=0; i<statement.length; i++){
+            console.log(statement[i]);
+        }
+
+    //  Otra forma de obtener el mismo resultado es utilizando FOR .. OF
+        
+        for (var eachLetter of statement){
+            console.log(eachLetter);
+        }
+    </script>
+</html>
