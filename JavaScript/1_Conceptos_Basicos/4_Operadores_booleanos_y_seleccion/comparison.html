@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison</title>
+</head>
+<body>
+    <h1>Comparison</h1>
+    <h2>Using == compares two values and returns either true if they are the same or false if they are different.</h2>
+    <script>
+        var myNum = 5;
+        var otherNum = 5;
+        var notNum = "5";
+        var notNum2 = "chicken";
+        var myValue = notNum2 - myNum;
+
+        if(myNum == otherNum){ //The statement is true
+            console.log("The statement is true");
+        } else {
+            console.log("The statement is false!");
+        }
+
+        if(myNum != otherNum){ // The statement is false!
+            console.log("The statement is true");
+        } else {
+            console.log("The statement is false!");
+        }
+
+        if(myNum == notNum){ // The statement is true
+            console.log("The statement is true");
+        } else {
+            console.log("The statement is false!");
+        }
+
+        if(myNum === notNum){ // The statement is false!
+            console.log("The statement is true");
+        } else {
+            console.log("The statement is false!");
+        }
+
+        if(myValue){ // The statement is false!    NaN
+            console.log("The statement is true");
+        } else {
+            console.log("The statement is false!");
+            console.log(myValue);
+        }
+    </script>
+</body>
+</html>
+
+/*  Lista de valores falsos:
+    El número 0
+    false
+    undefined
+    null
+    NaN (No es un número)
+*/
