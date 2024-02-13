@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loops</title>
+</head>
+<body>
+    <h1>Template Literals</h1>
+    <h2>Using backticks in JavaScript along wit ${} around your expressions allows you to embed them in your strings.</h2>
+    <script>
+        var incrementor = 0;
+        var text = "";
+
+        while (incrementor < 10){
+    /*  Colocar la marca de verificación encerrando la cadena (al inicio y al final)
+        La marca de verificación no es una comilla normal; es una comilla invertida.
+        La marca de veriicación la puedo obtener pulsando AltGr + ` + Espacio
+        La comilla invertida esta justo encima de la tecla Tab derecha
+        Hay que poner la variable entre corchetes con un signo de dolar.
+        Esta es una forma más legible de trabajar con cadenas.
+    */
+            text += `The incrementor has gone up to ${incrementor} \n`;
+            incrementor++;
+        }
+        console.log(text);
+
+    </script>
+</html>
