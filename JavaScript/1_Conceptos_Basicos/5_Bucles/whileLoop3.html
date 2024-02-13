@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loops</title>
+</head>
+<body>
+    <h1>Another Example</h1>
+    <h2>Here is another example where the expression in the second template literal is evaluated on the fly, each time through the loop.</h2>
+    <script>
+        var i = 0;
+        var text = "";
+    /*  El uso de marcas de verificación y literales de plantilla hace que las 
+        cadenas largas que incluyen variables sean mucho más fáciles de leer, 
+        y cometerá menos errores de sintaxis.
+    */
+        while (i < 10){
+            text += `The incrementor is ${i}, and squared it is ${i * i} \n`;
+            i++;
+        }
+        console.log(text);
+
+    </script>
+</html>
