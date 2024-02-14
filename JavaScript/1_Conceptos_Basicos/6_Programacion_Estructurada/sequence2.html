@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structured Programming</title>
+</head>
+<body>
+    <h2>Sequence Part 2</h2>
+    <p>Pull the word "really" from the first string, and put it it in its own variable, then convert it to upper case.</p>
+    <p>Then make a new strring and replace the lowercase "really" with the uppercase one and print it out in the console.</p>
+    <p>This example shows how you can perform surgery on strings of text.</p>
+    <script>
+        var myString = "I am really hungry for some";
+        console.log(myString);
+    /*  Los métodos llevan paréntesis al final.
+        El método toUpperCase convertirá la cadena en mayúsculas.
+    */
+        var myUpperString = myString.toUpperCase();
+        console.log(myUpperString);
+
+    /*  El método search nos devuelve un número donde se encuentra la parte
+        de la cadena que buscamos, en este caso es "really"
+        Nos devolverá el número 5 ya que está palabra inicia en la posición 5
+    */
+        var reallyLocation = myString.search('really');
+        console.log(reallyLocation);
+
+    /*  Una vez que sabemos donde inicia la palabra, indicamos cuantos caracteres
+        tiene la palabra "really". Para este caso la palabra contiene 6 caracteres.
+        Utilizaremos el método substr
+    */
+        var specialWord = myString.substr(reallyLocation, 6);
+        console.log(specialWord);
+
+    //  Una vez localizada la palabra la convertiremos en mayúsculas.
+        specialWord = specialWord.toUpperCase();
+
+    /*  Utilizaremos el método replace para reemplazar la porción de la cadena
+        (really) por la nueva que cambiamos a mayúsculas (REALLY)
+        Asignamos la cadena resultante a una nueva variable y la mostramos
+        en la consola para ver el resultado.
+    */
+        var newString = myString.replace('really', specialWord);
+        console.log(newString);
+    </script>
+</html>
