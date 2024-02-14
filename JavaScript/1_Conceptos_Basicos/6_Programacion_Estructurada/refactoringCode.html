@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structured Programming</title>
+</head>
+<body>
+    <h2>Refactoring Code</h2>
+    <p>The process of refactoring code is the process of making your code simpler. You should always look for ways to refactor your code, and you will almost always find some ways to do so!.</p>
+    <p>The next script is shorter.</p>
+    <br>
+    <p>--------------------------------------------------------------</p>
+    <br>
+    <h2>Make comments</h2>
+    <p>As you refactor your code, it will become more dense. Add comments that describe what you are doing.</p>
+
+    <script>
+        var foods = ["cheese", "pie", "lunch", "breakfast"];
+        var myString = "I am really hungry for some";
+    
+        for (i = 0; i < foods.length; i++){
+            // Check if the incrementor is even
+            if(i % 2 === 0){
+                // If it's even, make the array element uppercase
+                console.log(`${myString} ${foods[i].toUpperCase()}`);
+            }
+            else {
+                // If it's odd, keep it lowercase
+                console.log(`${myString} ${foods[i]}`);
+            }
+        }
+
+/*      ESTE ERA EL CÓDIGO ANTERIOR
+        var foods = ["cheese", "pie", "lunch", "breakfast"];
+        var myString = "I am really hungry for some";
+    
+        for (i = 0; i < foods.length; i++){
+
+            var remainder = i % 2;
+
+            if(remainder === 0){
+                var foodUpper = foods[i].toUpperCase();
+                console.log(`${myString} ${foodUpper}`);
+            }
+            else {
+                console.log(`${myString} ${foods[i]}`);
+            }
+        }
+ */
+    </script>
+</html>
