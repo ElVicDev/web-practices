@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structured Programming</title>
+</head>
+<body>
+    <h2>Loop</h2>
+    <p>Use a loop to print out in the console one line for each statement that includes the text in myString and each value in the foods array.</p>
+
+    <script>
+        var foods = ["cheese", "pie", "lunch", "breakfast"];
+        var myString = "I am really hungry for some";
+    
+    // Usando for
+        for (i = 0; i < foods.length; i++){
+            console.log(`${myString} ${foods[i]}`);
+        }
+
+    // Usando for of
+    for (var eachFood of foods){
+            console.log(`${myString} ${eachFood}`);
+        }
+
+    </script>
+</html>
