@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structured Programming</title>
+</head>
+<body>
+    <h2>Loop + Selection</h2>
+    <p>Modify the script so that this time, if the index of food is an even number, convert it to upercase, otherwise don't convert it.</p>
+    <p>To do this use the modulus operator(%). If you take any number and divide it by 2 and the remainder is 0, then it is even.</p>
+    <p>The result should look like this</p>
+
+    <script>
+        var foods = ["cheese", "pie", "lunch", "breakfast"];
+        var myString = "I am really hungry for some";
+    
+        for (i = 0; i < foods.length; i++){
+
+            var remainder = i % 2;
+
+            if(remainder === 0){
+                var foodUpper = foods[i].toUpperCase();
+                console.log(`${myString} ${foodUpper}`);
+            }
+            else {
+                console.log(`${myString} ${foods[i]}`);
+            }
+        }
+
+    </script>
+</html>
