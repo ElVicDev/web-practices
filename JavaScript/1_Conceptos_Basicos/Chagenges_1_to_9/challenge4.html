@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges 1 to 9</title>
+</head>
+<body>
+    <h1>JavaScript Basic Challenges</h1>
+    <h2>Challenge 4</h2>
+    <p>In JavaScript, <strong>prompt()</strong> can be used like this:</p>
+    <p><strong>var <FONT COLOR="green">name </FONT> = prompt("what's your name?", "Bob");</strong> When the page loads a prompt will appear and the user can add some text. "Bob" is the default text. If you don't want default text, you can leave the second set of quotes empty.</p>
+    <p>Write script that prompts the user for their name, and then display a sentence in the console that greets the user by name and welcomes them.</p>
+
+    <script>
+        var name = prompt("what's your name?", "");
+
+    // Puedo mostrarlo en la consola de esta manera
+        console.log("Hello " + name + "! How are you today?");
+
+    // Otra forma de mostrarlo en consola
+        console.log(`Hello ${name}! How are you today?`);
+    </script>
+</html>
