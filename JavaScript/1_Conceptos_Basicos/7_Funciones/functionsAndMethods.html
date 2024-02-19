@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <h1>"Functions" and "Methods in JavaScript"</h1>
+    <p>Sometimes you will hear the term "function" and other times you will hear the term "method". These two terms are technically interchangeable in JavaScript.</p>
+    <p>The function <code><strong>doStuff() </strong></code>could be written as:</p>
+    <p><code><strong>window.doStuff();</strong></code></p>
+    <script>
+        function doStuff(){
+            var myString = "Here is a message";
+            var upperSting = myString.toUpperCase();
+            console.log(myString);
+            console.log(upperSting);
+        }
+        window.doStuff();
+    /*  Regularmente no se usa WINDOW antes del llamado de la función,   
+        pero funciona.
+        Para este caso, haremos el llamado a la función 
+        de la siguiente manera y también funcionará:
+        doStuff();
+    */
+    </script>
+
+<!--    Cuando una función está configurada de forma más explícita 
+        para funcionar con un objeto concreto, es más probable que la 
+        llamemos Método.
+        En JavaScript todas las funciones son métodos.
+        Así que los dos términos son realmente intercambiables.
+-->
+
+</html>
