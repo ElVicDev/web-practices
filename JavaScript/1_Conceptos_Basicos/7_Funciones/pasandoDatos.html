@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <h1>Passing in Data</h1>
+
+    <p>Functions can take data through parameters that are passed into the function.</p>
+    <br>
+    <p><strong>function <FONT COLOR="green">name </FONT>(<FONT COLOR="brown">param1, param2, param3</FONT>){</strong></p>
+        <p style="margin-left: 40px;"><strong>  do something with param1;</strong></p>
+        <p style="margin-left: 40px;"><strong>  do something with param2;</strong></p>
+        <p style="margin-left: 40px;"><strong>  do something with param3;</strong></p>
+        <p><strong>}</strong></p>
+        <p><strong><FONT COLOR="green">name </FONT>('<FONT COLOR="brown">stuff1</FONT>', '<FONT COLOR="brown">stuff2</FONT>', '<FONT COLOR="brown">stuff3</FONT>');</strong></p>
+
+    <script>
+        function upperMessage(message){
+            var upper = message.toUpperCase();
+            console.log(upper);
+        }
+        upperMessage("An important message!");
+
+        function addnums(num1, num2){
+            var sum = num1 + num2;
+            console.log(sum);
+        }
+        addnums(4, 3);
+    </script>
+</html>
