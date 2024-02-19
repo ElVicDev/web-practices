@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <h1>Generating Random Numbers</h1>
+    <p>Try this out: <strong><code>console.log(Math.random());</code></strong></p>
+    <h3>Step 1</h3>
+    <p>First, let's get the number of potential values.</p>
+    <h3>Step 2</h3>
+    <p>Generate a random number between 0 and 1, then multiply that with the number of possible values.</p>
+    <h3>Step 3</h3>
+    <p>Rown down this random number so that it becomes a whole number with <code>Math.floor();</code></p>
+    <h3>Step 4</h3>
+    <p>Take the random number we generated and add the minimun number from our range, in this case it is a 5.</p>
+    <h3>Step 5</h3>
+    <p>Making the function useful.</p>
+    <script>
+/*         //  console.log(Math.random());
+
+        var foods = ["cheese", "fruit", "chicken", "pie"];
+
+        function randomInt(min, max){
+            var numOfValues = max - min + 1;
+            var randomNum = Math.random();
+            var randomVal = randomNum * numOfValues;
+            var roundedRandomVal = Math.floor(randomVal);
+            var finalNum = min + roundedRandomVal;
+
+            return finalNum;
+        }
+        console.log(foods[randomInt(0,3)]); */
+//  ------------------------------------------------------------
+
+/*  Si refactorizo mi código de arriba para hacerlo más corto, 
+    quedaría de la siguiente manera:
+*/    
+        var foods = ["cheese", "fruit", "chicken", "pie"];
+
+        function randomInt(min, max){
+            return Math.floor((max - min + 1) * Math.random()) + min;
+        }
+        console.log(foods[randomInt(0,3)]);
+    </script>
+</html>
