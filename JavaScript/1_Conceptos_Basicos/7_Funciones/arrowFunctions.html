@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <h1>Arrow Functions</h1>
+    <p>ES6, or ES2015 brought with a new syntax for defining functions called arrow functions.</p>
+
+    <script>
+        var greeting = "Hello, and good morning!";
+        
+        function capitalizeFunction(anyString){
+            anyString = anyString.toUpperCase();
+            return anyString;
+        }
+
+        var capitalizeExpression = function(anyString){
+            anyString = anyString.toUpperCase();
+            return anyString;
+        }
+
+        var capitalizeArrow = anyString => anyString.toUpperCase();
+
+        console.log(capitalizeFunction(greeting));
+        console.log(capitalizeExpression(greeting));
+        console.log(capitalizeArrow(greeting));
+    </script>
+</html>
