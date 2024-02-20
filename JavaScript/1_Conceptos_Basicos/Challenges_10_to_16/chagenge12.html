@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges 10 - 16</title>
+</head>
+<body>
+    <h1>JavaScript Function Challenges</h1>
+    <h2>Challenge 12</h2>
+    <p>This time, add a prompt requesting the user for their name, and assign the result to a variable.</p>
+    <p>Then pass that variable into the <strong><code>hello()</code></strong> function so that the console greets the person
+        by name.</p>
+
+    <script>
+        var yourName = prompt("Provide your name", "");
+
+        function hello(name){
+            console.log(`Hello ${name} and welcome!`);
+        }
+        hello(yourName);
+    </script>
+</html>
