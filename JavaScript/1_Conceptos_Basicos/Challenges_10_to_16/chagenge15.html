@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges 10 - 16</title>
+</head>
+<body>
+    <h1>JavaScript Function Challenges</h1>
+    <h2>Challenge 15</h2>
+    <p>For this challenge, add an array of foods and put 3-5 elements in the array. Then make a new function called <strong><code>hospitality(); </code></strong> after the <strong><code>hello(); </code></strong>function.</p>
+    <p>The new function will take two parameters, a name and a gift, which will be an array. Have this function run the hello() function and output the result to the console. Then have it loop through the gift array and offer a gift to the visitor by name and output that to the console.</p>
+
+    <script>
+        var yourName = prompt("Provide your name", "");
+        var food = ['cheese', 'fruit', 'chicken', 'dessert', 'candy'];
+
+        function hello(name){
+            var gretting;
+            if(name == null || name == ""){
+                gretting = "You didn't give me your name";
+            }
+            else {
+                gretting = `Hello ${name} and welcome!`;
+            }
+            return gretting;
+        }
+
+        function hospitality(name, gift){
+            console.log(hello(name));
+            for (var i=0; i<gift.length; i++){
+            console.log(`${name}, "would you like some" ${gift[i]}?`);
+            }
+        }
+
+        hospitality(yourName, food);
+    </script>
+
+</html>
