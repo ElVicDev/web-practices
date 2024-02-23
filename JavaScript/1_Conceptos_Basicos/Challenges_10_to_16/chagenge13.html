@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges 10 - 16</title>
+</head>
+<body>
+    <h1>JavaScript Function Challenges</h1>
+    <h2>Challenge 13</h2>
+    <p>For this challenge handle the situation that happens if the user clicks cancel on the prompt, or does not enter text in the prompt.</p>
+    <p>If the user does one of those two actions, have the <strong><code>hello()</code></strong> function log to the console "You didn't give me your name". Otherwise, have the console log the greeting.</p>
+    <p><strong>hint: </strong><em>What do you get if, in challenge 12, you
+        click cancel or put no text in the prompt?</em></p>
+
+    <script>
+        var yourName = prompt("Provide your name", "");
+
+        function hello(name){
+            if(name == null || name == ""){
+                console.log("You didn't give me your name");
+            }
+            else {
+                console.log(`Hello ${name} and welcome!`);
+            }
+        }
+        hello(yourName);
+    </script>
+</html>
