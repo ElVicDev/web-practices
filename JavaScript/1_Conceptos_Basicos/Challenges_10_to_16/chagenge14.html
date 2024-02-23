@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges 10 - 16</title>
+</head>
+<body>
+    <h1>JavaScript Function Challenges</h1>
+    <h2>Challenge 14</h2>
+    <p>For this challenge, update the <strong><code>hello()</code></strong> function so that it returns a value rather than outputs directly to the console.</p>
+    <p>I used a variable: <strong><code>var <FONT COLOR="green">greeting</FONT>;</code></strong> and returned that variable at the end of the function.</p>
+    <p>Then outside the function write a call to the console that logs the greeting returned by the function.</p>
+
+    <script>
+        var yourName = prompt("Provide your name", "");
+
+        function hello(name){
+            var gretting;
+            if(name == null || name == ""){
+                gretting = "You didn't give me your name";
+            }
+            else {
+                gretting = `Hello ${name} and welcome!`;
+            }
+            return gretting;
+        }
+        console.log(hello(yourName));
+    </script>
+
+</html>
