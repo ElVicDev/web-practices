@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges 10 - 16</title>
+</head>
+<body>
+    <h1>JavaScript Function Challenges</h1>
+    <h2>Challenge 16</h2>
+    <p>For this challenge, add the function that gets random integers from the functions lecture.</p>
+    <p>Update the <strong><code>hospitality(); </code></strong> function so that,
+        instead of looping through the whole array,
+        randomly picks one element from the array
+        and offers that to the user.</p>
+
+    <script>
+        var yourName = prompt("Provide your name", "");
+        var food = ['cheese', 'fruit', 'chicken', 'dessert', 'candy'];
+
+        function hello(name){
+            var gretting;
+            if(name == null || name == ""){
+                gretting = "You didn't give me your name";
+            }
+            else {
+                gretting = `Hello ${name} and welcome!`;
+            }
+            return gretting;
+        }
+
+        function randomInt(min, max){
+            return Math.floor((max - min + 1) * Math.random()) + min;
+        }
+
+        function hospitality(name, gift){
+            console.log(hello(name));
+            var randomGift = gift[randomInt(0, gift.length-1)];
+            console.log(`${name}, would you like some ${randomGift}?`);
+            }
+
+        hospitality(yourName, food);
+    </script>
+
+</html>
