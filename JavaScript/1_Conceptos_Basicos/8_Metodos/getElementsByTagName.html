@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Examples</title>
+</head>
+<body>
+    <h1>Dom Examples</h1>
+    <h2><code>getElement<FONT COLOR="red">s</FONT>ByTagName();</code></h2>
+    <p>The document method <strong><code>getElement<FONT COLOR="red">s</FONT>ByTagName();</code></strong> will give you all the elements with a particular tag name in a collection.</p>
+    <p>Here is some text</p>
+    <p>Is some more text</p>
+    <p>Is even more text</p>
+    <br><br>
+    <h2>Seeing the loop in action</h2>
+    <p>Add this <code><strong>alert()</strong></code> method to see the value of the variable <FONT COLOR="green">i </FONT>each time through the loop and run the page in Fierefox (Chrome won't show it properly).</p>
+    <script>
+        var myText = document.getElementsByTagName("p");
+        console.log(myText);
+
+        for(var i=0; i<myText.length; i++) {
+            myText[i].style.color = "red";
+            alert(`This is element ${i}`);
+        }
+    </script>
+</body>
+</html>
