@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Examples</title>
+</head>
+<body>
+    <h1>Dom Examples</h1>
+    <h2><code>getElementByClassName();</code></h2>
+    <p>The document method <strong><code>getElementByClassName();</code></strong> is similar to the one that gets tags. It will get all elements that match a particular class.</p>
+    <p class="blue">Here is some text</p>
+    <p>Here is some more text</p>
+    <p class="blue">Here is even more text</pclass>
+
+    <script>
+        var myText = document.getElementsByClassName("blue");
+
+        for(var i=0; i<myText.length; i++) {
+            myText[i].style.color = "blue";
+        }
+    </script>
+
+</body>
+</html>
