@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Examples</title>
+</head>
+<body>
+    <h1>Dom Examples</h1>
+    <h2><code>querySelector();</code></h2>
+    <p>The document method <strong><code>querySelector();</code></strong> will return the first match of a query.</p>
+    <div id="special">
+        <p class="cheese">Here is some text</p> <!-- Este párrafo si se modificará -->
+        <p>Here is some more text</p>
+        <p class="cheese">Here is even more text</pclass>  <!-- Este párrafo no se modificará. -->
+    </div>
+
+    <script>
+        var myText = document.querySelector('#special .cheese');
+        /*  IMPORTANTE: Dejar un espacio y usar la sintaxis CSS en la
+            sentencia anterior para que funcione: ('#special .cheese');
+      */
+        myText.style.fontSize="24px";
+        myText.style.color="blue";
+    </script>
+
+    <!--Al usar querySelector(); solo modificará el primer párrafo que 
+        encuentre con la clase "cheese"
+    -->
+
+</body>
+</html>
