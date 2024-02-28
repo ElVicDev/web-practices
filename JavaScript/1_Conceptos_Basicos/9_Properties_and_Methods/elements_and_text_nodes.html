@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties and Methods</title>
+</head>
+<body>
+    <h1>Creating Elements and Text Nodes</h1>
+    <p>It can be easy to add HTML to a page using <strong>innerHTML, </strong>as you have already seen, but sometimes you need to actually create an element, put some text in it, and add it to the page.</p>
+    <div id="special">
+        <p>Here is a paragraph</p>
+    </div>
+
+    <script>
+        var myTag = document.createElement('p');
+        var mySentence = document.createTextNode('Here is a new paragraph');
+        myTag.appendChild(mySentence);
+        document.querySelector('div').appendChild(myTag);
+    </script>
+
+</body>
+</html>
