@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties and Methods</title>
+</head>
+<body>
+    <h1>innerHTML</h1>
+    <p>Using the <strong>innerHTML </strong>property can be very powerful. You can use this property to change the HTML inside any element on a web page.</p>
+    <div id="special">
+        <p>Here is some text</p>
+        <p>Here is some more text</p>
+    </div>
+
+    <script>
+        var myDiv = document.getElementById('special');
+        myDiv.innerHTML = "<p>I love cheese</p>";
+    </script>
+
+    <!--Puedo usar un método más nuevo usando la sintaxis CSS, 
+        quedando de la siguiente manera:
+            var myDiv2 = document.querySelector('#special2');
+            myDiv2.innerHTML = "<p>I love wine</p>";
+    También puedo acortar mi código sin usar var y también funcionará.
+-->
+    <div id="special2">
+        <p>Here is more text</p>
+        <p>Here is more and more text</p>
+    </div>
+
+    <script>
+        document.querySelector('#special2').innerHTML = "<p>I love wine</p>";
+    </script>
+</body>
+</html>
