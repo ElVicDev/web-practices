@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties and Methods</title>
+    <style>
+        .blue {color: blue;}
+    </style>
+</head>
+<body>
+    <h1>className</h1>
+    <p>Setting the <strong>className </strong>property allows you to set the class, or classes for an element.</p>
+    <div id="special">
+        <p>Here is some text</p>
+        <p>Here is some more text</p>
+    </div>
+    <p>Here is even more text</p>
+    
+    <script>
+        var firstPara = document.querySelector('p');
+        firstPara.className = "blue";
+    </script>
+
+    <!--Para este ejemplo, la propiedad className solo modificará el primer
+        párrafo que encuentre. Cambia la propiedad del párrafo a color azúl.
+-->
+
+</body>
+</html>
