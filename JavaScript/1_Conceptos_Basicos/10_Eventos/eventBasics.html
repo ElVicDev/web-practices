@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Events</title>
+</head>
+<body>
+  <h1>JavaScript Events</h1>
+  <h2>Event Basics</h2>
+  <p>One way to acces events in through special event properties.</p>
+  <button>Don't Press Me!</button>
+    
+  <script>
+    var btn = document.querySelector('button');
+
+    function ouch(){
+      alert("I told you not to press me!");
+    }
+
+    /*  No agregar los parentesis para que no se ejecute inmediato ouch().
+        Tendrá que esterar a que se pulse el boton para ejecutar la función 
+    */
+    btn.onclick = ouch;
+
+    /*  Puedo usar una función anonima y también funcionará:
+
+        var btn = document.querySelector('button');
+        button.onclick = function(){
+          alert("I told you not to press me!");
+        }
+    */
+
+  </script>
+</body>
+</html>
