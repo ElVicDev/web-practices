@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Events</title>
+</head>
+<body>
+  <h1>JavaScript Events</h1>
+  <h2>Event Listeners</h2>
+  <p>A more modern way of capturing events is with the <code><strong>addEventListener(); </strong></code>method.</p>
+  <button>Don't Press Me!</button>
+    
+  <script>
+    var btn = document.querySelector('button');
+
+    function ouch(){
+      alert("I told you not to press me!");
+    }
+
+    btn.addEventListener('click', ouch);
+
+    /*  La propiedad onclick es útil pero es mas frecuente encontrar
+        el método addEventListener para capturar eventos.
+    */
+
+    /*  Here is the most common syntax.
+        The addEventListener() method with an anonymous function:
+
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function(){
+            alert("I told you not to press me!");
+        });
+    */
+  </script>
+</body>
+</html>
