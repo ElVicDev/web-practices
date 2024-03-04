@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Events</title>
+</head>
+<body>
+  <h1>JavaScript Events</h1>
+  <h2>The Event Object</h2>
+  <p>There is an event object that can be passed into event handlers, and sometimes you need to access it specifically.</p>
+  <button>Don't Press Me!</button>
+    
+  <script>
+    var btn = document.querySelector('button');
+
+    btn.addEventListener('click', function(event){
+        event.target.style.backgroundColor = "red";
+        alert("I told you not to press me!");
+    });
+
+  </script>
+</body>
+</html>
