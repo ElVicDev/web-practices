@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Events</title>
+  <style>
+    div {
+        width: 50px;
+        height: 5000px;
+        background-color: red;
+    }
+  </style>
+</head>
+<body>
+    <h1>JavaScript Events</h1>
+    <h2>Scroll Events: HTML</h2>
+    <p>Capturing Scroll Events</p>
+    <div></div>
+    <br>
+    <h2>Scroll Events: JavaScript</h2>
+<p>Define the variable pageTop, then inside the event listener for scrolling, every time the page is scrolled a bit, the pageTop variable is changed.</p>
+  <script>
+    var pagetop;
+
+    window.addEventListener('scroll', function(){
+        pagetop = window.pageYOffset;
+        console.log(pagetop);
+    });
+
+  </script>
+
+</body>
+</html>
