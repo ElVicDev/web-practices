@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Events</title>
+</head>
+<body>
+    <h1>JavaScript Events</h1>
+    <h2>Key Down Event</h2>
+    <p>This one will detect if a key was pressed on the keyboard. Of course it might be helpful to know which key was pressed.</p>
+    <p>Press a Key on the keyboard</p>
+
+<!--   <script>
+
+    document.addEventListener('keydown', function(){
+        alert("A key was pressed");
+    });
+
+  </script> -->
+
+<h2>Which key was Pressed</h2>
+<p>This will give the key that was pressed. Notice the use of the event object here.</p>
+
+<script>
+
+    document.addEventListener('keydown', function(event){
+        alert(`The ${event.key} key was pressed`);
+    });
+
+  </script>
+</body>
+</html>
