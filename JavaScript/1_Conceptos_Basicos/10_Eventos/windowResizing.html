@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Events</title>
+</head>
+<body>
+    <h1>JavaScript Events</h1>
+    <h2>Window Resizing</h2>
+    <p>This is very simple, but very useful for responsive design.</p>
+    <p>Resize the window and watch the console.</p>
+  <script>
+
+    window.addEventListener('resize', function(){
+        console.log(`The window width is ${window.innerWidth}`);
+        console.log(`The window height is ${window.innerHeight}`);
+    });
+
+  </script>
+
+</body>
+</html>
