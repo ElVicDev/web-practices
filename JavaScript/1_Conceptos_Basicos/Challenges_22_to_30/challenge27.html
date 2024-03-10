@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Challenges</title>
+</head>
+<body>
+    <h1>JavaScript Event Challenges</h1>
+    <h2>Challenge 27</h2>
+    <p>Add a form. When the user submits a number, change the size of the font for the h1 to be equal to the number they submitted in pixels.</p>
+    <p>If no number is entered, or something other than a number is entered, alert that the user must enter a number.</p>
+    <p>To make this work you will have to prevent the default behavior for the form submission.</p>
+    <form>
+        <label>Enter a number <input type="text"></label>
+        <input type="submit" value="Send number">
+    </form>
+
+    <script>
+        var h1Tag = document.querySelector('h1');
+        var formTag = document.querySelector('form');
+
+        formTag.addEventListener('submit', function(event){
+            event.preventDefault();
+            var myNum = parseInt(document.querySelector('input').value);
+
+            if(myNum){
+                h1Tag.style.fontSize = myNum + "px";
+            }
+            else{
+                alert('Please, enter a number');
+            }
+        });
+    </script>
+
+</body>
+</html>
