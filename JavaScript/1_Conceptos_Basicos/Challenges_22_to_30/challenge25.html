@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Challenges</title>
+</head>
+<body>
+    <h1>JavaScript Event Challenges</h1>
+    <h2>Challenge 25</h2>
+    <p>For this challenge, add an additional button that removes the last paragraph from the div.</p>
+    <div>
+        <p>Here is the first paragraph of text</p>
+    </div>
+    <button>Add a Paragraph</button>
+    <button>Remove Paragraph</button>
+    <script>
+        var divTag = document.querySelector('div');
+        var btnAdd = document.querySelectorAll('button')[0];
+        var btnDelete = document.querySelectorAll('button')[1];
+
+        btnAdd.addEventListener('click', function(){
+            var newP = document.createElement('p');
+            var pText = document.createTextNode('A new paragraph');
+            newP.appendChild(pText);
+            divTag.appendChild(newP);
+        });
+        btnDelete.addEventListener('click', function(){
+            var allPs = document.querySelectorAll('p');
+            divTag.removeChild(divTag.childNodes[allPs.length-1]);
+        });
+    </script>
+
+</body>
+</html>
