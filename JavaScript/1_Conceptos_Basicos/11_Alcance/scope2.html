@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global and Local Scope</title>
+</head>
+<body>
+    <h1>Global and Local Scope</h1>
+    <h2>Even worse!</h2>
+    <p>If you forget to use the <code><strong><FONT COLOR="brown">var </FONT></strong></code>keyword when defining a variable, the variable is assigned to the global scope.</p>
+
+    <script>
+        function testScope(){
+            oopsGlobal = "What the what?"
+            var aVariable = "This is local";
+            console.log(aVariable);
+        }
+        testScope();    //run the function
+        
+        console.log(oopsGlobal);
+    </script>
+
+</body>
+</html>
