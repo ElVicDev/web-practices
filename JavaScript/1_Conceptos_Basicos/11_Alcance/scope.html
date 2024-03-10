@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global and Local Scope</title>
+</head>
+<body>
+    <h1>Global and Local Scope</h1>
+    <p>Scope in JavaScript has, historically, been problematic. Some variables are global and some are local to a function.</p>
+
+    <script>
+        var aVariable = "This is global"
+
+        function testScope(){
+            var aVariable = "This is local";
+            console.log(aVariable);
+        }
+        testScope();    //run the function
+        
+        console.log(aVariable);
+    </script>
+
+</body>
+</html>
