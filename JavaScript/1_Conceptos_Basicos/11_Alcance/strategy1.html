@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope in JS</title>
+</head>
+<body>
+    <h1>Strategy 1: Never use global scope</h1>
+
+    <p>One of the most obvious ways to deal with the scope issues is to avoid using global scope as much as possible.</p>
+    <p>Here is a paragraph</p>
+    <p>Here is another paragraph</p>
+    <p>Here is one more paragraph</p><br>
+
+<!--Este script tiene variables globales 
+    <script>
+        var myPs = document.querySelectorAll('p');
+        for(var i=0; i<myPs.length; i++){
+            myPs[i].style.color = "red";
+        }
+    </script>
+-->
+
+    <h2>Namespacing & Closures</h2>
+    <p>You can wrap your code an immediately invoked function expression. This anonymous function run as soon as the script loads, and it will also keep variables out of the global scope.</p>
+
+<!--Podemos utilizarlo de la siguiente manera pero nos marcaría
+    el siguiente error: Uncaught ReferenceError: myPs is not defined
+    Esto es porque myPS no esta definida como variable global
+    <script>
+        (function(){
+            var myPs = document.querySelectorAll('p');
+            for(var i=0; i<myPs.length; i++){
+                myPs[i].style.color = "red";
+            } 
+        }());   
+        /*  Aquí miPs esta definido dentro de una función anónima.
+            Para obligarla a ejecutarse utilizaremos el () despues 
+            de la llave de cierre } */
+        console.log(myPs);
+    </script>
+-->
+
+<!-- Las espresiones de función de invocan inmediatamente.
+Nos ayudarán para soluconar el problema aplicando el siguiente script: -->
+    <script>
+        (function doStuff(){
+            var myPs = document.querySelectorAll('p');
+            for(var i=0; i<myPs.length; i++){
+                myPs[i].style.color = "red";
+            } 
+        })();   // Recordar que esta parte hace que se ejecute el script.
+    </script>
+</body>
+</html>
