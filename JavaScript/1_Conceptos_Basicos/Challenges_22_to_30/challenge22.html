@@ -4,26 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Event Challenges</title>
+    <script src="script22.js" defer></script>
 </head>
 <body>
     <h1>JavaScript Event Challenges</h1>
     <h2>Challenge 22</h2>
     <p>Make an HTML file with a paragraph and a button. When you click the button, make the paragraph turn green.</p>
     <button>Turn Green Dammit!</button>
-    <script>
-        var btn = document.querySelector('button');
-        var pTag = document.querySelector('p');
-
-        btn.onclick = function(){
-            pTag.style.color = "green";
-        }
-        
-        /*  Este código también funcionaría:  
-            btn.addEventListener('click', function(){
-                pTag.style.color = "green";
-            });
-        */
-    </script>
-
 </body>
 </html>
