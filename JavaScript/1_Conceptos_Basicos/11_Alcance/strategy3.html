@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope in JS</title>
+</head>
+<body>
+    <h1>Strategy 3: Use <code><FONT COLOR="brown">const </FONT></code>and <code><FONT COLOR="brown">let</FONT></code></h1>
+    <p>ES6 (ES2015) introduced two new ways to declare variables in JavaScript. They both help minimize the chances that a variable holds an unexpected value</p>
+    <p> <code><strong><FONT COLOR="brown">const </FONT><FONT COLOR="green">cheese </FONT>= "yummy";</strong></code></p>
+    <p>The variable cheese can not hold any other value, other than "yummy" for the life of the program</p>
+    <img src="code1.jpg" alt="Code Example" style="width: 15%;">
+    <p>let can change values, but it has block level scope.</p>
+
+    <h2><code><FONT COLOR="brown">const </FONT></code>Example</h2>
+    <img src="const.jpg" alt="Const Example" style="width: 22%;">
+    <p>Try the example above and you will see that the last line causes an error</p>
+    
+    <script>
+        const cheese = "Cheese is yummy";
+        console.log(cheese);
+        /*  Si agrego la siguiente línea me dara el error:
+            Uncaught TypeError: Assignment to constant variable.
+            Esto es porque la constante cheese ya ha sido utiizada.
+            Solo puede utilizarse una sola vez en todo el programa.
+            Esta declarada de forma global. */
+        cheese = "Cheese is yucky";
+    </script>
+
+<h2><code><FONT COLOR="brown">let </FONT></code>Example</h2>
+<img src="let.jpg" alt="Const Example" style="width: 32%;">
+<p>Try the example above, you will see the value of the variable <FONT COLOR="green">i </FONT>in this loop changes as the loop runs, but there is no acces to <FONT COLOR="green">i </FONT>outside the loop.</p>
+
+    <script>
+        for(let i=0; i<10; i++){
+            console.log(i);
+        }
+        /*  Si agrego la siguiente línea me dara el error:
+            Uncaught ReferenceError: i is not defined.
+            Esto es porque let está dentro del bloque for.
+            Solo puede utilizarse dentro del bloque.
+            Esta declarada de forma local. */
+        console.log(`The value of i is ${i}`)
+    </script>
+
+    <h2>Hoisting in JavaScript</h2>
+    <p>By default, JavaScript hoists variables. This means you can use them before you specifically declare them.This can lead to unexpected results.</p>
+    <p>You should declare your variables first.</p>
+    <p>Const and Let are not hoisted. Try the examples below to see the difference.</p>
+    <img src="examples.jpg" alt="Examples" style="width: 20%;">
+
+    <script>
+        /* Si ejecuto las siguientes dos líneas me dara un error undefined porque estoy definiendo la variable después de intentar ejecutarla en la consola.*/
+        console.log(cheese2);
+        var cheese2="yummy";
+
+        /* Si ejecuto las siguientes dos líneas pero utilizando const me saldrá un error:
+        Uncaught ReferenceError: Cannot access'cheese3' before initialization.
+        Hay que evitar los resultados inesperados. */
+        console.log(cheese3);
+        const cheese3="yummy";
+    </script>
+</body>
+</html>
