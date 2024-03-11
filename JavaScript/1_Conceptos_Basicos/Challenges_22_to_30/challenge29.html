@@ -12,6 +12,7 @@
         .four {background-color: cornflowerblue; transition: all 3s;}
         .five {background-color: darkgoldenrod; transition: all 3s;}
     </style>
+    <script src="script29.js" defer></script>
 </head>
 <body class="one">
     <h1>JavaScript Event Challenges</h1>
@@ -20,23 +21,5 @@
     <p>You can use if/else statements, but try using a switch statement!</p>
     <br>
     <p>Scroll Down!</p>
-    
-    <script>
-        var pageTop;
-        var bodyTag = document.querySelector('body');
-
-        window.addEventListener('scroll', function(){
-            pageTop = window.pageYOffset;
-
-            switch(true){
-                case pageTop < 500: bodyTag.className="one"; break;
-                case pageTop < 1000: bodyTag.className="two"; break;
-                case pageTop < 1500: bodyTag.className="three"; break;
-                case pageTop < 2000: bodyTag.className="four"; break;
-                default: bodyTag.className="five";
-            }
-        });
-    </script>
-
 </body>
 </html>
