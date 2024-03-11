@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope in JS</title>
+</head>
+<body>
+    <h1>Strategy 2: "Use <code>strict;</code>"</h1>
+
+    <p>ES5, which came out in 2009 included this directive to help cut down on accidental declarations of variables without using the <code><strong><FONT COLOR="brown">var </FONT></strong></code>keyword.</p>
+    <br>
+
+    <!--Al usar la directiva "use strict" evitará que se nos olvide
+        colocar la palabra var, pero nos marcará el siguiente error:
+        Uncaught ReferenceError: newVar is not defined
+    <script>
+
+        "use strict";
+        newVar = "Not properly declared";
+        console.log(newVar);
+    </script> -->
+
+    <h2>IIFE with "Use <code>strict;</code>"</h2>
+    <p>Here you see the combination of the immediately invoked function expression with the "use strict", directive.</p>
+    <p><strong>Get in the habit of doing this with your scripts.</strong></p>
+
+    <!-- El siguiente script usa las 2 estrategias y solucionamos el error -->
+
+    <script>
+        (function(){
+            "use strict";
+            var myPs = document.querySelectorAll('p');
+            for(var i=0; i<myPs.length; i++){
+                myPs[i].style.color="red";
+            }
+        }());
+    </script>
+</body>
+</html>
