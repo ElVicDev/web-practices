@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Event Challenges</title>
+    <script src="script23.js" defer></script>
 </head>
 <body>
     <h1>JavaScript Event Challenges</h1>
@@ -13,17 +14,5 @@
     <p>Here is another paragraph of text</p>
     <p>Here is a fourth paragraph of text</p>
     <button>Turn Them All Green Dammit!</button>
-    <script>
-        var pTags = document.querySelectorAll('p');
-        var btn = document.querySelector('button');
-
-        btn.addEventListener('click', function(){
-
-            for(var i=0; i<pTags.length; i++) {
-                pTags[i].style.color = "green";
-            }
-        });
-    </script>
-
 </body>
 </html>
