@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Event Challenges</title>
+    <script src="script27.js" defer></script>
 </head>
 <body>
     <h1>JavaScript Event Challenges</h1>
@@ -15,23 +16,5 @@
         <label>Enter a number <input type="text"></label>
         <input type="submit" value="Send number">
     </form>
-
-    <script>
-        var h1Tag = document.querySelector('h1');
-        var formTag = document.querySelector('form');
-
-        formTag.addEventListener('submit', function(event){
-            event.preventDefault();
-            var myNum = parseInt(document.querySelector('input').value);
-
-            if(myNum){
-                h1Tag.style.fontSize = myNum + "px";
-            }
-            else{
-                alert('Please, enter a number');
-            }
-        });
-    </script>
-
 </body>
 </html>
