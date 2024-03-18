@@ -57,7 +57,7 @@ h1, h2, h3, h4, p {
 /* Adding style to the form */
 label {
     display: block;
-    margin-bottom: .5em;
+    margin-bottom: 1em;
 }
 
 input, textarea, #destination_details_form button {
