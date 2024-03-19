@@ -47,5 +47,22 @@
         </section>
         
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        /* Probando estos estilos:
+        $('#main').css('border', '2px solid red');
+        $('.special').css('border', '2px solid blue');
+        $('#main h2').css('border', '2px solid green'); */
+
+        /* Añadiendo y probando más estilos CSS
+        $('h2, p').css('border', '2px solid brown');
+        $('ol li:even').css('border', '2px solid red');
+        $('#main p:first').css('border', '2px solid blue');
+        $('li:has(ul)').css('border', '2px solid green');
+        $('li:contains(three)').css('border', '2px solid pink');  */
+
+        /* Esto es un ejemplo de encademanmiento */
+        $('li').first().css('border', '2px solid red');
+    </script>
 </body>
 </html>

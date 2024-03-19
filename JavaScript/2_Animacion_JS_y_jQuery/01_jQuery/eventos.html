@@ -47,5 +47,17 @@
         </section>
         
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        /* $('a').click(function(){
+            console.log($(this).html());
+        }); */
+
+        /* JQuery es solo JavaScript, por lo que el siguiente script hace lo mismo que el script anterior: */
+        $('a').click(function(){
+            console.log(this.innerHTML);
+        });
+    </script>
 </body>
 </html>
