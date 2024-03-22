@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 5 - JS</title>
+</head>
+<body>
+    <h1>Challenge 5 - JS</h1>
+    <h4>Use JavaScript to change the font size and
+        color of the last paragraph in the div without
+        affecting any of the other paragraphs.</h4>
+
+        <p>Don't change this paragraph</p>
+        <div id="main">
+            <p>Don't change this paragraph</p>
+            <p>Don't change this paragraph</p>
+            <p>Change this last paragraph</p>
+        </div>
+
+    <script>
+        
+        var lastP = document.querySelector("#main p:last-of-type");
+        lastP.style.fontSize = "24px";
+        lastP.style.color = "red";
+    
+    </script>
+
+</body>
+</html>
