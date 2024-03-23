@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 9 - JS</title>
+</head>
+<body>
+    <h1>Challenge 9 - JS</h1>
+    <h4>Use JavaScript to change the color of paragraph
+        that contains “Llamas and Chickens!” to red.</h4>
+
+        <p>Don't change this paragraph</p>
+        <div id="main">
+            <p>Here is paragraph one</p>
+            <p>Here is paragraph two</p>
+            <p>Here is paragraph three</p>
+            <p>Here is paragraph four</p>
+            <p>Here is paragraph five</p>
+            <p>Llamas and Chickens!</p>
+            <p>Here is paragraph seven</p>
+            <p>Here is paragraph eight</p>
+            <p>Here is paragraph nine</p>
+            <p>Here is paragraph ten</p>
+            <p>Here is paragraph eleven</p>
+            <p>Here is paragraph twelve</p>
+        </div>
+
+    <script>
+        
+        var identifyP = document.querySelectorAll("#main p");
+        for(i = 0; i < identifyP.length; i++){
+            if(identifyP[i].innerHTML == "Llamas and Chickens!"){
+                identifyP[i].style.color = "red";
+            }
+        }
+        
+    </script>
+
+</body>
+</html>
