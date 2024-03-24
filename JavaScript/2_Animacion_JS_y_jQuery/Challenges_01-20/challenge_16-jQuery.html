@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 16 - jQuery</title>
+</head>
+<body>
+
+    <h1>Challenge 16 - jQuery</h1>
+    <h4>Use jQuery to put a click handler on the links in
+        the navigation.
+        When one of those links is clicked, change the
+        color of the text inside the link to red.
+        The link to google should be unaffected.</h4>
+
+        <nav>
+            <ul>
+                <li><a href="#">link one</a></li>
+                <li><a href="#">link two</a></li>
+                <li><a href="#">link three</a></li>
+                <li><a href="#">link four</a></li>
+                <li><a href="#">link five</a></li>
+            </ul>
+        </nav>
+            <p>Here is a paragraph with a <a
+            href="http://google.com">link to google</a> in
+            it</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        /*  Una forma de solucionarlo:
+        $("nav ul li a").click(function () { this.style.color = "red" }); */
+
+        $("nav ul li a").click(function () {
+            $(this).css("color", "red");
+        });
+
+    </script>
+
+</body>
+</html>
