@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 18 - jQuery</title>
+</head>
+<body>
+
+    <h1>Challenge 18 - jQuery</h1>
+    <h4>Use jQuery to put a click handler on the links in
+        the navigation.
+        When one of those links is clicked, change the
+        text in the paragraph below to say “You clicked”
+        and the text from the link.
+        So if link two were clicked, it would say “You
+        clicked link two”.</h4>
+
+        <nav>
+            <ul>
+                <li><a href="#">link one</a></li>
+                <li><a href="#">link two</a></li>
+                <li><a href="#">link three</a></li>
+                <li><a href="#">link four</a></li>
+                <li><a href="#">link five</a></li>
+            </ul>
+        </nav>
+        <p id="paragraph">Click a link to change this paragraph</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+
+        $("nav ul li a").click(function () {
+            const thisLink = $(this).html();
+            $("#paragraph").html(`You clicked ${thisLink}`);
+        });
+
+    </script>
+
+</body>
+</html>
