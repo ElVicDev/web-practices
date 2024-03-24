@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 17 - JS</title>
+</head>
+<body>
+    <h1>Challenge 17 - JS</h1>
+    <h4>Use JavaScript to put a click handler on the links
+        in the navigation.
+        When one of those links is clicked, change the
+        text in the paragraph below to say “You clicked”
+        and the text from the link.
+        So if link two were clicked, it would say “You
+        clicked link two”.</h4>
+
+        <nav>
+            <ul>
+                <li><a href="#">link one</a></li>
+                <li><a href="#">link two</a></li>
+                <li><a href="#">link three</a></li>
+                <li><a href="#">link four</a></li>
+                <li><a href="#">link five</a></li>
+            </ul>
+        </nav>
+        <p id="paragraph">Click a link to change this paragraph</p>
+
+    <script>
+        /*  Una forma de realizarlo:
+        const navLinks = document.querySelectorAll("nav ul li a");
+        for (let i = 0; i < navLinks.length; i++) {
+            navLinks[i].onclick = function(){
+                const thisLink = this.innerHTML;
+                document.getElementById("paragraph").innerHTML = `You clicked ${thisLink}`;
+            };
+        } */
+
+        const navLinks = document.querySelectorAll("nav ul li a");
+        for (let i = 0; i < navLinks.length; i++) {
+            navLinks[i].addEventListener("click", function () {
+                const thisLink = this.innerHTML;
+                document.getElementById("paragraph").innerHTML = `You clicked ${thisLink}`;
+            });
+        }
+
+    </script>
+
+</body>
+</html>
