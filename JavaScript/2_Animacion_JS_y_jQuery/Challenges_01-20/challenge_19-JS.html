@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 19 - JS</title>
+</head>
+<body>
+    <h1>Challenge 19 - JS</h1>
+    <h4>When the user clicks a link, have it turn the appropriate
+        paragraph below red. The rest of the paragraphs should be black.</h4>
+
+    <nav>
+        <ul>
+            <li><a href="#">link one</a></li>
+            <li><a href="#">link two</a></li>
+            <li><a href="#">link three</a></li>
+            <li><a href="#">link four</a></li>
+            <li><a href="#">link five</a></li>
+        </ul>
+    </nav>
+    <p id="paralink1">Looks like you clicked the first link in the list</p>
+    <p id="paralink2">Looks like you clicked the second link in the list</p>
+    <p id="paralink3">Looks like you clicked the third link in the list</p>
+    <p id="paralink4">Looks like you clicked the fourth link in the list</p>
+    <p id="paralink5">Looks like you clicked the fifth link in the list</p>
+
+    <script>
+        /*  Una forma de realizarlo:
+        const navLinks = document.querySelectorAll("nav ul li a");
+        for (let i = 0; i < navLinks.length; i++) {
+            navLinks[i].onclick = function(){
+                const thisLink = this.innerHTML;
+                document.getElementById("paragraph").innerHTML = `You clicked ${thisLink}`;
+            };
+        } */
+
+        const navLinks = document.querySelectorAll("nav ul li a");
+        const paragraphs = document.querySelectorAll("p");
+        for (let i = 0; i < navLinks.length; i++) {
+            navLinks[i].addEventListener("click", function () {
+                //constructs a string like this: "#paralink3"
+                const paraNumber = "#para" + this.id;
+                for (let i = 0; i < paragraphs.length; i++) {
+                    //loop through and make all paras black
+                    paragraphs[i].style.color = "black";
+                }
+                var thisParagraph = document.querySelector(paraNumber);
+                //change just the one paragraph red
+                thisParagraph.style.color = "red";
+            });
+        }
+
+    </script>
+
+</body>
+</html>
