@@ -12,11 +12,11 @@
 
     <nav>
         <ul>
-            <li><a href="#">link one</a></li>
-            <li><a href="#">link two</a></li>
-            <li><a href="#">link three</a></li>
-            <li><a href="#">link four</a></li>
-            <li><a href="#">link five</a></li>
+            <li><a href="#" id="link1">link one</a></li>
+            <li><a href="#" id="link2">link two</a></li>
+            <li><a href="#" id="link3">link three</a></li>
+            <li><a href="#" id="link4">link four</a></li>
+            <li><a href="#" id="link5">link five</a></li>
         </ul>
     </nav>
     <p id="paralink1">Looks like you clicked the first link in the list</p>
@@ -26,12 +26,17 @@
     <p id="paralink5">Looks like you clicked the fifth link in the list</p>
 
     <script>
-        /*  Una forma de realizarlo:
-        const navLinks = document.querySelectorAll("nav ul li a");
+        //  Una forma de realizarlo:
+        /* const navLinks = document.querySelectorAll("nav ul li a");
+        const paragraphs = document.querySelectorAll("p");
         for (let i = 0; i < navLinks.length; i++) {
             navLinks[i].onclick = function(){
-                const thisLink = this.innerHTML;
-                document.getElementById("paragraph").innerHTML = `You clicked ${thisLink}`;
+                const paraNumber = "#para" + this.id;
+                for (let i = 0; i < paragraphs.length; i++) {
+                    paragraphs[i].style.color = "black";
+                }
+                var thisParagraph = document.querySelector(paraNumber);
+                thisParagraph.style.color = "red";
             };
         } */
 
@@ -48,7 +53,7 @@
                 var thisParagraph = document.querySelector(paraNumber);
                 //change just the one paragraph red
                 thisParagraph.style.color = "red";
-            });
+            }); 
         }
 
     </script>
