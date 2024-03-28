@@ -1,0 +1,61 @@
+* { padding:0; margin:0; }
+
+body { 
+	padding: 100px 0; 
+	background:#ccc; 
+	font-family:Arial; 
+	color:#333; 
+}
+
+/* The entire tab interface will be 400px wide and centered on the screen */
+#tabs {
+	width: 400px;
+	margin: auto;
+}
+
+#tabs > ul {
+	list-style-type: none;	/* The bullets are removed from the list */
+	display: flex;			/* Puts the list items all in a line */
+}
+
+/* 	Styling the anchor Tags */
+#tabs > ul > li > a {
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	margin-right: 2px;
+	background: #a2a2a2;
+	color: #cecece;
+	text-decoration: none;
+	padding: 0 15 px;
+	border-radius: 3px 3px 0 0;
+}
+
+/* 	Initially, all of the content areas for the tabs are hidden */
+#tabs > div {
+	display: none;
+	padding: 15px;
+	background: #eaeaea;
+}
+
+/* 	This is the first div to display. It will be the first tab 
+	and will come up displaying by default when the page loads. */
+#tabs > div:first-of-type {
+	display: block;
+	background: #eaeaea;
+}
+
+/* 	The anchor tag inside the first list item should have 
+	the styling of the current active tab. */
+#tabs > ul > li:first-of-type a {
+	color: #333;
+	background: #eaeaea;
+}
+
+/* Add some styling for the paragraphs, so that they look a little better. */
+p {
+	line-height: 1.5em;
+	margin-bottom: 1em;
+}
+
+/* 	Ahora nuestro producto final funcionará usando jQuery. */
