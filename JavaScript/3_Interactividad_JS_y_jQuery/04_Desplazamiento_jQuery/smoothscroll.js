@@ -9,13 +9,9 @@ $("nav ul li a").click(function () {
         scrollTop: $(thisSection).offset().top - 200,
       },
       800,
-      "easeOutCirc",
-      function () {
-        $("nav ul li a").removeAttr("class");
-        $(thisLink).addClass("selected");
-        // alert($window.offset());
-      }
+      "easeOutCirc"
     );
+
   return false;
 });
 
@@ -65,7 +61,7 @@ $(window).on("load", function () {
     const pagePosition = $(window).scrollTop() + 210;
     counter = 0;
 
-    for (let i = 0; i < postTops; i++) {
+    for (let i = 0; i < postTops.length; i++) {
       if (pagePosition > postTops[i]) {
         counter++;
       }
