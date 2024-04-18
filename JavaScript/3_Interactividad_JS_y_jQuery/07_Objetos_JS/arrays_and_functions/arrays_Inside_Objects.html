@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Arrays and Functions inside Objects</title>
+</head>
+
+<body>
+	
+    <h1>Arrays and Functions inside Objects</h1>
+
+	<h2>Objects can contain arrays and other objects</h2>
+	
+	<p>Notice the array and the object inside the object.</p>
+    <img src="arrays_inside_objects.jpg" alt="Arrays inside Objects">
+
+    <h2>Objects can contain functions</h2>
+    <p>Because functions are first class in JavaScript, you can do this...</p>
+    <img src="functions_inside_objects.jpg" alt="Functions inside Objects">
+	
+	<script>
+		
+		var person = {
+            firstname: "John",
+            lastname: "Smith",
+            pets: ["dog", "cat", "chicken", "llama"],
+            phoneNumber: {
+                home: "916-123-4567",
+                work: "916-432-8765",
+                cell: "916-456-7890"
+            }
+        };
+        
+        console.log(person.pets[2]);
+        console.log(person.phoneNumber.home);
+
+        var person2 = {
+            firstname: "John",
+            lastname: "Smith",
+            gretting: function(){console.log("Hello!")}
+        };
+
+        person2.gretting();
+
+	</script>
+	
+</body>
+</html>
