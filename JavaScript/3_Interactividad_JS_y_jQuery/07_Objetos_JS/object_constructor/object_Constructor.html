@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Object Constructor</title>
+</head>
+
+<body>
+	
+    <h1>Objects</h1>
+
+	<h2>Object constructor</h2>
+	
+	<p>Constructor functions are useful for creating reusable object templates.</p>
+    <img src="constructor.jpg" alt="Object Constructor">
+    <p>Note the use of the <strong>new </strong>keyword.</p>
+
+	
+	<script>
+
+        function Person(first, last, age, eye){
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+        }
+        var myFather = new Person("John", "Doe", 50, "blue");
+        var myMother = new Person("Sally", "Rally", 48, "green");
+
+        console.log(myFather.firstName);
+        console.log(myMother);
+
+	</script>
+	
+</body>
+</html>
