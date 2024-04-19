@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Functions inside Objects</title>
+</head>
+
+<body>
+	
+    <h1>Functions inside Objects</h1>
+
+	<h2>Functions inside Objects are called Methods</h2>
+	
+	<p>Notice the use of the keyword <strong>this</strong>.</p>
+    </p><strong>This </strong>refers to this object.</p>
+    <img src="methods.jpg" alt="Functions inside Objects">
+
+	
+	<script>
+
+        var person = {
+            firstname: "John",
+            lastname: "Smith",
+            gretting: function(){
+                console.log(`Hello! ${this.firstname} ${this.lastname}`)}
+        };
+
+        person.gretting();
+
+	</script>
+	
+</body>
+</html>
