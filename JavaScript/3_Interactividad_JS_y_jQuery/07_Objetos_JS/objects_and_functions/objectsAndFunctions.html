@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Object and Functions</title>
+</head>
+
+<body>
+	
+    <h1>Objects</h1>
+
+	<h2>Putting Objects and Functions Together</h2>
+	
+    <img src="functions.jpg" alt="Functions">
+    <p>Pattern in use:</p>
+    <img src="patterns.jpg" alt="Pattern in use">
+    <p>Since a new object is created every time the function printableMessage is assigned to a new variable, awesome1 is unaffected by awesome2.</p>
+	<img src="awesome1.jpg" alt="awesome1">
+
+	<script>
+
+        function printableMessage(){
+            var message = 'hello';
+
+            function printMessage(){
+                console.log(message);
+            }
+            
+            function setMessage(newMessage){
+                message = newMessage;
+            }
+
+            return {
+                printMessage: printMessage,
+                setMessage: setMessage
+            };
+        }
+
+        var awesome1 = printableMessage();
+        awesome1.printMessage();
+
+        var awesome2 = printableMessage();
+        awesome2.setMessage('Hi');
+        awesome2.printMessage();
+
+        awesome1.printMessage();
+
+	</script>
+	
+</body>
+</html>
