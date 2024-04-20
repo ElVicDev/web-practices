@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON Data</title>
+</head>
+
+<body>
+	
+	<h1>Working with JSON Data</h1>
+	
+	<p>Usually JSON data will come from an external source, such as a database, or an API (Application Programming Interface), such as Google Maps or from Twitter. In this file, we are simply including the JSON directly.</p>
+
+	<p>Converting the JSON string into an Object:</p>
+	<img src="var.jpg" alt="var user">
+
+	<p>Then let's see what each of these variables have in them.</p>
+	<img src="console.jpg" alt="console json and console user">
+
+	<h2>Accesing Values.</h2>
+	<p>You can see that the console.log showed the JSON string and the user object, respectively. Now that you have an object, you can easily acces values:</p>
+	<img src="access.jpg" alt="Access Values">
+
+	<p>You can change the values in the object:</p>
+	<img src="change.jpg" alt="Change Values">
+
+	<p>You can delete values in the object:</p>
+	<img src="delete.jpg" alt="Delete Values">
+
+	<p>You can add values to the object:</p>
+	<img src="add.jpg" alt="Add Values">
+
+	<h2>Converting back to JSON</h2>
+	<p>Once you have made all the changes to the user object, you can convert it back to a JSON string, if you want to send it out to some other service, or maybe a database.</p>
+	<img src="objet_to_json.jpg" alt="Convert the objet to JSON">
+
+	<script>
+		
+		var json = '{ "first_name": "Joe", "last_name": "Jones", "age": 25, "social_media": [ "Facebook", "Twitter", "Instagram" ], "online": true, "phone_numbers": { "home": "916-123-4567", "work": "916-321-9876", "mobile": "530-212-1111" }, "status": "active" }';
+
+		var user = JSON.parse(json);
+
+		console.log(json);
+		console.log(user);
+
+		// Acceso a los valores del objeto
+		console.log(user.last_name);
+		console.log(user.social_media[0]);
+		console.log(user.phone_numbers.mobile);
+
+		// Cambia valores una vez que tenemos el objeto.
+		user.first_name = "Bob";
+		console.log(user);
+
+		// Borra valores del objeto
+		delete user.phone_numbers.home;
+		console.log(user);
+
+		// Añade valores al objeto.
+		user.social_media[3] = "WordPress";
+		console.log(user);
+
+		// Convierte el objeto a JSON
+		var data = JSON.stringify(user);
+		console.log(data);
+	
+	</script>
+	
+</body>
+</html>
