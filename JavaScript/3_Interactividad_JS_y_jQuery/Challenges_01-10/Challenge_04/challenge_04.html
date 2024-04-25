@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Challenge 4</title>
+</head>
+
+<body>
+	
+    <h1>Challenge 4</h1>
+
+	<h2>Supplies for my pet.</h2>
+	
+	<p>Add an additional property into the qualities properties, 
+        which is a list of supplies (an array) you need for your pet.</p>
+    <p>Then console log out a statement that says “I
+        need to get <strong><FONT COLOR="red">X </FONT></strong> amount 
+        of supplies for <strong><FONT COLOR="red">Y </FONT></strong> at the store” 
+        Where <strong><FONT COLOR="red">X </FONT></strong> is the number of supplies 
+        in the list and <strong><FONT COLOR="red">Y </FONT></strong> is the name of the pet.</p>
+
+    <img src="supplies.jpg" alt="Pet name">
+	
+	<script>
+
+        var pet = {
+            name: "rocky",
+            species: "Terrier"
+        }
+
+        pet.name = "Loky";
+        pet.species = "dog";
+        pet.qualities = {
+            color: "brown",
+            size: "medium",
+            disposition: "friendly"
+        }
+
+        pet.qualities.supplies = ["dog food", "dog bed", "treats", "collar", "leash"];
+
+        console.log(`I need to get ${pet.qualities.supplies.length} supplies for ${pet.name} at the store.`);
+
+	</script>
+	
+</body>
+</html>
