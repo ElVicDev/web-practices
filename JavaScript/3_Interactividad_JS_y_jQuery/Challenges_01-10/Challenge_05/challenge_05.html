@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Challenge 5</title>
+</head>
+
+<body>
+	
+    <h1>Challenge 5</h1>
+
+	<h2>Adding a greeting function.</h2>
+	
+	<p>Add an additional property to the pet object called “greeting” 
+        that contains a function as its value.</p>
+    <p>The function should alert the greeting that the pet says 
+        or does when you arrive home.</p>
+    <p>Remember that when an object has a function, it is called a method.</p>
+    <p>Make a call to the pet greeting method and also console log 
+        the whole pet object so you can see everything you have added to it.</p>
+
+    <img src="greeting.jpg" alt="Pet name">
+	
+	<script>
+
+        var pet = {
+            name: "rocky",
+            species: "Terrier"
+        }
+
+        pet.name = "Loky";
+        pet.species = "dog";
+        pet.qualities = {
+            color: "brown",
+            size: "medium",
+            disposition: "friendly"
+        }
+
+        pet.qualities.supplies = ["dog food", "dog bed", "treats", "collar", "leash"];
+
+        pet.greeting = function(){
+            alert("woof woof woof");
+        };
+
+        pet.greeting();
+
+        console.log(`I need to get ${pet.qualities.supplies.length} supplies for ${pet.name} at the store.`);
+        console.log(pet);
+
+	</script>
+	
+</body>
+</html>
