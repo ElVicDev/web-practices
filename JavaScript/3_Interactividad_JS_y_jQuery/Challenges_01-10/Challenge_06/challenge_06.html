@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Challenge 6</title>
+</head>
+
+<body>
+	
+    <h1>Challenge 6</h1>
+
+	<h2>Adding a constructor function.</h2>
+	
+	<p>AStarting with the challenge 5 code, comment out or remove all the 
+        script so far. Instead add a constructor function for pets that 
+        creates an object with the following properties:
+        name, species and greeting.</p>
+    <p>Make the greeting property contain a function.</p>
+    <p>Then make two variables for two different pets.</p>
+    <p>Then run the greeting method for each pet.</p>
+	
+	<script>
+
+        function pet(nme, species, greeting){
+            this.name = name;
+            this.species = species;
+            this.greeting = function(){
+                alert(greeting)
+            };
+        }
+
+        var myDog = new pet("Loky", "dog", "woof woof woof");
+        var myCat = new pet("Mickey", "mouse", "meow!");
+
+        myDog.greeting();
+        myCat.greeting();
+
+	</script>
+	
+</body>
+</html>
