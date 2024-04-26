@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Challenge 7</title>
+</head>
+
+<body>
+	
+    <h1>Challenge 7</h1>
+
+	<h2>Adding a form and an event handler.</h2>
+
+    <form id="addpet">
+        <p><label>Name <input type="text" id="name"></label></p>
+        <p><label>Species <input type="text" id="species"></label></p>
+        <p><label>Greeting <input type="text" id="greeting"></label></p>
+        <p><input type="submit" value="add pet"></p>
+    </form>
+	
+	<p>For this challenge, add the form above to the HTML and then 
+        add an event handler that will listen for the submission of the form.</p>
+    <p>Take the data from the form submission and create a new pet object 
+        and give it the values from the form data as values.</p>
+    <p>Add a call to the console.log() method within the event handler function 
+        to print the object to the console.</p>
+    <p>Don’t forget to pass in the event object and prevent the default behavior 
+        of the form submission.</p>
+	
+	<script>
+
+        function pet(name, species, greeting){
+            this.name = name;
+            this.species = species;
+            this.greeting = function(){
+                alert(greeting)
+            };
+        }
+
+        document.getElementById('addpet').addEventListener('submit', function(event){
+            event.preventDefault();
+            var petName = document.getElementById('name').value;
+            var petSpecies = document.getElementById('species').value;
+            var petGreeting = document.getElementById('greeting').value;
+
+            var myPet = new pet(petName, petSpecies, petGreeting);
+
+            console.log(myPet);
+        });
+
+	</script>
+	
+</body>
+</html>
