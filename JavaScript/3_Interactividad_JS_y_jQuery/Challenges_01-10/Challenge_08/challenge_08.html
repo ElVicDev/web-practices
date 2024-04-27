@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Challenge 8</title>
+</head>
+
+<body>
+	
+    <h1>Challenge 8</h1>
+
+	<h2>Getting elements.</h2>
+
+    <form id="addpet">
+        <p><label>Name <input type="text" id="name"></label></p>
+        <p><label>Species <input type="text" id="species"></label></p>
+        <p><label>Greeting <input type="text" id="greeting"></label></p>
+        <p><input type="submit" value="add pet"></p>
+    </form>
+	
+	<p>The answer to challenge 7 could be a little more elegant. There is a 
+        property on HTML forms called “elements”. You can use this property to get 
+        all the elements of a form when it is submitted all at once like this:</p>
+    <code>event.target.elements</code>
+    <p>If you assign that to a variable, that variable will
+        contain an array of all of those elements. Like this:</p>
+    <code>var formData = event.target.elements;</code>
+    <p>For this challenge, can you update the function to use this method to get 
+        the form data, instead of using getElementById for each field.</p>
+    <p>Note that formData will be an array of form elements. You will still 
+        need to get the values out of each field.</p>
+	
+	<script>
+
+        function pet(name, species, greeting){
+            this.name = name;
+            this.species = species;
+            this.greeting = function(){
+                alert(greeting)
+            };
+        }
+
+        document.getElementById('addpet').addEventListener('submit', function(event){
+            event.preventDefault();
+            var formData = event.target.elements;
+            var myPet = new pet(formData[0].value, formData[1].value, formData[2].value);
+
+            console.log(myPet);
+            myPet.greeting();
+        });
+
+	</script>
+	
+</body>
+</html>
