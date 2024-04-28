@@ -11,17 +11,17 @@
 
 	<h2>Adding a constructor function.</h2>
 	
-	<p>AStarting with the challenge 5 code, comment out or remove all the 
-        script so far. Instead add a constructor function for pets that 
-        creates an object with the following properties:
-        name, species and greeting.</p>
+	<p>Starting with the challenge 5 code, comment out or remove all the 
+        script so far.</p>
+    <p>Instead add a constructor function for pets that  creates an object 
+        with the following properties: name, species and greeting.</p>
     <p>Make the greeting property contain a function.</p>
     <p>Then make two variables for two different pets.</p>
     <p>Then run the greeting method for each pet.</p>
 	
 	<script>
 
-        function pet(nme, species, greeting){
+        function pet(name, species, greeting){
             this.name = name;
             this.species = species;
             this.greeting = function(){
@@ -30,10 +30,13 @@
         }
 
         var myDog = new pet("Loky", "dog", "woof woof woof");
-        var myCat = new pet("Mickey", "mouse", "meow!");
+        var myCat = new pet("Felix", "cat", "meow!");
 
+        console.log(myDog);
         myDog.greeting();
+        console.log(myCat);
         myCat.greeting();
+        
 
 	</script>
 	
