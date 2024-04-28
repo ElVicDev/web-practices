@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Challenge 10</title>
+</head>
+
+<body>
+	
+    <h1>Challenge 10</h1>
+
+	<h2>Form Validation.</h2>
+
+    <form id="addpet">
+        <p><label>Name <input type="text" id="name"></label></p>
+        <p><label>Species <input type="text" id="species"></label></p>
+        <p><label>Greeting <input type="text" id="greeting"></label></p>
+        <p><input type="submit" value="add pet"></p>
+    </form>
+
+    <div>
+
+    </div>
+	
+	<p>Add an empty div after the form on the challenge 9 file.</p>
+    <p>Then make it so that when the user fills out the form, the div in the HTML 
+        gets filled with two paragraphs. The first says “I have a pet X named Y”.</p>
+    <p>The second paragraph contains a button that says 
+        “click for a greeting from Y”.</p>
+    <p>When the user clicks the button, the greeting method on the pet object runs.</p>
+    <p>Hint: innerHTML is your friend.</p>
+    <p>Hint: Make a function and pass in the myPet variable as data to work 
+        with within that function.</p>
+	
+	<script>
+
+        var petsDiv = document.querySelector('div');
+
+        function addToPetsDiv(thisPet){
+            var newPet = `<p>I have a pet ${thisPet.species} named ${thisPet.name}</button></p>`;
+            newPet += `<p><button id="sayhi"> Click for a greeting from ${thisPet.name}</button></p>`;
+            petsDiv.innerHTML =newPet;
+            document.getElementById('sayhi').addEventListener('click', thisPet.greeting);
+        }
+
+        function pet(name, species, greeting){
+            this.name = name;
+            this.species = species;
+            this.greeting = function(){
+                alert(greeting)
+            };
+        }
+
+        document.getElementById('addpet').addEventListener('submit', function(event){
+            event.preventDefault();
+            var formData = document.querySelectorAll('input');
+            var errors = 0;
+
+            formData.forEach(function(eachField){
+                if(eachField.value == ""){ errors++;}
+            });
+
+            if(errors === 0){
+                var myPet = new pet(formData[0].value, formData[1].value, formData[2].value);
+                addToPetsDiv(myPet);
+            }
+            else {
+                alert("Fill in the fields!");
+            }
+        });
+
+	</script>
+	
+</body>
+</html>
