@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Challenge 9</title>
+</head>
+
+<body>
+	
+    <h1>Challenge 9</h1>
+
+	<h2>Form Validation.</h2>
+
+    <form id="addpet">
+        <p><label>Name <input type="text" id="name"></label></p>
+        <p><label>Species <input type="text" id="species"></label></p>
+        <p><label>Greeting <input type="text" id="greeting"></label></p>
+        <p><input type="submit" value="add pet"></p>
+    </form>
+	
+	<p>For this challenge, add a little basic form validation to the function. 
+        If any of the fields are empty, have an alert pop up that says, 
+        “Fill in the Fields”.</p>
+    <p>If all the fields are filled in, create the object and call the greeting method.</p>
+    <p>A few hints…</p>
+    <p>1. Change the formData variable to using the querySelectorAll method 
+        to get all the input tags.</p>
+    <p>2. Use a variable set to zero, and use the forEach method to loop 
+        through all the values to see if any are empty. If they are, 
+        increment the variable.</p>
+    <p>3. If the variable at the end is any higher than zero, you know 
+        the form was not completely filled out.</p>
+	
+	<script>
+
+        function pet(name, species, greeting){
+            this.name = name;
+            this.species = species;
+            this.greeting = function(){
+                alert(greeting)
+            };
+        }
+
+        document.getElementById('addpet').addEventListener('submit', function(event){
+            event.preventDefault();
+            var formData = document.querySelectorAll('input');
+            var errors = 0;
+
+            formData.forEach(function(eachField){
+                if(eachField.value == ""){ errors++;}
+            });
+
+            if(errors === 0){
+                var myPet = new pet(formData[0].value, formData[1].value, formData[2].value);
+                console.log(myPet);
+                myPet.greeting();
+            }
+            else {
+                alert("Fill in the fields!");
+            }
+        });
+
+	</script>
+	
+</body>
+</html>
