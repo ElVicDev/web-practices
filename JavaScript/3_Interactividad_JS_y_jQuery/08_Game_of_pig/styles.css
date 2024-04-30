@@ -13,6 +13,10 @@ div {
     padding: 20px;
 }
 
+p {
+    text-align: justify;
+}
+
 #gamecontrol, #score {
     background-color: aliceblue;
 }
