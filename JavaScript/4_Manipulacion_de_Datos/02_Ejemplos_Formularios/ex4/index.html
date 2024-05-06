@@ -6,7 +6,7 @@
 
 	<style>
 
-	/*
+	
 	label.error {
 		color:#D40004;
 		display:block;
@@ -15,7 +15,7 @@
 		font-size:24px;
 		text-transform:uppercase;
 	}
-	*/
+	
 
 	</style>
 
@@ -27,24 +27,31 @@
 	<form action="processor.php" method="post" id="myForm">
     
     	<p><label for="name">Name</label><br>
-		<input id="name" name="name" type="text"></p>
+		<input id="name" name="name" type="text" required title="Proporciona tu nombre"></p>
         
         <p><label for="email">Email</label><br>
-        <input id="email" name="email" type="email"></p>
+        <input id="email" name="email" type="email" required></p>
         
         <p><label for="url">Website</label><br>
         <input id="url" name="url" type="url"></p>
         
         <p><label for="comments">Comments</label><br>
-    	<textarea id="comments" name="comments" cols="40" rows="10" ></textarea></p>
+    	<textarea id="comments" name="comments" cols="40" rows="10" required></textarea></p>
         
         <p><input id="send"  name="send" type="submit" value="send it"></p>
     
     </form>
 	
 	<!-- add link to jQuery library here -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	
 	<!-- add validator plugin here -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+	
 	<!-- Run the validator plugin with your own script here -->
+	<script>
+		$('#myForm').validate();
+	</script>
 
 </body>
 </html>
