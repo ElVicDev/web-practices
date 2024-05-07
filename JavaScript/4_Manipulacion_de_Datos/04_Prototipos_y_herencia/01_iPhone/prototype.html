@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhoneExample</title>
+</head>
+<body>
+    <h1>iPhone Example : Making the Prototype</h1>
+    <h2>Demonstrating Prototypes &amp; Inheritance</h2>
+    <p>Suppose you get a new iPhone. Every iPhone is manufactured
+        the same way and come with the same features.</p>
+        <img src="iPhone.jpg" alt="iPhone">
+    <script>
+        function iPhone(){} // constructor
+        iPhone.prototype.faceId = function () {
+            console.log("unlock my phone with my face!");
+        }
+        iPhone.prototype.video = function () {
+            console.log("take 4k video with my iPhone");
+        }
+        iPhone.prototype.stocksApp = function () {
+            console.log("find out what the stock market is doing");
+        }
+
+        let myPhone = new iPhone();
+
+        myPhone.faceId();
+        myPhone.video();
+        myPhone.stocksApp();
+        myPhone.app = "instagram";
+        console.log(myPhone);
+
+        /* myPhone.stocksApp = function(){
+            console.log("Upgrade to Pro version");
+        } */
+
+        myPhone.stocksApp = undefined;
+        console.log(myPhone);
+
+        /*  Una mirada más cercana a una matriz
+            El siguiente script muestra cómo funciona la 
+            herencia prototípica en JavaScript. */
+        const myArray = ["banana", "peach", "apple"];
+        console.log(myArray);
+    </script>
+</body>
+</html>
