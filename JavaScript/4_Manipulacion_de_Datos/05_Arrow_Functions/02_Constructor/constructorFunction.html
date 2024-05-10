@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Function</title>
+</head>
+<body>
+    <h1>Constructor Function Expression</h1>
+    <p>This is a constructor function.</p>
+    <script>
+        /* const Employee = function( fname, lname, jobTitle ){
+            this.fname = fname;
+            this.lname = lname;
+            this.position = jobTitle;
+            this.fullName = function(){
+                return `${fname} ${lname}`;
+            }
+        }
+        const id1234 = new Employee('Bob', 'Smith', 'Mechanic');
+        console.log( id1234.fname );
+        console.log( id1234.fullName() ); */
+
+        const Employee = function( fname, lname, jobTitle ){
+            this.fname = fname;
+            this.lname = lname;
+            this.position = jobTitle;
+            this.fullName = () => `${fname} ${lname}`;
+        }
+        const id1234 = new Employee('Bob', 'Smith', 'Mechanic');
+        console.log( id1234.fname );
+        console.log( id1234.fullName() );
+    </script>
+</body>
+</html>
