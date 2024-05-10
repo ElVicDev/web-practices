@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <h1>Introducción a las Funciones de Flecha</h1>
+    <p>Ejemplo de como crear Funciones de Flecha con un solo parámetro.</p><br>
+    <p>Las funciones de flecha son oficialmente 
+        <strong>expresiones de funciones de flecha.</strong></p>
+
+    <!-- Primero, cree un archivo HTML y cree una función que simplemente 
+        tome una cadena como entrada y luego la ponga en mayúscula 
+        y devuelva la versión en mayúscula. -->
+    <script>
+        
+        /* function makeUpperCase(aString){
+            return aString.toUpperCase();
+        }
+        console.log(makeUpperCase("here is a string")); */
+
+        /* Cambie la palabra "function" por "const" y agregue una "flecha" que en 
+        realidad es solo un signo igual = y un signo mayor que > después 
+        del parámetro. */
+        /* const makeUpperCase(aString) => {
+            return aString.toUpperCase();
+        }
+        console.log(makeUpperCase("here is a string")); */
+ 
+        /* Si solo hay un parámetro, puede simplificarlo aún más 
+        y eliminar los paréntesis que lo rodean. 
+        Agregar un signo igual antes del parámetro. */
+        /* const makeUpperCase = aString => {
+            return aString.toUpperCase();
+        }
+        console.log(makeUpperCase("here is a string")); */
+
+        /* Si tiene solo una declaración y es una declaración de devolución, también 
+        puede eliminar las llaves y la palabra clave de devolución (return). */
+        const makeUpperCase = aString => aString.toUpperCase();
+        console.log(makeUpperCase("here is a string"));
+
+        /* Ejemplo de dos parámetros */
+        const fullName = (fname, lname) => `${fname} ${lname}`;
+        console.log(fullName('Bill', 'Mead'));
+
+        /* EJEMPLO SIN PARAMETROS Y MAS DE UNA DECLARACIÓN DE DEVOLUCIÓN.
+            Si no tiene parámetros y tiene más de una línea en la función, 
+            o no devuelve una variable, debe incluir los paréntesis 
+            y las llaves nuevamente */
+        const fullName2 = () => {
+            const fname = "Richardson";
+            const lname = "Smith";
+            return `${fname} ${lname}`;
+        }
+        console.log(fullName2());
+
+        /* CUANDO UTILIZAR FUNCIONES DE FLECHA
+            Las funciones de flecha no son excelentes en todos los casos, pero 
+            pueden hacer que su código sea más fácil de leer en algunos casos. */
+            /*  const fruit = ["banana", "apple", "lemon", "kiwi"];
+                const upperFruit = [];
+                fruit.forEach( function(thisFruit){
+                    upperFruit.push(thisFruit.toUpperCase());
+                });
+                console.log(upperFruit); */
+
+        // EJEMPLO forEach
+        /* Deberías obtener algo como el siguiente código. 
+            Debido a que no hay una declaración de retorno de una línea, 
+            es necesario mantener las llaves, pero aún así, es bastante expresivo. */
+            const fruit = ["banana", "apple", "lemon", "kiwi"];
+            const upperFruit = [];
+            fruit.forEach( thisFruit => {
+                upperFruit.push(thisFruit.toUpperCase());
+            });
+            console.log(upperFruit);
+
+    </script>
+</body>
+</html>
