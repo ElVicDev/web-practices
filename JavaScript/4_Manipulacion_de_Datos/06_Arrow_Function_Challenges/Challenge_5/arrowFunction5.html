@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function Challenge 5</title>
+</head>
+<body>
+    <h1>Challenge 5</h1>
+    <p>Convierta la función de devolución de llamada en una función de flecha.</p>
+    <p>Intente obtener dos líneas: una para la creación de la matriz y otra para la llamada al registro de la consola.</p>
+    <p>Es posible que desee buscar el <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce">método de reducción en el sitio web de MDN</a>.</strong></p>
+    <img src="function5.jpg" alt="Function 5">
+
+    <script>
+        
+    //  Convierta la función de devolución de llamada en una función de flecha.
+    /* Intente obtener dos líneas: una para la creación de la matriz y otra para la llamada al registro de la consola. */
+    /*  const scores = [5, 10, 15, 20];
+        function totals(accumulator, curValue) {
+            return accumulator + curValue;
+        }
+        console.log(scores.reduce(totals)); */
+        //50
+
+    // Esta forma de realizarlo funciona:
+    /* const scores = [5, 10, 15, 20].reduce(totals = (accumulator, curValue) => accumulator + curValue);
+        console.log(scores); */
+
+    // También esta forma de realizarlo funciona:
+    const scores = [5, 10, 15, 20];
+    console.log(scores.reduce((accumulator, curValue) => accumulator + curValue));
+    
+    </script>
+</body>
+</html>
