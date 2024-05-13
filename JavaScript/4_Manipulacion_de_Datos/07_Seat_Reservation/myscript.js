@@ -25,7 +25,7 @@ let html = "";
 let counter = 1;
 
 rows.forEach(function (row) {
-  // Recorre cada asiento de la sección.
+  // Recorre cada asiento de la sección izquierda.
   html += `<div class="label">${row}</div>`;
 
   for (let i = 0; i < 3; i++) {
@@ -36,3 +36,19 @@ rows.forEach(function (row) {
 });
 
 document.getElementById("left").innerHTML = html;
+
+html = "";
+counter = 1;
+
+rows.forEach(function (row) {
+  counter = counter + 12;
+
+  for (let i = 0; i < 3; i++) {
+    html += `<div id="${row + counter}">${counter}</div>`;
+    counter++;
+  }
+  // Recorre cada asiento de la sección derecha.
+  html += `<div class="label">${row}</div>`;
+});
+
+document.getElementById("right").innerHTML = html;
