@@ -29,9 +29,10 @@ rows.forEach(function (row) {
   html += `<div class="label">${row}</div>`;
 
   for (let i = 0; i < 3; i++) {
-    html += `<div id="4{row + counter}">${counter}</div>`;
+    html += `<div id="${row + counter}">${counter}</div>`;
     counter++;
   }
+  counter = counter + 12;
 });
 
 document.getElementById("left").innerHTML = html;
