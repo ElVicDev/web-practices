@@ -21,6 +21,7 @@ const rows = [
   "t",
 ];
 
+/* * * * * * * * SECCION IZQUERDA * * * * * * * */
 let html = "";
 let counter = 1;
 
@@ -37,6 +38,7 @@ rows.forEach(function (row) {
 
 document.getElementById("left").innerHTML = html;
 
+/* * * * * * * * SECCION DERECHA * * * * * * * */
 html = "";
 counter = 1;
 
@@ -52,3 +54,19 @@ rows.forEach(function (row) {
 });
 
 document.getElementById("right").innerHTML = html;
+
+/* * * * * * * * SECCION CENTRAL * * * * * * * */
+html = "";
+counter = 1;
+
+rows.forEach(function (row) {
+  counter = counter + 3;
+
+  for (let i = 0; i < 9; i++) {
+    html += `<div id="${row + counter}">${counter}</div>`;
+    counter++;
+  }
+  counter = counter + 3;
+});
+
+document.getElementById("middle").innerHTML = html;
