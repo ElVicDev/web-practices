@@ -28,8 +28,8 @@ function makeRows(sectionLength, rowLength, placement) {
   let counter = 1;
 
   // Por cada fila.
-  rows.forEach(function (row) {
-    // Si estoy en la sección izquierda, derecha o central, haz lo correcto.
+  rows.forEach((row) => {
+    // Si estoy en la sección izquierda, derecha o central, haz lo siguiente:
     switch (placement) {
       // Agregue la etiqueta div al lado izquierdo de la fila.
       case "left":
@@ -49,7 +49,7 @@ function makeRows(sectionLength, rowLength, placement) {
       counter++;
     }
 
-    // Si estoy en la sección izquierda, derecha o central, haz lo correcto.
+    // Si estoy en la sección izquierda, derecha o central, haz lo siguiente:
     switch (placement) {
       // Añade 12 al contador.
       case "left":
