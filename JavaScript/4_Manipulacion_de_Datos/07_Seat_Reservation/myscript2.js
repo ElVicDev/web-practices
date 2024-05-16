@@ -33,7 +33,7 @@ var reservedSeats = {
   },
 };
 
-/* PARA LA CREACIÓN DE ASIETOS UTILIZAREMOS SWITCH QUE ES MAS COMPACTO. */
+/* PARA LA CREACIÓN DE ASIENTOS UTILIZAREMOS SWITCH QUE ES MAS COMPACTO. */
 
 function makeRows(sectionLength, rowLength, placement) {
   const rows = [
@@ -121,5 +121,40 @@ makeRows(9, 15, "middle");
       document.getElementById(obj.seat).className = "r";
       document.getElementById(obj.seat).innerHTML = "R";
     }
+  }
+})();
+
+(function () {
+  "use strict";
+
+  var selectedSeats = [];
+  var seats = document.querySelectorAll(".a");
+
+  seats.forEach(function (seat) {
+    seat.addEventListener("click", function (event) {
+      // Obtener identificación del asiento
+      // console.log(seat.id);
+      seatSelectionProcess(seat.id);
+    });
+  });
+
+  // ejecutar una función que agrega o quita el asiento de la matriz.
+  function seatSelectionProcess(thisSeat) {
+    // agregar o eliminar asientos de la matriz
+    // alert(thisSeat);
+    var index = selectedSeats.indexOf(thisSeat);
+
+    if (index > -1) {
+      // Saque el asiento del conjunto
+      selectedSeats.splice(index, 1);
+      // Establecer la clase del respaldo del asiento en "a"
+      document.getElementById(thisSeat).className = "a";
+    } else {
+      // Pon el asiento en la matriz.
+      selectedSeats.push(thisSeat);
+      // Establece la clase del asiento en "s"
+      document.getElementById(thisSeat).className = "s";
+    }
+    console.log(selectedSeats);
   }
 })();
