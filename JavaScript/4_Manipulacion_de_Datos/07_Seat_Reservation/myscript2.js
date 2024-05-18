@@ -155,6 +155,7 @@ makeRows(9, 15, "middle");
       // Establece la clase del asiento en "s"
       document.getElementById(thisSeat).className = "s";
     }
+    manageConfirmForm();
     console.log(selectedSeats);
   }
 
@@ -171,4 +172,32 @@ makeRows(9, 15, "middle");
     document.getElementById("resform").style.display = "none";
     event.preventDefault();
   });
+
+  function manageConfirmForm() {
+    if (selectedSeats.length > 0) {
+      document.getElementById("confirmres").style.display = "block";
+
+      if (selectedSeats.length === 1) {
+        document.getElementById(
+          "selectedseats"
+        ).innerHTML = `You have selected seat ${selectedSeats[0]}`;
+      } else {
+        let seatsString = selectedSeats.toString();
+        seatsString = seatsString.replace(/,/g, ", ");
+        seatsString = seatsString.replace(/,(?=[^,]*$)/, " and");
+        document.getElementById(
+          "selectedseats"
+        ).innerHTML = `You have selected seats ${seatsString}`;
+      }
+    } else {
+      document.getElementById("confirmres").style.display = "none";
+      document.getElementById("selectedseats").innerHTML =
+        'You need to select some seats to reserve.<br><a href="#" id="error">Close</a> this dialog box and pick at least one seat.';
+      // Agregar el controlador de clic de error.
+      document.getElementById("error").addEventListener("click", function () {
+        document.getElementById("resform").style.display = "none";
+      });
+    }
+  }
+  manageConfirmForm();
 })();
