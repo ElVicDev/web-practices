@@ -157,4 +157,18 @@ makeRows(9, 15, "middle");
     }
     console.log(selectedSeats);
   }
+
+  // Oyente de eventos para el botón de reserva para abrir el formulario.
+  document
+    .getElementById("reserve")
+    .addEventListener("click", function (event) {
+      document.getElementById("resform").style.display = "block";
+      event.preventDefault();
+    });
+
+  // Oyente de eventos para cerrar el formulario si alguien hace clic en cancelar.
+  document.getElementById("cancel").addEventListener("click", function (event) {
+    document.getElementById("resform").style.display = "none";
+    event.preventDefault();
+  });
 })();
