@@ -111,6 +111,9 @@ makeRows(9, 15, "middle");
 (function () {
   "use strict";
 
+  let selectedSeats = [];
+  const seats = document.querySelectorAll(".a");
+
   for (const key in reservedSeats) {
     /*Lidiando con la herencia prototípica
       Envuelva el núcleo del bucle for en esta declaración if. 
@@ -122,16 +125,9 @@ makeRows(9, 15, "middle");
       document.getElementById(obj.seat).innerHTML = "R";
     }
   }
-})();
 
-(function () {
-  "use strict";
-
-  var selectedSeats = [];
-  var seats = document.querySelectorAll(".a");
-
-  seats.forEach(function (seat) {
-    seat.addEventListener("click", function (event) {
+  seats.forEach((seat) => {
+    seat.addEventListener("click", (event) => {
       // Obtener identificación del asiento
       // console.log(seat.id);
       seatSelectionProcess(seat.id);
@@ -140,35 +136,35 @@ makeRows(9, 15, "middle");
 
   // ejecutar una función que agrega o quita el asiento de la matriz.
   function seatSelectionProcess(thisSeat) {
-    // agregar o eliminar asientos de la matriz
-    // alert(thisSeat);
-    var index = selectedSeats.indexOf(thisSeat);
+    if (!document.getElementById(thisSeat).classList.contains("r")) {
+      // agregar o eliminar asientos de la matriz
+      // alert(thisSeat);
+      const index = selectedSeats.indexOf(thisSeat);
 
-    if (index > -1) {
-      // Saque el asiento del conjunto
-      selectedSeats.splice(index, 1);
-      // Establecer la clase del respaldo del asiento en "a"
-      document.getElementById(thisSeat).className = "a";
-    } else {
-      // Pon el asiento en la matriz.
-      selectedSeats.push(thisSeat);
-      // Establece la clase del asiento en "s"
-      document.getElementById(thisSeat).className = "s";
+      if (index > -1) {
+        // Saque el asiento del conjunto
+        selectedSeats.splice(index, 1);
+        // Establecer la clase del respaldo del asiento en "a"
+        document.getElementById(thisSeat).className = "a";
+      } else {
+        // Pon el asiento en la matriz.
+        selectedSeats.push(thisSeat);
+        // Establece la clase del asiento en "s"
+        document.getElementById(thisSeat).className = "s";
+      }
+      manageConfirmForm();
+      console.log(selectedSeats);
     }
-    manageConfirmForm();
-    console.log(selectedSeats);
   }
 
   // Oyente de eventos para el botón de reserva para abrir el formulario.
-  document
-    .getElementById("reserve")
-    .addEventListener("click", function (event) {
-      document.getElementById("resform").style.display = "block";
-      event.preventDefault();
-    });
+  document.getElementById("reserve").addEventListener("click", (event) => {
+    document.getElementById("resform").style.display = "block";
+    event.preventDefault();
+  });
 
   // Oyente de eventos para cerrar el formulario si alguien hace clic en cancelar.
-  document.getElementById("cancel").addEventListener("click", function (event) {
+  document.getElementById("cancel").addEventListener("click", (event) => {
     document.getElementById("resform").style.display = "none";
     event.preventDefault();
   });
@@ -194,10 +190,49 @@ makeRows(9, 15, "middle");
       document.getElementById("selectedseats").innerHTML =
         'You need to select some seats to reserve.<br><a href="#" id="error">Close</a> this dialog box and pick at least one seat.';
       // Agregar el controlador de clic de error.
-      document.getElementById("error").addEventListener("click", function () {
+      document.getElementById("error").addEventListener("click", () => {
         document.getElementById("resform").style.display = "none";
       });
     }
   }
   manageConfirmForm();
+
+  document.getElementById("confirmres").addEventListener("submit", (event) => {
+    processReservation();
+    event.preventDefault();
+  });
+
+  function processReservation() {
+    // Tramitar la reserva.
+    const hardCodeRecords = Object.keys(reservedSeats).length;
+    const fname = document.getElementById("fname").value;
+    const lname = document.getElementById("lname").value;
+    let counter = 1;
+    let nextRecord = "";
+
+    selectedSeats.forEach((thisSeat) => {
+      // Establezca el nombre de la clase en "r"
+      document.getElementById(thisSeat).className = "r";
+      // Establezca el innerHTML para ese asiento <div> en "R"
+      document.getElementById(thisSeat).innerHTML = "R";
+
+      // Agregue cada registro al objeto reservedSeats.
+      nextRecord = `record${hardCodeRecords + counter}`;
+      reservedSeats[nextRecord] = {
+        seat: thisSeat,
+        owner: {
+          fname: fname,
+          lname: lname,
+        },
+      };
+      counter++;
+    });
+
+    // Limpiar...
+    document.getElementById("resform").style.display = "none";
+    selectedSeats = [];
+    manageConfirmForm();
+    // Puedes ver el objeto resultante en la consola...
+    console.log(reservedSeats);
+  }
 })();
