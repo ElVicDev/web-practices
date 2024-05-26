@@ -11,6 +11,23 @@
     <h1>Event Example 2</h1>
     <script>
         // JS here
+        function mkUpperCase(message) {
+            var upper = message.toUpperCase();
+            return upper;
+        }
+        
+        function mkLowerCase(message) {
+            var lower = message.toLowerCase();
+            return lower;
+        }
+
+        function outputMessages(message) {
+            var output = `Uppercase version: ${mkUpperCase(message)}\n`;
+            output += `Lowercase version: ${mkLowerCase(message)}`;
+            console.log(output);
+        }
+
+        outputMessages('Llamas are THE best!');
     </script>
 </body>
 
