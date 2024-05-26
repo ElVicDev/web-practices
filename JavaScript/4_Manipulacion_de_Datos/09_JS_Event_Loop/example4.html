@@ -11,6 +11,14 @@
     <h1>Event Example 4</h1>
     <script>
         // JS here
+        console.log("do this first");
+        setTimeout(function () {
+            var second = "do this second";
+            for (var eachLetter of second) {
+                console.log(eachLetter);
+            }
+        }, 0);
+        console.log("do this third");
     </script>
 </body>
 
