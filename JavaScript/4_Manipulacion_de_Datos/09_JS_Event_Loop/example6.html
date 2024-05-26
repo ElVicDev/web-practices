@@ -37,9 +37,9 @@
         var badIdea;
         var stopRecursion;
 
-        /* Uses setInterval to go do something every 1.5 seconds
-        not good for async calls because you don't know how long they will
-        actually take to complete*/
+        /*  Utiliza setInterval para hacer algo cada 1,5 segundos, 
+            lo que no es bueno para llamadas asíncronas porque no sabes 
+            cuánto tiempo tardarán en completarse.*/
         bttnEx1.addEventListener('click', function () {
             badIdea = setInterval(function () {
                 container1.innerHTML += "<p>don't do async calls this way</p>";
@@ -52,8 +52,8 @@
 
         /**************************** ||||| *************************/
 
-        /* This uses recursion, which will run only after the async call has 
-        happened, no matter how long it takes*/
+        /*  Esto utiliza recursividad, que se ejecutará solo después de que se 
+            haya realizado la llamada asíncrona, sin importar cuánto tiempo demore*/
 
         function doRecursion() {
             setTimeout(function () {
