@@ -41,6 +41,11 @@ header img {
     max-width: 75%;
 }
 
+nav {
+    padding: 20px;
+    text-align: center;
+}
+
 main {
     padding: 20px;
 }
