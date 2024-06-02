@@ -3,7 +3,7 @@ const mainElement = document.querySelector("main");
 let filmData;
 
 async function getFilms() {
-  const filmsPromise = await fetch("./movieData.json");
+  const filmsPromise = await fetch("./data.json");
   const films = await filmsPromise.json();
 
   setSort(films);
