@@ -1,44 +1,44 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Little Lemon</title>
-    </head>
-    <body>
-        <h2>Access registration form</h2>
-        <form action="/registration" method="POST">
-            <label for="username">Username</label><br>
-            <input type="text" name="username"><br>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <meta property="og:title" content="Our Menu">
+    <meta property="og:type"  content="website">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url"   content="https://littlelemon/">
+    <meta property="og:description" content="Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Little Lemon">
 
-            <label for="password">Password:</label><br>
-            <input type="password" /><br><br>
-            <input type="submit" /><br><br>
-        
-        <h2>Checkbox examples</h2>
-        <input type="checkbox" name="dog" value="Dog" />
-        <label for="dog">I own a dog</label><br>
-        <input type="checkbox" name="cat" value="Cat" />
-        <label for="cat">I own a cat</label><br><br>
-
-        <h2>Radio button examples</h2>
-        <input type="radio" name="right" value="Right" />
-        <label for="right">I am right-handed</label><br>
-        <input type="radio" name="left" value="Left" />
-        <label for="left">I am left-handed</label><br><br>
-
-        <h2>Other input types</h2>
-        <input type="number" name="age" /><br><br>
-        <input type="email" name="email" /><br><br>
-        <input type="file" name="file" /><br><br>
-
-        <h2>Textarea examples</h2>
-        <input type="text" name="username" /><br><br>
-        <textarea name="multiline" rows="5"></textarea><br><br>
-
-        <h2>Drop-down list</h2>
-        <select name="food">
-            <option value="chocolate">Chocolate</option>
-            <option value="ice_cream">Ice Cream</option>
-        </select>
-    </form>
-    </body>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- El elemento header se utilizará para mostrar el logotipo de Little Lemon -->
+    <header>
+        <img src="logo.png" alt="logo">
+    </header>
+    <!-- El elemento nav se utilizará para describir la estructura de navegación -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form>
+            <div>
+                <label for="user">Username</label>
+                <input type="text" id="user" required minlength="3" maxlength="12"><br>
+            </div>
+            <div>
+                <label for="pass">Password</label>
+                <input type="password" id="pass" required minlength="5">
+            </div>
+            <button type="submit">Log In</button>
+        </form>
+    </main>
+</body>
 </html>
