@@ -22,8 +22,8 @@
     <main>
         <form method="POST">
             <div>
-                <label for="email">Email Address</label>
-                <input type="email" id="email">
+                <label for="email_address">Email Address</label>
+                <input type="email" id="email_address" name="email_address">
             </div>
             <div>
                 <label for="booking_date">Date of Booking</label>
@@ -31,11 +31,13 @@
             </div>
             <div>
                 <label for="number_people">Number of people</label>
-                <input type="number" id="number_people">
+                <input type="number" id="number_people" min="1" max="8" name="number_people">
             </div>
             <div>
-                <input type="checkbox" name="agree" value="Agree" />
-                <label for="agree">I agree to the cancellation policy</label>
+                <label>
+                <input type="checkbox" name="agree" value="Agree" name="agree" required>
+                I agree to the cancellation policy
+            </label>
             </div>
             <div>
                 <button type="submit">Book Now</button>
