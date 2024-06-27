@@ -1,0 +1,9 @@
+ul{
+    list-style-type: none;
+}
+
+li::first-line {
+    color: lightseagreen;
+    text-decoration: underline;
+    line-height: 1;
+}
