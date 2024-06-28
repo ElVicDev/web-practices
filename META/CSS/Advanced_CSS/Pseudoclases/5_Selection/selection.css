@@ -1,0 +1,9 @@
+ul{
+    list-style-type: none;
+}
+
+li::selection {
+    color:brown;
+    background-color: antiquewhite;
+    line-height: 1;
+}
