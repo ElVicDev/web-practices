@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clip Property</title>
+    <!-- CSS Code -->
+     <style>
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .text {
+            width: 300 px;
+            border: 2px solid brown;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: clip;
+        }
+
+        .text:hover {
+            overflow: visible;
+        }
+     </style>
+</head>
+<body>
+    <h1 style="color: brown;">Clip Property</h1>
+
+    <div class="text">
+        This is a sample write-up to show use of clip property of text-overflow
+    </div>
+</body>
+</html>
