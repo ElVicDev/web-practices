@@ -10,7 +10,11 @@ body {
     background-size: 82%;
     background-repeat: no-repeat;
     background-position: top;
-    font-family: 'Caveat, serif';
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: x-large;
     margin-top: 3rem;
     margin-bottom: 3rem;
     margin-left: 5%;
