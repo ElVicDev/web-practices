@@ -10,11 +10,11 @@ body {
     background-size: 82%;
     background-repeat: no-repeat;
     background-position: top;
-    font-family: "Caveat", cursive;
+    font-family: "Merienda", cursive;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    font-size: x-large;
+    font-size: larger;
     margin-top: 3rem;
     margin-bottom: 3rem;
     margin-left: 5%;
@@ -25,9 +25,19 @@ h1 {
     font-size: 3rem;
 }
 
+h1~p {
+    text-align: justify;
+}
+
 h2 {
     font-size: 2rem;
     margin-top: 15px;
+    margin-left: 20px;
+}
+
+h2~p {
+    margin: 0 20px 0 20px;
+    text-align: justify;
 }
 
 header>img {
