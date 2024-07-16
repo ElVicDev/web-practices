@@ -4,9 +4,90 @@
     box-sizing: border-box;
 }
 
+.header-link {
+    width: 3rem;
+    height: 3rem;
+    justify-self: center;
+    align-self: self-end;
+    color: #ecb707;
+    border-radius: 50%;
+    animation: slide-bottom 1.5s linear infinite;
+
+    &:hover {
+        box-shadow: #ecb707 0 -.3rem .9rem;
+    }
+}
+
+/* Main */
+.mainContent {
+    width: 100%;
+    display: grid;
+    gap: 5rem;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    display: grid;
+    gap: 2rem;
+    position: relative;
+    min-height: 50vh;
+    padding: 2rem 1rem;
+    background: url('../img/drinks.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+
+    @media screen and (min-width: 900px) {
+        min-height: 70vh;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: #0000006c;
+    }
+}
+
+.banner-title {
+    padding-top: 2rem;
+    font-size: clamp(1.5rem, 5vw, 5rem);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.banner-title--yellow {
+    color: #ecb707;
+    text-shadow: .3rem .3rem .4rem #286587;
+}
+
+.banner-content {
+    position: relative;
+}
+
+.banner-text {
+    --delay: 0s;
+    position: absolute;
+    font-size: clamp(1rem, 1.3vw, 2rem);
+    font-weight: 600;
+    text-wrap: pretty;
+
+    &:nth-child(1) {
+        animation: appear linear 5s infinite var(--delay) both;
+    }
+
+    &:nth-child(2) {
+        --delay: 2s;
+        animation: appear linear 5s infinite var(--delay) both;
+    }
+}
+
 body {
     background-color: #EDEFEE;
-    font-family: 'Markazi Text, serif';
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
     margin-top: 3rem;
     margin-bottom: 3rem;
     margin-left: 5%;
@@ -50,4 +131,53 @@ footer {
 
 footer div {
     flex: 1;
+}
+
+
+/* Utility class */
+.z-index-xs {
+    position: relative;
+    z-index: 1;
+}
+
+.strong-yellow {
+    color: #ecb707;
+    font-weight: 700;
+}
+
+/* Keyframes */
+
+@keyframes slide-bottom {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(3rem);
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
+    0% {
+        transform: translateY(-2rem);
+        opacity: 0;
+    }
+
+    30% {
+        transform: translateY(0rem);
+        opacity: 0;
+    }
+
+    60%,
+    80% {
+        transform: translateY(-2rem);
+        opacity: 1;
+    }
+
+    90%,
+    100% {
+        opacity: 0;
+    }
 }
