@@ -1,12 +1,15 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: flex;
 }
 
 body {
-    background-color: #EDEFEE;
-    font-family: 'Markazi Text, serif';
+    background: linear-gradient(50deg, green, yellow, rgb(111, 212, 40), yellow, green);
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
     margin-top: 3rem;
     margin-bottom: 3rem;
     margin-left: 5%;
@@ -14,35 +17,68 @@ body {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
+}
+
+h1~p {
+    text-align: justify;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1rem;
     margin-top: 15px;
+    margin-left: 20px;
+}
+
+h2~p {
+    margin: 0 20px 0 20px;
+    text-align: justify;
 }
 
 header>img {
-    width: 10%;
-    display: block;
+    width: 7%;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
 }
 
 div>img {
     width: 5%;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 nav ul {
     list-style: none;
     text-align: center;
+    text-shadow:
+        1px 1px 2px black,
+        0 0 1em blue,
+        0 0 0.2em blue;
+    font-size: 1.5rem;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 nav li {
     display: inline-block;
+    margin: 0 70px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: green;
+    font-weight: bold;
+}
+
+nav {
+    margin-top: 25px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    margin-bottom: 25px;
 }
 
 section {
@@ -54,10 +90,9 @@ article {
 }
 
 footer {
-    display: inline-block;
+    display: inline;
     text-align: center;
+    text-emphasis: double-circle rgb(165, 42, 42);
+    font-size: 0.8rem;
+    color: rgb(165, 42, 42);
 }
-
-/* footer div {
-    flex: 1;
-} */
