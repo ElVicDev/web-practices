@@ -4,9 +4,86 @@
     box-sizing: border-box;
 }
 
+.header-link {
+    width: 3rem;
+    height: 3rem;
+    justify-self: center;
+    align-self: self-end;
+    color: #ecb707;
+    border-radius: 50%;
+    animation: slide-bottom 1.5s linear infinite;
+
+    &:hover {
+        box-shadow: #ecb707 0 -.3rem .9rem;
+    }
+}
+
+/* Main */
+.mainContent {
+    width: 100%;
+    display: grid;
+    gap: 5rem;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    display: grid;
+    gap: 2rem;
+    position: relative;
+    min-height: 50vh;
+    padding: 2rem 1rem;
+    background: url('../img/drinks.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2rem;
+
+    @media screen and (min-width: 900px) {
+        min-height: 70vh;
+    }
+}
+
+.banner-title {
+    padding-top: 2rem;
+    font-size: clamp(1.5rem, 5vw, 5rem);
+    font-weight: 700;
+    color: aliceblue;
+    line-height: 1.5;
+}
+
+.banner-title--yellow {
+    color: #ecb707;
+    text-shadow: .3rem .3rem .4rem #286587;
+}
+
+.banner-content {
+    position: relative;
+}
+
+.banner-text {
+    --delay: 0s;
+    position: absolute;
+    font-size: clamp(1rem, 1.3vw, 2rem);
+    font-weight: 600;
+    text-wrap: pretty;
+    color: azure;
+
+    &:nth-child(1) {
+        animation: appear linear 5s infinite var(--delay) both;
+    }
+
+    &:nth-child(2) {
+        --delay: 2s;
+        animation: appear linear 5s infinite var(--delay) both;
+    }
+}
+
 body {
-    background-color: #EDEFEE;
-    font-family: 'Markazi Text, serif';
+    background-color: rgba(244, 206, 20, 0.1);
+    font-family: "Markazi Text", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     margin-top: 3rem;
     margin-bottom: 3rem;
     margin-left: 5%;
@@ -21,19 +98,58 @@ h2 {
     font-size: 2rem;
 }
 
+h2~p {
+    padding-bottom: 3rem;
+}
+
+header {
+    background-image: linear-gradient(rgba(73, 94, 87, 0.2), rgba(244, 206, 20, 0.2));
+    border-radius: 1rem;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
 header>img {
     display: block;
+    width: 20%;
     margin-left: auto;
     margin-right: auto;
+}
+
+div>img {
+    width: 20%;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 nav ul {
     list-style: none;
     text-align: center;
+    text-shadow:
+        1px 1px 2px black,
+        0 0 1em rgba(73, 94, 87),
+        0 0 0.2em rgba(73, 94, 87);
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 nav li {
     display: inline-block;
+    margin: 0 70px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgba(244, 206, 20);
+    font-weight: bold;
+}
+
+nav {
+    margin-top: 25px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    margin-bottom: 25px;
 }
 
 section {
@@ -46,8 +162,64 @@ article {
 
 footer {
     display: flex;
+    background-image: linear-gradient(rgba(73, 94, 87, 0.2), rgba(244, 206, 20, 0.2));
+    border-radius: 1rem;
 }
 
 footer div {
     flex: 1;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: rgb(73, 94, 87);
+}
+
+
+/* Utility class */
+.z-index-xs {
+    position: relative;
+    z-index: 1;
+}
+
+.strong-yellow {
+    color: #ecb707;
+    font-weight: 700;
+}
+
+/* Keyframes */
+
+@keyframes slide-bottom {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(3rem);
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
+    0% {
+        transform: translateY(-2rem);
+        opacity: 0;
+    }
+
+    30% {
+        transform: translateY(0rem);
+        opacity: 0;
+    }
+
+    60%,
+    80% {
+        transform: translateY(-2rem);
+        opacity: 1;
+    }
+
+    90%,
+    100% {
+        opacity: 0;
+    }
 }
