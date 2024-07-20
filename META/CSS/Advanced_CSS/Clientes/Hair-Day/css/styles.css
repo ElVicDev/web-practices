@@ -33,7 +33,7 @@
     position: relative;
     min-height: 50vh;
     padding: 2rem 1rem;
-    background: url('../img/drinks.jpg');
+    background: url('../img/muebles.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 2rem;
@@ -79,7 +79,7 @@
 }
 
 body {
-    background-color: rgba(244, 206, 20, 0.1);
+    background-image: url('../img/Bottanical-Pattern.jpg');
     font-family: "Markazi Text", serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -103,7 +103,7 @@ h2~p {
 }
 
 header {
-    background-image: linear-gradient(rgba(73, 94, 87, 0.2), rgba(244, 206, 20, 0.2));
+    background-image: linear-gradient(rgba(166, 224, 210, 0.5), rgba(249, 218, 220, 0.8));
     border-radius: 1rem;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -127,8 +127,8 @@ nav ul {
     text-align: center;
     text-shadow:
         1px 1px 2px black,
-        0 0 1em rgba(73, 94, 87),
-        0 0 0.2em rgba(73, 94, 87);
+        0 0 1em rgba(243, 182, 186),
+        0 0 0.4em rgba(243, 182, 186);
     font-size: 1.5rem;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -141,7 +141,7 @@ nav li {
 
 nav ul li a {
     text-decoration: none;
-    color: rgba(244, 206, 20);
+    color: rgba(146, 209, 193);
     font-weight: bold;
 }
 
@@ -162,7 +162,7 @@ article {
 
 footer {
     display: flex;
-    background-image: linear-gradient(rgba(73, 94, 87, 0.2), rgba(244, 206, 20, 0.2));
+    background-image: linear-gradient(rgba(166, 224, 210, 0.5), rgba(249, 218, 220, 0.8));
     border-radius: 1rem;
 }
 
