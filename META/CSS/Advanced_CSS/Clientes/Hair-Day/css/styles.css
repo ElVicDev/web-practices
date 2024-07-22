@@ -9,12 +9,12 @@
     height: 3rem;
     justify-self: center;
     align-self: self-end;
-    color: #ecb707;
+    color: rgba(200, 98, 79);
     border-radius: 50%;
     animation: slide-bottom 1.5s linear infinite;
 
     &:hover {
-        box-shadow: #ecb707 0 -.3rem .9rem;
+        box-shadow: rgba(200, 98, 79) 0 -.3rem .9rem;
     }
 }
 
@@ -22,37 +22,38 @@
 .mainContent {
     width: 100%;
     display: grid;
-    gap: 5rem;
+    gap: 1rem;
 }
 
 /* Banner */
 .banner {
     width: 100%;
-    display: grid;
+    display: inline;
     gap: 2rem;
     position: relative;
-    min-height: 50vh;
-    padding: 2rem 1rem;
-    background: url('../img/muebles.jpg');
+    min-height: 18vh;
+    padding: 1rem 1rem;
+    background: url('../img/muebles.jpg'), rgba(166, 224, 210, 0.3);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     border-radius: 2rem;
 
     @media screen and (min-width: 900px) {
-        min-height: 70vh;
+        min-height: 30vh;
     }
 }
 
 .banner-title {
-    padding-top: 2rem;
+    padding-top: 5rem;
     font-size: clamp(1.5rem, 5vw, 5rem);
-    font-weight: 700;
-    color: aliceblue;
-    line-height: 1.5;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px black;
+    color: rgba(200, 98, 79);
+    line-height: 2;
 }
 
-.banner-title--yellow {
-    color: #ecb707;
+.banner-title--strong-color {
+    color: rgba(200, 98, 79);
     text-shadow: .3rem .3rem .4rem #286587;
 }
 
@@ -63,17 +64,19 @@
 .banner-text {
     --delay: 0s;
     position: absolute;
-    font-size: clamp(1rem, 1.3vw, 2rem);
-    font-weight: 600;
+    left: 30px;
+    font-size: clamp(1rem, 1.8vw, 2rem);
+    font-weight: 60;
     text-wrap: pretty;
-    color: azure;
+    color: rgba(63, 182, 152);
+    text-shadow: 1px 1px 2px black;
 
     &:nth-child(1) {
         animation: appear linear 5s infinite var(--delay) both;
     }
 
     &:nth-child(2) {
-        --delay: 2s;
+        --delay: 3s;
         animation: appear linear 5s infinite var(--delay) both;
     }
 }
@@ -94,12 +97,21 @@ h1 {
     font-size: 3rem;
 }
 
+h1~p {
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
 h2 {
     font-size: 2rem;
+    margin-top: 15px;
+    margin-left: 20px;
 }
 
 h2~p {
-    padding-bottom: 3rem;
+    font-size: 1.2rem;
+    margin: 0 20px 20px 20px;
+    text-align: justify;
 }
 
 header {
@@ -129,7 +141,7 @@ nav ul {
         1px 1px 2px black,
         0 0 1em rgba(243, 182, 186),
         0 0 0.4em rgba(243, 182, 186);
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -169,7 +181,8 @@ footer {
 footer div {
     flex: 1;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
     margin-top: auto;
     margin-bottom: auto;
     color: rgb(73, 94, 87);
@@ -182,8 +195,8 @@ footer div {
     z-index: 1;
 }
 
-.strong-yellow {
-    color: #ecb707;
+.strong-color {
+    color: rgba(200, 98, 79);
     font-weight: 700;
 }
 
