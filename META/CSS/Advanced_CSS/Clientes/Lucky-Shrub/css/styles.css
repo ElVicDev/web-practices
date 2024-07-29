@@ -85,10 +85,6 @@ section {
     display: flex;
 }
 
-article {
-    flex: 1;
-}
-
 footer {
     display: inline;
     text-align: center;
