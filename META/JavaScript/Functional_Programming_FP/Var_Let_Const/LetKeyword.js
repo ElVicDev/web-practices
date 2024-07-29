@@ -1,16 +1,16 @@
 // ***  let keyword ***
 
-/*  1. We cannot access a let variable before we declare it */
+/*  1. No podemos acceder a una variable let antes de declararla */
 //console.log(user); // Error!
 //let user;
 
-/* 2.   We can declare an unassigned variable with let */
+/* 2.   Podemos declarar una variable no asignada con let */
 let user;
 console.log(user);
 
-/* 3.   We can't redeclare a let variable */
+/* 3.   No podemos redeclarar una variable let */
 // let user = "Anna";
 
-/* 4.   But we can re-assign it */
+/* 4.   Pero podemos reasignarla */
 user = "Anna";
 console.log(user);
