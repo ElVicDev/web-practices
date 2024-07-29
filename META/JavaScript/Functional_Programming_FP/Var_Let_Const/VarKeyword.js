@@ -1,4 +1,4 @@
-//var keyword;
+//  ***     var keyword     ***
 
 /*  1. Podemos acceder a una variable var antes de la inicialización...
     ... siempre que la variable var se inicialice finalmente
