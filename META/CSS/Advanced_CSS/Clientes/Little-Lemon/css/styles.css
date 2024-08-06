@@ -27,7 +27,7 @@
 
 /* Banner */
 .banner {
-    width: 100%;
+    max-width: 100%;
     display: grid;
     gap: 2rem;
     position: relative;
@@ -178,7 +178,14 @@ article {
     border-radius: 1rem;
 }
 
+article img {
+    max-width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
 footer {
+    max-width: 100%;
     margin-top: 60px;
     display: flex;
     background-image: linear-gradient(rgba(73, 94, 87, 0.2), rgba(244, 206, 20, 0.2));
