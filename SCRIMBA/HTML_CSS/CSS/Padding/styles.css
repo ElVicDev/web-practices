@@ -1,0 +1,13 @@
+.card {
+    color: #222222;
+    background: lightgray;
+    width: 300px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /*
+    Desafío:
+    Agregue relleno. */
+    padding: 20px;
+}
