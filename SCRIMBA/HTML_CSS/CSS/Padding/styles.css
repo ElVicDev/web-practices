@@ -10,4 +10,10 @@
     Desafío:
     Agregue relleno. */
     padding: 20px;
+
+    /* Si quiero poner un borde a la tarjeta: */
+    border: 3px solid #222222;
+
+    /* Si quiero redondear los bordes: */
+    border-radius: 20px;
 }
