@@ -1,0 +1,22 @@
+/* 
+Desafío: 
+Haz que el botón se parezca al botón "Seguir" de Twitter!
+(A excepción de la fuente)
+
+Consejos:
+border color: #cfd9de
+text color: #0f1419
+Remember the font-weight!
+*/
+
+button {
+    color: #0f1419;
+    border: 1px solid #cfd9de;
+    border-radius: 20px;
+    background: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+}
