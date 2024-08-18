@@ -1,0 +1,43 @@
+body {
+    margin: 20px;
+}
+
+.avatar {
+    width: 150px;
+}
+
+/*
+Desafío:
+1. Dale una clase al div de la tarjeta (nómbrala "card")
+2. Seleccione la clase de tarjeta y asígnele un borde azul punteado.
+3. Añade 20 píxeles de relleno en todos los lados de la tarjeta.
+*/
+
+.card {
+    /*
+    Desafío:
+    Dale a la tarjeta un ancho de 400px y céntrala..
+    */
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 20px;
+    display: flex;
+    /*
+    Desafío:
+    Agregar espacio horizontal alrededor de los elementos secundarios flexibles.
+    Sugerencia: busque en Google "justificar contenido"
+    */
+    justify-content: space-around;
+}
+
+/*
+Desafío:
+Crea una clase de utilidad para el borde azul punteado.
+Proporcione la clase a ambos hijos de flexbox en el HTML.
+*/
+
+.border-blue {
+    border: 1px dotted blue;
+}
