@@ -1,5 +1,10 @@
 body {
     margin: 20px;
+    /*
+    Desafío:
+    Establezca la fuente en Verdana.
+    */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .avatar {
@@ -30,6 +35,23 @@ Desafío:
     Sugerencia: busque en Google "justificar contenido"
     */
     justify-content: space-around;
+    /*
+    Desafío:
+    Centrar el texto en los elementos <p> y <h4>.
+    Nota: solo debes agregar UNA propiedad, ya que la herencia
+    debería encargarse de aplicarla a ambos elementos.
+    */
+    text-align: center;
+    /* 
+    Desafío:
+    Añade colores a la tarjeta.
+    black - #2b2839 (El color del texto)
+    background-color: #c9b5ae4d
+    border-bottom: #c9b5ae
+    */
+    color: #2b2839;
+    background-color: #c9b5ae4d;
+    border-bottom: 6px solid #c9b5ae;
 }
 
 /*
@@ -40,4 +62,5 @@ Proporcione la clase a ambos hijos de flexbox en el HTML.
 
 .border-blue {
     border: 1px dotted blue;
+
 }
