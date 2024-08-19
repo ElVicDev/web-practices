@@ -24,8 +24,14 @@ Desafío:
     Dale a la tarjeta un ancho de 400px y céntrala..
     */
     width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+    /* 
+    Desafío:
+    Reemplace las dos propiedades de margen con una 
+    abreviatura de margen único.
+    */
+    /*  margin-left: auto;
+        margin-right: auto; */
+    margin: 0 auto;
 
     padding: 20px;
     display: flex;
