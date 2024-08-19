@@ -1,0 +1,24 @@
+.red-circle {
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    background: #BC002D;
+
+    /* 
+    Desafío:
+    Traduce esto al uso de la abreviatura de margen. 
+    */
+
+    /* 
+    Esta sería una forma de hacerlo:
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: auto; */
+
+    /* Pero se puede abrebiar más nuestro código usando lo siguiente: */
+    margin: 40px auto;
+
+    /*  40px - se aplicará en los márgenes top y bottom
+        auto - a¿se aplicará en los márgenes right y left */
+}
