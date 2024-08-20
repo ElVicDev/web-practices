@@ -1,3 +1,15 @@
+/*
+Desafío:
+Envuelva la sección "hero" (title, button, logo) en un <div>
+y establezca como imagen de fondo la imagen de la galaxia. Esto 
+te obligan a agregar también algo de relleno en el "hero" <div>.
+
+Agregar un "Terms and conditions apply" <h3> debajo de
+la sección "hero".
+
+PD: es probable que su diseño se vea alterado por el
+margen predeterminado de la etiqueta <body>.
+*/
 body {
     margin: 0;
     color: #82a5ca;
