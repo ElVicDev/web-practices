@@ -1,0 +1,51 @@
+body {
+    letter-spacing: 4px;
+    /* background: #b7111b; */
+    /* color: #fafbf4; */
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+}
+
+/*
+Desafío:
+Intente lograr la sombra del diseño proporcionado.
+*/
+.zero {
+    background: #b7111b;
+    color: #fafbf4;
+    font-size: 36px;
+    text-shadow: -8px -16px black;
+    /*           ➡️  ⬇️  blur color */
+}
+
+.first {
+    background: #b7111b;
+    color: #fafbf4;
+    font-size: 36px;
+    text-shadow: 5px -5px 5px black;
+    /*           ➡️  ⬇️  blur color */
+}
+
+.second {
+    background: whitesmoke;
+    color: #fafbf4;
+    font-size: 36px;
+    text-shadow: 0px 0px 20px black;
+    /*           ➡️  ⬇️  blur color */
+}
+
+.third {
+    background: whitesmoke;
+    color: #fafbf4;
+    font-size: 36px;
+    text-shadow: 0px 0px 2px black;
+    /*           ➡️  ⬇️  blur color */
+}
+
+.fourth {
+    background: #b7111b;
+    color: #fafbf4;
+    font-size: 36px;
+    text-shadow: 5px 5px black;
+    /*           ➡️  ⬇️  blur color */
+}
