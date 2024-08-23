@@ -7,27 +7,30 @@ from blue at the top to pink at the bottom.
 body {
     text-align: center;
     font-family: 'Happy Monkey', cursive;
-    background: linear-gradient(#a2d2ff, #EFB0C9);
+    background: linear-gradient(#c9b5ae4d, #c9b5ae);
     color: #ffffff;
 }
 
-h1,
+h1 {
+    text-shadow: 0 0 4px black;
+}
+
 h2,
 h3,
 h4,
 p {
-    text-shadow: 0 0 1px black;
+    text-shadow: 0 0 2px black;
 }
 
 #ElVicDev {
     width: 150px;
-    border-radius: 50%;
-    border: 6px solid #EFB0C9;
+    border-radius: 10%;
+    border: 6px solid #c9b5ae4d;
     margin-bottom: 10px;
 }
 
 #bday-age {
-    background: #EFB0C9;
+    background: #c9b5ae4d;
     padding: 5px 10px;
     border-radius: 5px;
     margin: 5px 0 10px 0;
@@ -35,7 +38,7 @@ p {
 
 #bday-date {
     margin: 0;
-    background: #EFB0C9;
+    background: #c9b5ae4d;
     padding: 5px 10px;
     border-radius: 5px;
 }
@@ -52,6 +55,7 @@ p {
 
 .gift-title {
     margin-bottom: 10px;
+    text-shadow: 0 0 2px black;
 }
 
 .gift-hint {
@@ -94,10 +98,7 @@ p {
 
 #footer {
     font-style: italic;
+    text-shadow: 0 0 5px black;
     width: 400px;
     margin: 40px auto 20px;
-}
-
-a {
-    color: white;
 }
