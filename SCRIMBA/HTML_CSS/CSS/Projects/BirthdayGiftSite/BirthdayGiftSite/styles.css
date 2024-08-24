@@ -1,7 +1,7 @@
 /*
-Challenge:
-Change the site's background into a gradient that goes
-from blue at the top to pink at the bottom.
+Desafío:
+Cambie el fondo del sitio a un degradado que vaya de un color
+en la parte superior a otro color en la parte inferior.
 */
 
 body {
@@ -43,12 +43,27 @@ p {
     border-radius: 5px;
 }
 
+/*
+Desafío:
+Primero, envuelva los elementos HTML en un <div> con
+un id llamado "header".
+Luego, seleccione el "header" y use flexbox.
+*/
 #header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/*
+Desafío:
+1.  Crea una sección de obsequios <div> que envuelva todos 
+    los elementos del primer obsequio.
+2.  Agrega los elementos <h2>, <h3> e <img> y dales a cada 
+    uno sus propias clases.
+3.  Aplica estilo a los elementos.
+Nota: la imagen debe tener 400 píxeles de ancho.
+*/
 .gift-section {
     margin-top: 50px;
 }
@@ -66,6 +81,13 @@ p {
     height: 200px;
 }
 
+/*
+Desafío:
+"Reparar" el <div> "gift-img" para que se parezca nuevamente
+al diseño proporcionado.
+Necesita una altura (debe ser un cuadrado), una
+imagen de fondo y volver a estar centrado.
+*/
 .gift-img {
     margin: 20px auto;
     max-width: 400px;
