@@ -98,14 +98,35 @@ imagen de fondo y volver a estar centrado.
     background-size: cover;
 }
 
+/*
+Desafío:
+¡Cambia la imagen del papel de regalo con el happy.gif cuando 
+pases el cursor sobre él!
+*/
 #gift-img-happy:hover {
     background-image: url("images/happy.gif");
 }
 
+/*
+Desafío:
+Crea el siguiente GIFt (hot.gif).
+Su estructura HTML debería ser como la anterior, 
+pero sin el elemento "gift-hint".
+Sin embargo, ahora que tienes varios GIFt en la página,
+no puedes usar la clase "gift-img" para configurar
+las imágenes de fondo del GIF en :hover. Cada GIFt
+necesitará una identificación única que controle qué
+imagen de fondo debe mostrarse al pasar el cursor
+sobre el elemento. */
 #gift-img-hot:hover {
     background-image: url("images/hot.gif");
 }
 
+/* Crear las secciones de GIFt "genius" y "badass"
+Textos:
+If I had to describe you with ONE word 👇
+The only person as badass as you 💪
+*/
 #gift-img-genius:hover {
     background-image: url("images/genius.gif");
 }
@@ -114,10 +135,23 @@ imagen de fondo y volver a estar centrado.
     background-image: url("images/badass.gif");
 }
 
+/* Desafío:
+Crea la sección GIFt "cheers".
+Nota: este GIFt debe tener una altura de 200 px.
+Selecciona el ID #gift-img-cheers y reemplaza
+la altura que el elemento obtuvo de la clase .gift-img.
+Texto:
+This one's for you, my friend 🥂
+*/
 #gift-img-cheers:hover {
     background-image: url("images/cheers.gif");
 }
 
+/* 
+Agrega el párrafo de pie de página.
+Texto:
+Happy Birthday my friend!!!
+*/
 #footer {
     font-style: italic;
     text-shadow: 0 0 5px black;
