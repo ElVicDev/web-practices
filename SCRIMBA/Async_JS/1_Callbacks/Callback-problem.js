@@ -9,4 +9,5 @@ navigator.geolocation.getCurrentPosition((position) => {
 });
 
 // setTimeout()
+
 // addEventListener()
