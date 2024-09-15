@@ -1,0 +1,61 @@
+<!-- *  Este es un primer ejemplo de uso de una plantilla. -->
+
+<head>
+
+<!-- Incluya nuestras bibliotecas y archivos css. -->
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/handlebars-v3.0.3.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/gallery.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <!-- El contenido de la página web comienza vacío porque lo 
+    completaremos más adelante desde la plantilla. -->
+    <div id="content">
+    </div>
+
+    <!-- Esta es nuestra plantilla.
+    Muestra una imagen con un título y encabezados de autor.
+    Los bits entre llaves {{}} son expresiones de plantilla. -->
+    <script id="image-template" type="text/x-handlebars-template">
+      <div class="title">
+		    <h1>{{title}}</h1>
+    		<h3 class="author">
+    		  {{author}}
+    		</h3>
+		    <img  style="height:600" src="{{src}}"/>
+      </div>
+    </script>
+
+  <!-- Código JavaScript para rellenar la plantilla. -->
+  <script type="text/javascript">
+
+    // Obtenga nuestro código de plantilla del DOM.
+    var source   = $("#image-template").html();
+
+    // Compila la plantilla para que podamos utilizarla.
+    var template = Handlebars.compile(source);
+
+    // Crear algunos datos.
+    var data = {
+      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/600px-The_Earth_seen_from_Apollo_17.jpg ", 
+      title:"The Earth seen from Apollo 17",
+      author:"Ed g2s"
+    };
+
+    // Generar HTML a partir de los datos.
+    var html    = template(data);
+
+    // Añade el HTML al contenido div.
+    $('#content').html(html);
+  </script>
+
+</body>
