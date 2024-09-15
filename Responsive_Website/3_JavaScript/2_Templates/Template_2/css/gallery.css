@@ -1,0 +1,35 @@
+.crop-img {
+  max-height: 150px;
+  max-width: 100%;
+}
+
+.large-img {
+  max-width: 100%;
+}
+
+.carousel-img {
+  margin: auto;
+  padding: 10px;
+  max-height: 300px;
+  max-width: 100%;
+
+}
+
+/* 
+ * Quite el comentario de esto para agregar sombras proyectadas
+ * y esquinas redondeadas en CSS3.
+ */
+
+
+.thumbnail,
+.nav,
+.large-img,
+.crop-img {
+  border-radius: 25px;
+  padding-top: 5px;
+}
+
+.thumbnail,
+.nav {
+  box-shadow: 5px 5px 5px #888888;
+}
