@@ -1,0 +1,141 @@
+<!-- 
+  Un ejemplo de cómo mostrar los mismos datos de 
+  dos maneras diferentes con dos plantillas.
+-->
+
+<head>
+
+<!-- Incluya nuestras bibliotecas y archivos css. -->
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/handlebars-v3.0.3.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/gallery.css" rel="stylesheet">
+
+</head>
+
+<body role="document">
+
+  <div class="container">
+
+    <div class="page-header">
+      <h1>My photo albums </h1>
+    </div> 
+
+    <!--  Esta es una barra de navegación simple para seleccionar 
+          entre los métodos de visualización. -->
+    <ul class="nav nav-tabs">
+          <li role=""  id="detailsbtn"><a href="#">Details</a></li>
+          <li role="" id="modalbtn"><a href="#">Modal</a></li>
+    </ul>
+
+    <br/><br/>  
+
+    <!--  El contenido de la página web comienza vacío 
+          porque lo completaremos más adelante desde la plantilla. -->
+    <div id="content"  class="container-fluid"  role="main">
+    </div>
+
+  </div>
+    
+    <!--  Esta plantilla muestra la imagen con un título y un autor, 
+          al igual que los ejemplos anteriores. -->
+    <script id="detail-template" type="text/x-handlebars-template">
+      <br>
+      <div class="row-fluid">
+        <div class="col-sm-5">
+          <img  style="width:100%" src="{{src}}"/>
+        </div>
+        <div class="col-sm-7">
+          <h1>{{title}}</h1>
+          <h3 class="author">{{author}}</h3>
+        </div>
+      </div>
+    </script>
+
+    <!-- Esta plantilla muestra una ventana emergente modal de la imagen. 
+          Tiene bastante código HTML repetitivo, pero en esencia solo muestra 
+          una etiqueta de imagen dentro de un conjunto de divs que definen 
+          la ventana modal. -->
+    <script id="modal-template" type="text/x-handlebars-template">
+      <div id="imageModal" class="modal fade" role="dialog">
+        <div class="modal-dialog"  style="width:800">
+
+          <div class="modal-content">
+            
+            <div class="modal-body">
+              <img  style="width:100%" src="{{src}}"/>
+            </div>
+            
+          </div>
+
+        </div>
+      </div>
+    </script>
+
+  </body>
+	
+  <!-- Código javascript para rellenar la plantilla. -->
+  <script type="text/javascript">
+
+    // Esta vez tenemos dos plantillas, compilamos ambas y almacenamos 
+    // los resultados en variables separadas.
+    var source   = $("#detail-template").html();
+
+    var detail_template = Handlebars.compile(source);
+
+    source   = $("#modal-template").html();
+
+    var modal_template = Handlebars.compile(source);
+
+    // Este es el objeto de datos que utilizaremos.
+    var data = {
+      src: "https://upload.wikimedia.org/wikipedia/commons/archive/9/97/20101017074210%21The_Earth_seen_from_Apollo_17.jpg", 
+      title:"The Earth seen from Apollo 17",
+      author:"Ed g2s"
+    };
+
+    var image1Data = {
+      title: "image1",
+      author: "Tuxtso",
+      src: "https://upload.wikimedia.org/wikipedia/commons/archive/9/97/20101017074210%21The_Earth_seen_from_Apollo_17.jpg", 
+    };
+    // Imprima las variables.
+    console.log(image1Data.author + " " + image1Data.title + " " + image1Data.src);
+
+    // Esto crea una instancia de la plantilla de detalle.
+    $("#detailsbtn").click(function () {
+
+      // Ocultar el modal si se muestra.
+      $("#imageModal").modal('hide');
+
+      // Utilice la plantilla de detalles para generar HTML y colocarlo en el DOM.
+      var html    = detail_template(data);
+      $('#content').html(html);
+    });
+
+
+    $("#modalbtn").click(function () {
+
+      // Utilice la plantilla modal para generar HTML y colocarlo en el DOM.
+      var html    = modal_template(data);
+      $('#content').html(html);
+
+      /*  Sólo podemos mostrar el modal una vez que se haya instanciado 
+          la plantilla porque no existía antes. */
+      $("#imageModal").modal('show');
+
+      // Crea una devolución de llamada para cuando el modelo esté oculto 
+      // para que podamos volver a mostrar la plantilla de detalles.
+      $('#imageModal').on('hidden.bs.modal', function (){
+        $("#detailsbtn").click();
+      });
+
+    });
+
+  </script>
+
+</body>
