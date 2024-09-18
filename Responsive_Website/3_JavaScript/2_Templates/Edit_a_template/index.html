@@ -1,0 +1,54 @@
+<!-- Este es un ejemplo de uso de una plantilla. -->
+
+<head>
+
+<!-- Incluya nuestras bibliotecas y archivos css. -->
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/handlebars-v3.0.3.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap_blue.css" rel="stylesheet">
+<link href="css/gallery.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!--  El contenido de la página web comienza vacío 
+          porque lo completaremos más adelante desde la plantilla. -->
+    <div id="content">
+    </div>
+
+    <!-- Esta es nuestra plantilla, coloque su código aquí.-->
+    <script id="todo-template" type="text/x-handlebars-template">
+        <h2>{{title}} due {{due_by}}</h2>
+        <h3>Assigned to: {{owner}}</h3>
+    </script>
+
+  <!-- Código JavaScript para rellenar la plantilla. -->
+  <script type="text/javascript">
+
+    // Obtenga nuestro código de plantilla del DOM.
+    var source   = $("#todo-template").html();
+
+    // Compila la plantilla para que podamos utilizarla.
+    var template = Handlebars.compile(source);
+
+    // Crear algunos datos.
+    var task1 = {
+        "title":"Complete the peer assessment",
+        "due_by":"1 week from now",
+        "owner":"Vicente Escobar"
+    };
+
+    // Generar HTML a partir de los datos.
+    var html    = template(task1);
+
+    // Añade el HTML al contenido div.
+    $('#content').html(html);
+  </script>
+
+</body>
