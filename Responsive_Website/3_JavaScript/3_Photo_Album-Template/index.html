@@ -1,16 +1,14 @@
 <!--
-  This example extends our array example so that you can
-  display an image by clicking on it.
-  It uses two templates, one for viewing thumbnails and
-  one for viewing a single image.
-
-  NB I have found a bug in this code since doing the video
-  see if you can find it and even fix it.
+  Este ejemplo amplía nuestro ejemplo de matriz para que puedas 
+  visualizar una imagen haciendo clic en ella. Utiliza dos plantillas, 
+  una para ver miniaturas y otra para ver una sola imagen.
+  Nota: he encontrado un error en este código desde que hice el video. 
+  Intenta encontrarlo e incluso solucionarlo.
 -->
 
 <head>
 
-<!-- include our libraries and css files -->
+<!-- Incluya nuestras bibliotecas y archivos css. -->
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/handlebars-v3.0.3.js"></script>
 
@@ -26,25 +24,25 @@
 
   <div class="container">
 
-    <!-- the page title -->
+    <!-- El título de la página. -->
     <div class="page-header">
       <h1>My photo albums </h1>
     </div>
 
 
     <!--
-      the search box.
-      It is given the navbar-form class so that bootstrap
-      put it in the top navbar
+      El cuadro de búsqueda.
+      Se le asigna la clase navbar-form para que bootstrap lo coloque 
+      en la barra de navegación superior
     -->
     <div class="navbar-form navbar-right">
       <input id="searchbox" type="text" class="form-control" placeholder="Search...">
     </div>
 
     <!--
-      We don't actually use these navigation tabs in this example, but
-      I've included them so that the top nav looks right, and
-      we can extend the example later to use them
+      En realidad, no usamos estas pestañas de navegación en este ejemplo, 
+      pero las incluí para que la navegación superior se vea bien y 
+      podamos ampliar el ejemplo más adelante para usarlas.
     -->
     <ul class="nav nav-tabs">
           <li role=""  id="detailsbtn"><a href="#">Details</a></li>
@@ -53,39 +51,39 @@
     <br/><br/>
 
     <!--
-     the content of the web page starts off empty
-     because we will fill it later from the template
-     We use container-fluid because our template uses
-     the bootstrap grid
+      El contenido de la página web comienza vacío porque lo 
+      completaremos más adelante a partir de la plantilla.
+      Usamos container-fluid porque nuestra plantilla utiliza 
+      la cuadrícula de bootstrap.
     -->
     <div id="content"  class="container-fluid"  role="main">
     </div>
 
     <!--
-      this div will contain the modal dialog which will
-      display the large image
+      Este div contendrá el cuadro de diálogo modal que 
+      mostrará la imagen grande.
     -->
     <div id="modal-container"  >
     </div>
   </div>
 
   <!--
-    This template displays many photos in an album.
-    Is uses the {{#each }} template tag which repeats the
-    innter bit of the template for each element of an array
+    Esta plantilla muestra muchas fotos en un álbum. 
+    Utiliza la etiqueta de plantilla {{#each}} que repite 
+    la parte interna de la plantilla para cada elemento de una matriz.
   -->
   <script id="album-template" type="text/x-handlebars-template">
 
       <div class="row">
         {{#each images}}
         <div class="col-xs-12 col-md-3">
-         <div class="thumbnail" data-id="{{@index}}">
+          <div class="thumbnail" data-id="{{@index}}">
             <img class="crop-img" src="{{src}}" alt=""/>
 
-             <div class="author">
+              <div class="author">
                 <h3> {{title}} </h3>
                 <p> {{author}} </p>
-             </div>
+              </div>
           </div>
 
           </div> <!-- / col -->
@@ -94,10 +92,9 @@
     </script>
 
     <!--
-         This second template displays a modal pop-up of the image.
-         It has quite a bit of boilder plate HTML code but in
-         essence it just displays and image tag within a
-         set of divs that define the modal
+      Esta segunda plantilla muestra una ventana emergente modal de la imagen. 
+      Tiene bastante código HTML repetitivo, pero en esencia solo muestra una 
+      etiqueta de imagen dentro de un conjunto de divs que definen el modal.
     -->
     <script id="modal-template" type="text/x-handlebars-template">
       <div id="imageModal" class="modal fade" role="dialog">
@@ -117,21 +114,19 @@
   </body>
 
   <!--
-    The javascript code to instantiate the template
+    El código javascript para instanciar la plantilla.
   -->
   <script type="text/javascript">
-    // get the source code for our two template
-    // and compile them
+    // Obtenga el código fuente de nuestras dos plantillas y compílelas.
     var source   = $("#album-template").html();
     var template = Handlebars.compile(source);
 
     source   = $("#modal-template").html();
     var modal_template = Handlebars.compile(source);
 
-    // define the data for the template
-    // we define an objects which contains an
-    // array of other objects. This array will be used
-    // to create multiple images
+    // Definimos los datos de la plantilla. 
+    // Definimos un objeto que contiene una matriz de otros objetos. 
+    // Esta matriz se utilizará para crear varias imágenes.
     var data = {images:[
          {
        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Shopping_Center_Magna_Plaza_Amsterdam_2014.jpg/600px-Shopping_Center_Magna_Plaza_Amsterdam_2014.jpg",
@@ -166,31 +161,27 @@
 
          ]};
 
-    // render the data into the template
+    // Representar los datos en la plantilla.
     var html    = template(data);
-    // put the rendered template into the DOM
+    // Coloque la plantilla renderizada en el DOM.
     $('#content').html(html);
 
-    // a function to display a clicked
-    // image as a modal
-    // this is added as a click callback
-    // to the thumbnails
+    // Una función para mostrar una imagen en la que se hizo clic como un modal.
+    // Se agrega como una devolución de llamada de clic a las miniaturas.
     function displayModal(event){
-        // get the index (position in the array)
-        // of the photo we clicked on
-        // "this" is the element that was clicked on
-        // data("id") gets the attribute data-id
-        // (which we set to the index of the photo in
-        // the array - @index)
+        // Obtiene el índice (posición en la matriz) de la foto en la que hicimos clic.
+        // "this" es el elemento en el que hicimos clic.
+        // data("id") obtiene el atributo data-id 
+        // (que configuramos en el índice de la foto en la matriz - @index)
         var imageNumber = $(this).data("id");
 
-        // get the image out of the array using the image
-        // number and render it using the modal template
+        // Obtenga la imagen de la matriz utilizando el número de imagen 
+        // y representela utilizando la plantilla modal.
         var html    = modal_template(data.images[imageNumber]);
-        // put the modal template in the DOM
+        // Coloque la plantilla modal en el DOM.
         $('#modal-container').html(html);
 
-        // show the modal
+        // Mostrar el modal.
         $("#imageModal").modal('show');
     }
 
