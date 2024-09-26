@@ -1,8 +1,8 @@
-<!-- This is a first example of using a template -->
+<!-- Este es un primer ejemplo de uso de una plantilla. -->
 
 <head>
 
-<!-- include our libraries and css files -->
+<!-- Incluya nuestras bibliotecas y archivos css. -->
 
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/handlebars-v3.0.3.js"></script>
@@ -23,23 +23,23 @@
         <div class="row">
             <div class="col-md-2">
                 <div id="content_left">
-                    <!-- animal list is rendered here -->
+                    <!-- La lista de animales se muestra aquí. -->
                 </div>
             </div>
             <div class="col-md-10">
                 <div id="content_right">
-                    <!-- animal detail is rendered here -->
+                    <!-- Aquí se representan detalles de animales. -->
                 </div>
             </div>
             </div>
     </div>
 
-    <!-- this is our template put your code in here...-->
+    <!-- Esta es nuestra plantilla, coloque su código aquí: -->
     <script id="category-template" type="text/x-handlebars-template">
         <ul class="nav nav-pills nav-stacked nav-pills-stacked-example">
         {{#each animals}}
-            <!-- note that we set the class to js-animal name. This lets us
-                assign a click event to this li -->
+            <!--    Tenga en cuenta que configuramos la clase con el nombre js-animal. 
+                    Esto nos permite asignar un evento de clic a esta li. -->
             <li><a href="#" class="js-animal-name" data-id="{{name}}">{{name}}</a></li>
         {{/each}}
         </ul>
@@ -49,52 +49,49 @@
         <h2>{{name}}</h2>
     </script>
 
-  <!-- javascript code to fill the template -->
+  <!-- Código JavaScript para rellenar la plantilla. -->
   <script type="text/javascript">
 
-    // grab our template code from the DOM
+    // Obtenga nuestro código de plantilla del DOM.
     var source   = $("#category-template").html();
 
-    // compile the template so we can use it
+    // Compila la plantilla para que podamos utilizarla.
     var template = Handlebars.compile(source);
 
-    // generate HTML from the data
+    // Generar HTML a partir de los datos.
     var html    = template(animals_data);
 
-    // add the HTML to the content div
+    // Añade el HTML al contenido div.
     $('#content_left').html(html);
 
-    // this event listener is triggered when the user clicks on an animal name
+    // Este detector de eventos se activa cuando el usuario hace clic en el nombre de un animal.
     $('.js-animal-name').on('click', function(e){
-        var animal_name = $(e.target).data('id');// pull the data-id attribute, which contains the name
+        var animal_name = $(e.target).data('id');// Extraiga el atributo data-id, que contiene el nombre.
         console.log('rendering detail page for '+animal_name);
-        for (var i=0;i<animals_data.animals.length;i++){// look for the animal in the array of animals
+        for (var i=0;i<animals_data.animals.length;i++){// Busque el animal en el array de animales.
             var an_animal = animals_data.animals[i];
-            if (an_animal.name == animal_name){// found it!
+            if (an_animal.name == animal_name){// ¡Lo encontré!
                 break;
             }
         }
-    // HERE IS WHERE YOU COME IN...
-        // fill in the following gaps:
-        // 1)
-        // load the html content of the animal-detail-template into a variable called sourcs
+    /*  AQUÍ ES DONDE ENTRA USTED...
+        Complete los siguientes espacios en blanco:
+        1) Cargue el contenido HTML de la plantilla de detalles de animales en una variable llamada fuentes */
 
         //var source  = ... ?
 
-        // 2)
-        // compile the contents of that variable using Handlebars and store it into
+        /* 2) compila el contenido de esa variable usando Handlebars y almacénalo en */
 
         //var template = ...?
 
-        // 3)
-        // call the template function, passing it the 'an_animal' variable to render the animal data with
-        // the template and store the results in a variable.
+        /* 3) Llamar a la función de plantilla, pasándole la variable 'an_animal' 
+            para representar los datos del animal con la plantilla y almacenar 
+            los resultados en una variable. */
 
         //var html = ... ?
 
-        // 4)
-        // finally, replace the contents of the div with id #content_right
-        // with the results of your template render
+        /* 4) Finalmente, reemplace el contenido del div con id #content_right 
+            con los resultados de la representación de su plantilla. */
 
         //$('#content_right')...?
 
