@@ -4,19 +4,21 @@ let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let isAlive = true;
 let message = "";
+let messageEl = document.getElementById("message-el");
+console.log(messageEl);
 
-// 2. Crea una función startGame(). Mueve la condición
-// que se encuentra debajo (línea 11-20) dentro del cuerpo de la función.
+// 1. Almacene el párrafo message-el en una variable llamada messageEl
 
 function startGame() {
   if (sum < 21) {
-    message = "Do you want to draw a new card? 🙂";
+    message = "Do you want to draw a new card?";
   } else if (sum === 21) {
-    message = "Wohoo! You've got Blackjack! 🥳";
+    message = "You've got Blackjack!";
     hasBlackJack = true;
   } else {
-    message = "You're out of the game! 😭";
+    message = "You're out of the game!";
     isAlive = false;
   }
-  console.log(message);
+  // 2. Muestra el mensaje en messageEl usando messageEl.textContent
+  messageEl.textContent = message;
 }
