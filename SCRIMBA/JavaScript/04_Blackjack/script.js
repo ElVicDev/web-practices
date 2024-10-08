@@ -6,11 +6,11 @@ let isAlive = true;
 let message = "";
 let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
-// 2. Almacene el párrafo de tarjetas en una variable llamada cardsEl
+// Almacene el párrafo de tarjetas en una variable llamada cardsEl
 let cardsEl = document.getElementById("cards-el");
 
 function startGame() {
-  // 3. Representa los coches en la página usando este formato -> "Tarjetas: 10 4"
+  // Representa las cartas en la página usando este formato -> "Cards: 10 4"
   cardsEl.textContent = "Cards: " + firstCard + " " + secondCard;
   // Representa la suma en la página usando este formato -> "Suma: 14"
   sumEl.textContent = "Sum: " + sum;
@@ -26,7 +26,13 @@ function startGame() {
   messageEl.textContent = message;
 }
 
-// 2. Crea una función newCard() que cierre la sesión "Drawing a new card from the deck!"
+// Crea una función newCard() que cierre la sesión "Drawing a new card from the deck!"
 function newCard() {
   console.log("Drawing a new card from the deck!");
+  // 1. Crea una variable de carta y codifica su valor en un número (2-11)
+  let card = 6;
+  // 2. Agrega la nueva carta a la variable suma
+  sum += card;
+  // 3. Llama a startGame()
+  startGame();
 }
