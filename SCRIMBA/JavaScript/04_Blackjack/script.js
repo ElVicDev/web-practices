@@ -9,7 +9,12 @@ let sumEl = document.getElementById("sum-el");
 // Almacene el párrafo de tarjetas en una variable llamada cardsEl
 let cardsEl = document.getElementById("cards-el");
 
+// Crea una nueva función llamada startGame() que llama a renderGame()
 function startGame() {
+  renderGame();
+}
+
+function renderGame() {
   // Representa las cartas en la página usando este formato -> "Cards: 10 4"
   cardsEl.textContent = "Cards: " + firstCard + " " + secondCard;
   // Representa la suma en la página usando este formato -> "Suma: 14"
@@ -29,10 +34,10 @@ function startGame() {
 // Crea una función newCard() que cierre la sesión "Drawing a new card from the deck!"
 function newCard() {
   console.log("Drawing a new card from the deck!");
-  // 1. Crea una variable de carta y codifica su valor en un número (2-11)
+  // Crea una variable de carta y codifica su valor en un número (2-11)
   let card = 6;
-  // 2. Agrega la nueva carta a la variable suma
+  // Agrega la nueva carta a la variable suma
   sum += card;
-  // 3. Llama a startGame()
+  // Llama a startGame()
   startGame();
 }
