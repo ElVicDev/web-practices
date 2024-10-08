@@ -25,3 +25,8 @@ function startGame() {
   }
   messageEl.textContent = message;
 }
+
+// 2. Crea una función newCard() que cierre la sesión "Drawing a new card from the deck!"
+function newCard() {
+  console.log("Drawing a new card from the deck!");
+}
