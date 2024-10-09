@@ -1,5 +1,6 @@
 let firstCard = 10;
 let secondCard = 4;
+let cards = [firstCard, secondCard]; // array - lista ordenada de artículos.
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let isAlive = true;
@@ -15,9 +16,9 @@ function startGame() {
 }
 
 function renderGame() {
-  // Representa las cartas en la página usando este formato -> "Cards: 10 4"
-  cardsEl.textContent = "Cards: " + firstCard + " " + secondCard;
-  // Representa la suma en la página usando este formato -> "Suma: 14"
+  // Renderizar firstCard y secondCard.
+  cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1];
+  // Renderizar TODAS las cartas que tenemos.
   sumEl.textContent = "Sum: " + sum;
   if (sum < 21) {
     message = "Do you want to draw a new card?";
@@ -39,5 +40,5 @@ function newCard() {
   // Agrega la nueva carta a la variable suma
   sum += card;
   // Llama a startGame()
-  startGame();
+  renderGame();
 }
