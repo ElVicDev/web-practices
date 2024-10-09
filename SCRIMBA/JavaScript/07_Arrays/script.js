@@ -17,3 +17,12 @@ let experience = [
 ];
 
 console.log(experience);
+
+//  Hacer que aparezca lo siguiente en la consola:
+//  Full Stack
+console.log(experience[0]);
+//  SW/App/Cloud/Tech Support Sr. Engineer
+console.log(experience[3]);
+
+//  El número de elementos que tiene la matriz llamada experience:
+console.log(experience.length);
