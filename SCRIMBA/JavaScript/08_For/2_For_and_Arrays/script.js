@@ -16,3 +16,14 @@ let messages = [
 for (let i = 0; i < messages.length; i += 1) {
   console.log(messages[i]);
 }
+
+// *-------------------------------------------------
+// *** Escribe tu primer bucle for basado en matrices
+// *-------------------------------------------------
+let cards = [7, 3, 9];
+
+// Crea un bucle for que registre todas las tarjetas en la matriz
+// Usa cards.length para especificar cuánto tiempo debe ejecutarse el bucle
+for (let i = 0; i < cards.length; i++) {
+  console.log(cards[i]);
+}
