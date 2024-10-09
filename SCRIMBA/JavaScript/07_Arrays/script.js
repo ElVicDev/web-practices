@@ -30,3 +30,23 @@ console.log(experience.length);
 // Debe contener tu nombre (cadena), tu edad (número) y si te gusta la pizza (booleano)
 let info = ["ElVicDev", 8, true];
 console.log(info);
+
+//  *** Agregar y eliminar elementos de matrices
+let cards = [7, 4];
+cards.push(6);
+console.log(cards);
+
+// Envía newMessage a la matriz de mensajes y luego cierra la sesión de la matriz.
+let messages = [
+  "Hey, how's it going?",
+  "I'm great, thank you! How about you?",
+  "All good. Been working on my portfolio lately.",
+];
+console.log(messages);
+let newMessage = "Same here!";
+messages.push(newMessage);
+console.log(messages);
+
+// ¿Cómo se puede eliminar el último elemento de una matriz? ¡Intenta buscarlo en Google!
+messages.pop();
+console.log(messages);
