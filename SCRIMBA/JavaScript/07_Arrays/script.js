@@ -1,4 +1,4 @@
-// Matrices: listas ordenadas de elementos
+// *** Matrices: listas ordenadas de elementos
 
 let featuredPosts = [
   "Check out my Netflix clone",
@@ -15,7 +15,6 @@ let experience = [
   "SW/App/Cloud/Tech Support Sr. Engineer",
   "Business Critical Solution Engineer",
 ];
-
 console.log(experience);
 
 //  Hacer que aparezca lo siguiente en la consola:
@@ -23,6 +22,11 @@ console.log(experience);
 console.log(experience[0]);
 //  SW/App/Cloud/Tech Support Sr. Engineer
 console.log(experience[3]);
-
 //  El número de elementos que tiene la matriz llamada experience:
 console.log(experience.length);
+
+//  *** Matriz: lista ordenada de elementos: tipo de datos complejo/compuesto
+// Crea una matriz que te describa. Usa los tres tipos de datos primitivos que has aprendido
+// Debe contener tu nombre (cadena), tu edad (número) y si te gusta la pizza (booleano)
+let info = ["ElVicDev", 8, true];
+console.log(info);
