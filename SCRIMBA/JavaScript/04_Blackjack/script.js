@@ -1,6 +1,7 @@
 let firstCard = 10;
 let secondCard = 4;
-let cards = [firstCard, secondCard]; // array - lista ordenada de artículos.
+// 1. Crea una nueva matriz - cards - que contenga firstCard y secondCard.
+let cards = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let isAlive = true;
