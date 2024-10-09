@@ -40,6 +40,9 @@ function newCard() {
   let card = 6;
   // Agrega la nueva carta a la variable suma
   sum += card;
+  // Empuja la tarjeta a la matriz de tarjetas
+  cards.push(card);
+  console.log(cards);
   // Llama a startGame()
   renderGame();
 }
