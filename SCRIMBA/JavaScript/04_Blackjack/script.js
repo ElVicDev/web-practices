@@ -7,7 +7,7 @@ let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 // Almacene el párrafo de tarjetas en una variable llamada cardsEl
 let cardsEl = document.getElementById("cards-el");
-console.log(cards);
+
 // Haga que esta función devuelva un número aleatorio entre 1 y 13
 function getRandomCard() {
   // if 1     -> return 11
@@ -58,14 +58,15 @@ function renderGame() {
 
 // Crea una función newCard() que cierre la sesión "Drawing a new card from the deck!"
 function newCard() {
-  console.log("Drawing a new card from the deck!");
-  // Utilice getRandomCard() para establecer el valor de la tarjeta
-  let card = getRandomCard();
-  // Agrega la nueva carta a la variable suma
-  sum += card;
-  // Empuja la tarjeta a la matriz de tarjetas
-  cards.push(card);
-  console.log(cards);
-  // Llama a startGame()
-  renderGame();
+  // Solo se permite que el jugador obtenga una nueva carta si ESTÁ vivo y NO tiene Blackjack
+  if (isAlive === true && hasBlackJack === false) {
+    // Utilice getRandomCard() para establecer el valor de la tarjeta
+    let card = getRandomCard();
+    // Agrega la nueva carta a la variable suma
+    sum += card;
+    // Empuja la tarjeta a la matriz de tarjetas
+    cards.push(card);
+    // Llama a startGame()
+    renderGame();
+  }
 }
