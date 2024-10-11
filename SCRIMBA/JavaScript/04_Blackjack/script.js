@@ -8,6 +8,14 @@ let sumEl = document.getElementById("sum-el");
 // Almacene el párrafo de tarjetas en una variable llamada cardsEl
 let cardsEl = document.getElementById("cards-el");
 
+let player = {
+  name: "Per",
+  chips: 145,
+};
+
+let playerEl = document.getElementById("player-el");
+playerEl.textContent = player.name + ": $" + player.chips;
+
 // Haga que esta función devuelva un número aleatorio entre 1 y 13
 function getRandomCard() {
   // if 1     -> return 11
