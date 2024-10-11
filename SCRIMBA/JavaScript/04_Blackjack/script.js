@@ -1,6 +1,7 @@
-let firstCard = 10;
-let secondCard = 4;
-// 1. Crea una nueva matriz - cards - que contenga firstCard y secondCard.
+// 2. Utilice getRandomCard() para establecer los valores de firstCard y secondCard
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
+// Crea una nueva matriz - cards - que contenga firstCard y secondCard.
 let cards = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
@@ -10,6 +11,11 @@ let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 // Almacene el párrafo de tarjetas en una variable llamada cardsEl
 let cardsEl = document.getElementById("cards-el");
+
+// 1. Crea una función, getRandomCard(), que siempre devuelva el número 5
+function getRandomCard() {
+  return 5;
+}
 
 // Crea una nueva función llamada startGame() que llama a renderGame()
 function startGame() {
@@ -41,8 +47,8 @@ function renderGame() {
 // Crea una función newCard() que cierre la sesión "Drawing a new card from the deck!"
 function newCard() {
   console.log("Drawing a new card from the deck!");
-  // Crea una variable de carta y codifica su valor en un número (2-11)
-  let card = 6;
+  // 3. Utilice getRandomCard() para establecer el valor de la tarjeta
+  let card = getRandomCard();
   // Agrega la nueva carta a la variable suma
   sum += card;
   // Empuja la tarjeta a la matriz de tarjetas
