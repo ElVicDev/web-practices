@@ -1,7 +1,7 @@
 let player1Time = 102;
 let player2Time = 107;
 
-// *   cmd+d - ctrl+d - Selecciona varias lineas para poderlas modificar al mismo tiempo
+// *NOTA: cmd+d - ctrl+d - Selecciona varias lineas para poderlas modificar al mismo tiempo
 
 function getFastestRaceTime() {
   if (player1Time < player2Time) {
