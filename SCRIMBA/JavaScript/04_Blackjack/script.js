@@ -12,9 +12,9 @@ let sumEl = document.getElementById("sum-el");
 // Almacene el párrafo de tarjetas en una variable llamada cardsEl
 let cardsEl = document.getElementById("cards-el");
 
-// Crea una función, getRandomCard(), que siempre devuelva el número 5
+// Haga que esta función devuelva un número aleatorio entre 1 y 13
 function getRandomCard() {
-  return 5;
+  return Math.floor(Math.random() * 13) + 1;
 }
 
 // Crea una nueva función llamada startGame() que llama a renderGame()
