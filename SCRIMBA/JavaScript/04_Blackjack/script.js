@@ -1,17 +1,13 @@
-// Utilice getRandomCard() para establecer los valores de firstCard y secondCard
-let firstCard = getRandomCard();
-let secondCard = getRandomCard();
-// Crea una nueva matriz - cards - que contenga firstCard y secondCard.
-let cards = [firstCard, secondCard];
-let sum = firstCard + secondCard;
+let cards = [];
+let sum = 0;
 let hasBlackJack = false;
-let isAlive = true;
+let isAlive = false;
 let message = "";
 let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 // Almacene el párrafo de tarjetas en una variable llamada cardsEl
 let cardsEl = document.getElementById("cards-el");
-
+console.log(cards);
 // Haga que esta función devuelva un número aleatorio entre 1 y 13
 function getRandomCard() {
   // if 1     -> return 11
@@ -28,6 +24,13 @@ function getRandomCard() {
 
 // Crea una nueva función llamada startGame() que llama a renderGame()
 function startGame() {
+  isAlive = true;
+  // Generar dos números aleatorios
+  let firstCard = getRandomCard();
+  let secondCard = getRandomCard();
+  // Reasignar las cartas y las variables de suma para que el juego pueda comenzar
+  cards = [firstCard, secondCard];
+  sum = firstCard + secondCard;
   renderGame();
 }
 
