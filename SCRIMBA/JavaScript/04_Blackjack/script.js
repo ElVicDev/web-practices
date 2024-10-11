@@ -18,7 +18,12 @@ function startGame() {
 
 function renderGame() {
   // Renderizar firstCard y secondCard.
-  cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1];
+  cardsEl.textContent = "Cards: "; // + cards[0] + " " + cards[1];
+  // Crea un bucle for que represente todas las tarjetas en lugar de solo dos
+  for (let i = 0; i < cards.length; i++) {
+    cardsEl.textContent += cards[i] + " ";
+  }
+
   // Renderizar TODAS las cartas que tenemos.
   sumEl.textContent = "Sum: " + sum;
   if (sum < 21) {
