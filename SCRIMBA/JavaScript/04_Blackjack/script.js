@@ -7,13 +7,14 @@ let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 // Almacene el párrafo de tarjetas en una variable llamada cardsEl
 let cardsEl = document.getElementById("cards-el");
-
+// 2. Crea el objeto jugador. Asígnale dos claves, nombre y fichas, y establece sus valores.
 let player = {
   name: "Per",
   chips: 145,
 };
-
+// 3. Tome el párrafo player-el y almacénelo en una variable llamada playerEl
 let playerEl = document.getElementById("player-el");
+// 4. Representa el nombre y las fichas del jugador en playerEl
 playerEl.textContent = player.name + ": $" + player.chips;
 
 // Haga que esta función devuelva un número aleatorio entre 1 y 13
