@@ -7,7 +7,9 @@ function increment() {
   countEl.textContent = count;
 }
 
+// Crea una función, save(), que registra el recuento cuando se la llama
 function save() {
+  // console.log(count)
   let countStr = count + " - ";
   saveEl.textContenttStr;
   countEl.textContent = 0;
