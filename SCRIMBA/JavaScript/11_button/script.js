@@ -1,5 +1,9 @@
-// Cerrar sesión "¡Botón hecho clic!" cuando el usuario hace clic en el botón "GUARDAR ENTRADA"
-
-function saveLead() {
+/* function saveLead() {
   console.log("Button clicked!");
-}
+} */
+
+let inputBtn = document.getElementById("input-btn");
+
+inputBtn.addEventListener("click", function () {
+  console.log("Button clicked from addEventListener");
+});
