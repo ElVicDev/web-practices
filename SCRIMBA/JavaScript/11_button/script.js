@@ -13,7 +13,8 @@ inputBtn.addEventListener("click", function () {
   console.log(myLeads);
 });
 
-// Cerrar sesión en los elementos de la matriz myLeads usando un bucle for
+// Representar los clientes potenciales en la lista desordenada usando ulEl.textContent
 for (let i = 0; i < myLeads.length; i++) {
-  console.log(myLeads[i]);
+  //console.log(myLeads[i]);
+  ulEl.textContent += myLeads[i] + " ";
 }
