@@ -1,14 +1,17 @@
-// Crea dos variables:
-// myLeads -> debe asignarse a una matriz vacía
-// inputEl -> debe asignarse al campo de entrada de texto
-
-let myLeads = [];
+let myLeads = [
+  "https://www.elvicdev.com",
+  "www.epiclead.com",
+  "www.greatlead.com",
+];
 const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 
-// Inserte el valor "www.awesomelead.com" en myArray cuando se haga clic en el botón de entrada
 inputBtn.addEventListener("click", function () {
-  //console.log("Button clicked from addEventListener");
-  myLeads.push("www.awesomelead.com");
+  myLeads.push(inputEl.value);
   console.log(myLeads);
 });
+
+// Cerrar sesión en los elementos de la matriz myLeads usando un bucle for
+for (let i = 0; i < myLeads.length; i++) {
+  console.log(myLeads[i]);
+}
