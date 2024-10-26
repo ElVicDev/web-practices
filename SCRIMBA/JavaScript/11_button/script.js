@@ -5,7 +5,7 @@ let myLeads = [
 ];
 const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
-// 2. Toma la lista desordenada y almacénala en una variable constante llamada ulEl
+// Toma la lista desordenada y almacénala en una variable constante llamada ulEl
 const ulEl = document.getElementById("ul-el");
 
 inputBtn.addEventListener("click", function () {
@@ -15,6 +15,8 @@ inputBtn.addEventListener("click", function () {
 
 // Representar los clientes potenciales en la lista desordenada usando ulEl.textContent
 for (let i = 0; i < myLeads.length; i++) {
-  //console.log(myLeads[i]);
-  ulEl.textContent += myLeads[i] + " ";
+  // console.log(myLeads[i]);
+  // ulEl.textContent += myLeads[i] + " ";
+  // How to render <li> elements with innerHTML
+  ulEl.innerHTML += "<li>" + myLeads[i] + "</li>";
 }
