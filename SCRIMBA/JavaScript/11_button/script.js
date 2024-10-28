@@ -13,7 +13,7 @@ inputBtn.addEventListener("click", function () {
   console.log(myLeads);
 });
 
-// Representar los clientes potenciales en la lista desordenada usando ulEl.textContent
+/* // Representar los clientes potenciales en la lista desordenada usando ulEl.textContent
 for (let i = 0; i < myLeads.length; i++) {
   // console.log(myLeads[i]);
   // ulEl.textContent += myLeads[i] + " ";
@@ -25,4 +25,14 @@ for (let i = 0; i < myLeads.length; i++) {
   const li = document.createElement("li");
   li.textContent = myLeads[i];
   ulEl.append(li);
+} */
+
+// 1. Cree una variable, listItems, para almacenar todo el HTML de los elementos de la lista
+// Asígnele una cadena vacía para comenzar
+let listItems = "";
+for (let i = 0; i < myLeads.length; i++) {
+  // 2. Agregue el elemento a la variable listItems en lugar de ulEl.innerHTML
+  listItems += "<li>" + myLeads[i] + "</li>";
 }
+// 3. Representa los elementos de la lista dentro de la lista desordenada usando ulEl.innerHTML
+ulEl.innerHTML = listItems;
