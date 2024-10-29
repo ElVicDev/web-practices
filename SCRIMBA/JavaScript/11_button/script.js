@@ -16,12 +16,22 @@ function renderLeads() {
   for (let i = 0; i < myLeads.length; i++) {
     // Envuelva el encabezado en una etiqueta de ancla (<a>) dentro de <li>
     // ¿Puede hacer que el enlace se abra en una nueva pestaña?
-    listItems +=
+    /* listItems +=
       "<li><a href='" +
       myLeads[i] +
       "' + target='_blank' + rel='noopener noreferrer'>" +
       myLeads[i] +
-      "</a></li>";
+      "</a></li>"; */
+    // * ----------------
+    // * Template strings
+    // * ----------------
+    listItems += `
+      <li>
+        <a href='${myLeads[i]}' target='_blank' rel='noopener noreferrer'>
+          ${myLeads[i]}
+        </a>
+      </li>
+    `;
   }
   ulEl.innerHTML = listItems;
 }
