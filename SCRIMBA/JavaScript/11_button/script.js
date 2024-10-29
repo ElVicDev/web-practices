@@ -8,6 +8,7 @@ inputBtn.addEventListener("click", function () {
   myLeads.push(inputEl.value);
   console.log(myLeads);
   // 2. Llamar a la función renderLeads()
+  inputEl.value = "";
   renderLeads();
 });
 
