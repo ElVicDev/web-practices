@@ -1,4 +1,15 @@
-let myLeads = [];
+let myLeads = `["www.awesomelead.com"]`;
+
+// 1. Convierte la cadena myLeads en una matriz
+myLeads = JSON.parse(myLeads);
+// 2. Inserta un nuevo valor en la matriz
+myLeads.push("www.lead2.com");
+console.log(myLeads);
+// 3. Convierte la matriz en una cadena nuevamente
+myLeads = JSON.stringify(myLeads);
+// 4. Registra la cadena en Console.log usando typeof para verificar que sea una cadena
+console.log(typeof myLeads);
+
 const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
