@@ -1,66 +1,30 @@
-let myLeads = `["www.awesomelead.com"]`;
-
-// 1. Convierte la cadena myLeads en una matriz
-myLeads = JSON.parse(myLeads);
-// 2. Inserta un nuevo valor en la matriz
-myLeads.push("www.lead2.com");
-console.log(myLeads);
-// 3. Convierte la matriz en una cadena nuevamente
-myLeads = JSON.stringify(myLeads);
-// 4. Registra la cadena en Console.log usando typeof para verificar que sea una cadena
-console.log(typeof myLeads);
-
+let myLeads = [];
 const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
 
-// * ----------------------
-// * Tu primer localStorage
-// * ----------------------
-// 1. Guarda un par clave-valor en localStorage
-// 2. Actualiza la página. Obtén el valor y regístralo en la consola
-// 3. Limpia localStorage
-
-// SUGERENCIAS:
-// localStorage.setItem(key, value)
-// localStorage.getItem(key)
-// localStorage.clear()
-// PD: tanto la clave como el valor deben ser cadenas
-
-// localStorage.setItem("repository", "https://www.elvicdev.com/");
-// let elvicdev = localStorage.getItem("repository");
-// console.log(elvicdev);
-// localStorage.clear();
-
 inputBtn.addEventListener("click", function () {
   myLeads.push(inputEl.value);
-  console.log(myLeads);
-  // Llamar a la función renderLeads()
   inputEl.value = "";
+  // Guarda la matriz myLeads en localStorage
+  // PD: recuerda JSON.stringify()
+  localStorage.setItem("myLeads", JSON.stringify(myLeads));
   renderLeads();
+
+  // Para verificar que funciona:
+  console.log(localStorage.getItem("myLeads"));
 });
 
 function renderLeads() {
   let listItems = "";
   for (let i = 0; i < myLeads.length; i++) {
-    // Envuelva el encabezado en una etiqueta de ancla (<a>) dentro de <li>
-    // ¿Puede hacer que el enlace se abra en una nueva pestaña?
-    /* listItems +=
-      "<li><a href='" +
-      myLeads[i] +
-      "' + target='_blank' + rel='noopener noreferrer'>" +
-      myLeads[i] +
-      "</a></li>"; */
-    // * ----------------
-    // * Template strings
-    // * ----------------
     listItems += `
-      <li>
-        <a href='${myLeads[i]}' target='_blank' rel='noopener noreferrer'>
-          ${myLeads[i]}
-        </a>
-      </li>
-    `;
+            <li>
+                <a target='_blank' href='${myLeads[i]}'>
+                    ${myLeads[i]}
+                </a>
+            </li>
+        `;
   }
   ulEl.innerHTML = listItems;
 }
