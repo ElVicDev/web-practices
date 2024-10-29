@@ -1,8 +1,4 @@
-let myLeads = [
-  "https://www.elvicdev.com",
-  "www.epiclead.com",
-  "www.greatlead.com",
-];
+let myLeads = [];
 const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 // Toma la lista desordenada y almacénala en una variable constante llamada ulEl
@@ -11,6 +7,8 @@ const ulEl = document.getElementById("ul-el");
 inputBtn.addEventListener("click", function () {
   myLeads.push(inputEl.value);
   console.log(myLeads);
+  // 2. Llamar a la función renderLeads()
+  renderLeads();
 });
 
 /* // Representar los clientes potenciales en la lista desordenada usando ulEl.textContent
@@ -27,7 +25,7 @@ for (let i = 0; i < myLeads.length; i++) {
   ulEl.append(li);
 } */
 
-// 1. Cree una variable, listItems, para almacenar todo el HTML de los elementos de la lista
+/* // 1. Cree una variable, listItems, para almacenar todo el HTML de los elementos de la lista
 // Asígnele una cadena vacía para comenzar
 let listItems = "";
 for (let i = 0; i < myLeads.length; i++) {
@@ -35,4 +33,13 @@ for (let i = 0; i < myLeads.length; i++) {
   listItems += "<li>" + myLeads[i] + "</li>";
 }
 // 3. Representa los elementos de la lista dentro de la lista desordenada usando ulEl.innerHTML
-ulEl.innerHTML = listItems;
+ulEl.innerHTML = listItems; */
+
+// 1. Envuelva el código a continuación en una función renderLeads()
+function renderLeads() {
+  let listItems = "";
+  for (let i = 0; i < myLeads.length; i++) {
+    listItems += "<li>" + myLeads[i] + "</li>";
+  }
+  ulEl.innerHTML = listItems;
+}
