@@ -23,3 +23,16 @@ let currentViewers2 = ["jane"];
 console.log(currentViewers2[5]); // Undefined
 
 // * -----------------------
+
+let trueOfFalse = Boolean("hello");
+console.log(trueOfFalse); // true
+
+let trueOfFalse2 = Boolean("");
+console.log(trueOfFalse2); // false
+
+console.log(Boolean("")); // false
+console.log(Boolean("0")); // true
+console.log(Boolean(100)); // true
+console.log(Boolean(null)); // false
+console.log(Boolean([0])); // true
+console.log(Boolean(-0)); // false
