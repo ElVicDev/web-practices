@@ -14,13 +14,19 @@ input {
 
 button {
     background: #5f9341;
-    color: aliceblue;
+    color: white;
     padding: 10px 20px;
-    border: none;
+    border: 1px solid #5f9341;
     font-weight: bold;
 }
 
-/* DALE ESTILO LA LISTA */
+/* Dar estilo al botón de eliminar */
+#delete-btn {
+    background: white;
+    color: #5f9341;
+}
+
+/* Dar estilo a la lista */
 ul {
     margin-top: 20px;
     list-style: none;
