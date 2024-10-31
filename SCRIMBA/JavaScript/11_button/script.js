@@ -3,11 +3,12 @@ const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
 
-// Obtener los clientes potenciales del almacenamiento local - PS: JSON.parse()
-// Almacenarlos en una variable, leadsFromLocalStorage
-// Cerrar sesión en la variable
-localStorage.clear();
 let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
+
+if (leadsFromLocalStorage) {
+  myLeads = leadsFromLocalStorage;
+  renderLeads();
+}
 
 inputBtn.addEventListener("click", function () {
   myLeads.push(inputEl.value);
