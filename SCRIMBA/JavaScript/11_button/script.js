@@ -13,14 +13,12 @@ if (leadsFromLocalStorage) {
   render(myLeads);
 }
 
-const tabs = [{ url: "https://www.linkedin.com/in/vicente-escobar" }];
-// 2. Escucha los clics en tabBtn. Registra la URL de LinkedIn en la consola
 tabBtn.addEventListener("click", function () {
-  // Guarde la URL en lugar de cerrar la sesión
-  // console.log(tabs[0].url);
-  myLeads.push(tabs[0].url);
-  localStorage.setItem("myLeads", JSON.stringify(myLeads));
-  render(myLeads);
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    myLeads.push(tabs[0].url);
+    localStorage.setItem("myLeads", JSON.stringify(myLeads));
+    render(myLeads);
+  });
 });
 
 function render(leads) {
