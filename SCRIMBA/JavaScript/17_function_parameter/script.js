@@ -10,7 +10,7 @@ greetUser(); */
 // * Escribe tu primer parámetro de función
 // * --------------------------------------
 
-const welcomeEl = document.getElementById("welcome-el");
+// const welcomeEl = document.getElementById("welcome-el");
 
 // EJEMPLO 1 .Sustituyendo el nombre.
 /* function greetUser(name) {
@@ -19,7 +19,29 @@ const welcomeEl = document.getElementById("welcome-el");
 greetUser("ElVicDev"); */
 
 // EJEMPLO 2. Sustituyendo el saludo.
-function greetUser(gretting) {
+/* function greetUser(gretting) {
   welcomeEl.textContent = gretting + ", ElVicDev 👋";
 }
-greetUser("Bye");
+greetUser("Bye"); */
+
+// * ----------------------------------
+// * Funciones con múltiples parámetros
+// * ----------------------------------
+const welcomeEl = document.getElementById("welcome-el");
+
+// ¡Añade la posibilidad de elegir el emoji también!
+function greetUser(greeting, name, emoji) {
+  // Reescribe la expresión usando literales de plantilla
+  // welcomeEl.textContent = greeting + ", " + name + " 👋"
+  welcomeEl.textContent = `${greeting}, ${name} ${emoji}`;
+}
+
+greetUser("Bye", "ElVicDev", "👋");
+
+// * ---------------------------------------------
+// * NOTA:
+// * Para seleccionar emojis en Windows presionar
+// *            WINDOWS + .
+// * Para seleccionar emojis en Mac presionar
+// *            CTRL + CMD + SPACE
+// * ---------------------------------------------
