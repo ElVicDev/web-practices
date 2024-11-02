@@ -5,11 +5,19 @@ const inputBtn = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
 const deleteBtn = document.getElementById("delete-btn");
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
+// 1. Tome el botón SAVE TAB y guárdelo en una variable tabBtn
+const tabBtn = document.getElementById("tab-btn");
 
 if (leadsFromLocalStorage) {
   myLeads = leadsFromLocalStorage;
   render(myLeads);
 }
+
+const tabs = [{ url: "https://www.linkedin.com/in/vicente-escobar" }];
+// 2. Escucha los clics en tabBtn. Registra la URL de LinkedIn en la consola
+tabBtn.addEventListener("click", function () {
+  console.log(tabs[0].url);
+});
 
 function render(leads) {
   let listItems = "";
