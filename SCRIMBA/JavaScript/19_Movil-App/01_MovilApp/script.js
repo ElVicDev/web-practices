@@ -1,37 +1,25 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
-import { getDatabase } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+import {
+  getDatabase,
+  ref,
+  push,
+} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
 
 const firebaseConfig = {
-  databaseURL: process.env.DATABASE_URL,
+  databaseURL: "https://leads-tracker-app-4a42d-default-rtdb.firebaseio.com/",
 };
 
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
-// Eliminar el código asociado al botón de "save tab"
-// Eliminar todo el código de localStorage
-// Eliminar la variable myLeads. Esta pertenecía al almacenamiento local
+// Desafío: crear una constante llamada 'referenceInDB' y usar la
+// función ref para crear una referencia llamada 'leads' en la base de datos
+const referenceInDB = ref(database, "leads");
 
-// let myLeads = [];
 const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
 const deleteBtn = document.getElementById("delete-btn");
-// const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
-// const tabBtn = document.getElementById("tab-btn");
-
-/* if (leadsFromLocalStorage) {
-  myLeads = leadsFromLocalStorage;
-  render(myLeads);
-} */
-
-/* tabBtn.addEventListener("click", function () {
-  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-    myLeads.push(tabs[0].url);
-    localStorage.setItem("myLeads", JSON.stringify(myLeads));
-    render(myLeads);
-  });
-}); */
 
 function render(leads) {
   let listItems = "";
@@ -47,15 +35,12 @@ function render(leads) {
   ulEl.innerHTML = listItems;
 }
 
-deleteBtn.addEventListener("dblclick", function () {
-  // localStorage.clear();
-  // myLeads = [];
-  //render(myLeads);
-});
+deleteBtn.addEventListener("dblclick", function () {});
 
 inputBtn.addEventListener("click", function () {
   console.log(inputEl.value);
+  // Desafío: Importar la función 'push' y modificar la línea anterior
+  // para enviar inputEl.value a referenceInDB en la base de datos
+  push(referenceInDB, inputEl.value);
   inputEl.value = "";
-  // localStorage.setItem("myLeads", JSON.stringify(myLeads));
-  // render(myLeads);
 });
