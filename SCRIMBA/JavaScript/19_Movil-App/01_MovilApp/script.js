@@ -36,18 +36,21 @@ function render(leads) {
   ulEl.innerHTML = listItems;
 }
 
-// Desafío: Cerrar la sesión de una instantánea de su base de datos
-// cuando se le agregue un nuevo valor
 onValue(referenceInDB, function (snapshot) {
-  console.log(snapshot.val());
+  const snapshotValues = snapshot.val();
+  // Desafío: crear una constante llamada 'leads' que es una matriz
+  // que contiene los valores dentro del objeto snapshotValues
+  const leads = Object.values(snapshotValues);
+  console.log(leads);
+  // Desafío: utilizar la función de renderizado con 'leads' para
+  // renderizar los leads en la aplicación
+  render(leads);
 });
 
 deleteBtn.addEventListener("dblclick", function () {});
 
 inputBtn.addEventListener("click", function () {
   console.log(inputEl.value);
-  // Desafío: Importar la función 'push' y modificar la línea anterior
-  // para enviar inputEl.value a referenceInDB en la base de datos
   push(referenceInDB, inputEl.value);
   inputEl.value = "";
 });
