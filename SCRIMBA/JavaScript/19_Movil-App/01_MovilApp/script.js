@@ -4,6 +4,7 @@ import {
   ref,
   push,
   onValue,
+  remove,
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
 
 const firebaseConfig = {
@@ -13,8 +14,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
-// Desafío: crear una constante llamada 'referenceInDB' y usar la
-// función ref para crear una referencia llamada 'leads' en la base de datos
 const referenceInDB = ref(database, "leads");
 
 const inputEl = document.getElementById("input-el");
@@ -37,20 +36,24 @@ function render(leads) {
 }
 
 onValue(referenceInDB, function (snapshot) {
-  const snapshotValues = snapshot.val();
-  // Desafío: crear una constante llamada 'leads' que es una matriz
-  // que contiene los valores dentro del objeto snapshotValues
-  const leads = Object.values(snapshotValues);
-  console.log(leads);
-  // Desafío: utilizar la función de renderizado con 'leads' para
-  // renderizar los leads en la aplicación
-  render(leads);
+  // Desafío: ejecute el código siguiente solo si existe una instantánea
+  const snapshotDoesExist = snapshot.exists();
+  if (snapshotDoesExist) {
+    const snapshotValues = snapshot.val();
+    const leads = Object.values(snapshotValues);
+    render(leads);
+  }
 });
 
-deleteBtn.addEventListener("dblclick", function () {});
+deleteBtn.addEventListener("dblclick", function () {
+  // Desafío: Importar la función 'eliminar' y llamarla aquí
+  // para eliminar los clientes potenciales
+  remove(referenceInDB);
+  // Desafío: Limpiar todas las pistas de ulEl
+  ulEl.innerHTML = "";
+});
 
 inputBtn.addEventListener("click", function () {
-  console.log(inputEl.value);
   push(referenceInDB, inputEl.value);
   inputEl.value = "";
 });
