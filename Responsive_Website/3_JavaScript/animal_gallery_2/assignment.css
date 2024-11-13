@@ -1,0 +1,121 @@
+/* put your css code here */
+
+.jumbotron {
+	background-color: #e17055;
+	color: #262626;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+.container-fluid {
+	padding: 0px;
+}
+
+.title {
+	padding-left: 20px;
+}
+
+body {
+	background-color: white;
+	color: #262626;
+}
+
+#list {
+	padding-left: 30px;
+	box-shadow: none;
+	background-color: #fab1a0;
+	border-radius: none;
+	border: none;
+}
+
+#home>a {
+	color: #2d3436;
+}
+
+
+#albums>a {
+	color: #2d3436;
+}
+
+#photos>a {
+	color: #2d3436;
+}
+
+
+#list>li>a:hover,
+#list>li>a:focus {
+	background: #ff7675;
+	color: #262626;
+	border: none;
+	border-radius: 0px;
+}
+
+#list>li.active>a,
+#list>li.active>a:hover,
+#list>li.active>a:focus {
+	background: #ff7675;
+	color: #262626;
+	border: none;
+	border-radius: 0px;
+}
+
+#list>.open>a,
+#list>.open>a:hover,
+#list>.open>a:focus {
+	background: #ff7675;
+	color: #262626;
+	border: none;
+}
+
+#list .open .dropdown-menu {
+	background: #ff7675;
+	color: #d9d9d9;
+}
+
+#list .open .dropdown-menu>li>a {
+	background: #fdcb6e;
+	color: #2d3436;
+	border: none;
+}
+
+#list .open .dropdown-menu>li>a:hover,
+#list .open .dropdown-menu>li>a:active {
+	background: #ffeaa7;
+	color: #262626;
+	border: none;
+}
+
+.crop-image {
+	max-height: 150px;
+	max-width: auto;
+	padding: 7.5px;
+	margin: 0px auto;
+}
+
+.album-thumbnail {
+	z-index: 1000;
+}
+
+.border {
+	border: 2px solid #636e72;
+	transition: linear 0.1s;
+}
+
+.border:hover {
+
+	border: 1px solid #fdcb6e;
+	box-shadow: 0px 0px 5px 5px #ffeaa7;
+}
+
+.large-image {
+	width: 500px;
+	height: 500px;
+}
+
+#toggle {
+	position: relative;
+}
+
+h4 {
+	margin-bottom: 0px;
+}
