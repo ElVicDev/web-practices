@@ -1,3 +1,26 @@
+body {
+  background-color: #f3faf3;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: large;
+  margin: 50px;
+}
+
+a {
+  color: #31511E;
+  cursor: pointer;
+  font-size: larger;
+  font-weight: bold;
+}
+
+h2 {
+  color: #1A1A19;
+  font-weight: bold;
+}
+
+#content_left {
+  background-color: #BFF6C3;
+}
+
 .crop-img {
   max-height: 150px;
   max-width: 100%;
@@ -12,21 +35,30 @@
   padding: 10px;
   max-height: 300px;
   max-width: 100%;
+}
+
+.images {
+  width: auto;
+  height: 200px;
+  margin: 0 30px 30px 0;
 
 }
 
-/* 
-  * Quite el comentario de esto para agregar sombras proyectadas 
-  * y esquinas redondeadas en CSS3..
- */
-
-/*
-.thumbnail,.nav, .large-img, .crop-img{
-  border-radius: 25px;
-  padding-top:5px;
+p {
+  text-align: justify;
+  max-width: auto;
 }
 
-.thumbnail,.nav {
-  box-shadow: 10px 10px 5px #888888;
+.thumbnail,
+.nav,
+.large-img,
+.crop-img,
+.images {
+  border-radius: 18px;
+  padding-top: 5px;
 }
-*/
+
+.thumbnail,
+.nav {
+  box-shadow: 7px 7px 5px #888888;
+}

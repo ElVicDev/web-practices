@@ -22,7 +22,7 @@ var animals_data = {
     },
     {
       image1:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Bartagame_fcm.jpg/500px-Bartagame_fcm.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Bartagame_%28fcm%29.jpg/640px-Bartagame_%28fcm%29.jpg",
       image2:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Lizard_in_Yemen.JPG/440px-Lizard_in_Yemen.JPG",
       name: "Lizard",

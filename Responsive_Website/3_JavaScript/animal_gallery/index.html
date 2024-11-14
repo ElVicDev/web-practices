@@ -1,5 +1,6 @@
+<!DOCTYPE html>
 <!-- Este es un primer ejemplo de uso de una plantilla. -->
-
+<html lang="en">
 <head>
 
 <!-- Incluya nuestras bibliotecas y archivos css. -->
@@ -18,21 +19,22 @@
 </head>
 
 <body>
-
+    <h1>Animal Gallery</h1>
     <div id="container">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-xs-12 col-md-4 col-lg-3">
                 <div id="content_left">
                     <!-- La lista de animales se muestra aquí. -->
                 </div>
             </div>
-            <div class="col-md-10">
+            <div class="col-xs-12 col-md-8 col-md-9">
                 <div id="content_right">
                     <!-- Aquí se representan detalles de animales. -->
                 </div>
             </div>
             </div>
     </div>
+    <br>
 
     <!-- Esta es nuestra plantilla, coloque su código aquí: -->
     <script id="category-template" type="text/x-handlebars-template">
@@ -47,6 +49,9 @@
 
     <script id="animal-detail-template" type="text/x-handlebars-template">
         <h2>{{name}}</h2>
+        <img class="images" src="{{image1}}">
+		<img class="images" src="{{image2}}">
+        <p>{{description}}</p>
     </script>
 
   <!-- Código JavaScript para rellenar la plantilla. -->
@@ -79,23 +84,28 @@
         1) Cargue el contenido HTML de la plantilla de detalles de animales en una variable llamada fuentes */
 
         //var source  = ... ?
+        var source  = $("#animal-detail-template").html();
 
         /* 2) compila el contenido de esa variable usando Handlebars y almacénalo en */
 
         //var template = ...?
+        var template = Handlebars.compile(source);
 
         /* 3) Llamar a la función de plantilla, pasándole la variable 'an_animal' 
             para representar los datos del animal con la plantilla y almacenar 
             los resultados en una variable. */
 
         //var html = ... ?
+        var html = template(an_animal);
 
         /* 4) Finalmente, reemplace el contenido del div con id #content_right 
             con los resultados de la representación de su plantilla. */
 
         //$('#content_right')...?
+        $('#content_right').html(html);
 
     });
   </script>
 
 </body>
+</html>
