@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capturar Datos</title>
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    div {
+        width: 600px;
+        margin: 2em auto;
+        padding: 1em;
+        text-align: justify;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    #instructions{
+        width: 800px;
+        background-color: #fafae3;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.5);
+        text-align: center;
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    </style>    
+</head>
+<body>
+    <div>
+        <h1>Example Domain</h1>
+        <p class="txt">This domain is for use in illustrative examples in documents. You may use this
+        domain in literature without prior coordination or asking for permission.</p>
+        <a href="https://exampledomain.github.io/capture-data/index.html">Example Domain...</a>
+    </div>
+    <div id="instructions">
+        <h3>Realizar las siguientes prácticas utilizando las herramientas para el desarrollador </h3>
+        <p><b>var h1 = document.querySelector('h1')</b></p>
+        <p><b>var arr = ['Example Domain', 'First Click', 'Second Click', 'Third Click']</b></p>
+        <p><b>function handleClicks() {
+            switch(h1.innerText) {
+                case arr[0]:
+                    h1.innerText = arr[1];
+                    break;
+                case arr[1]:
+                    h1.innerText = arr[2];
+                    break;
+                case arr[2]:
+                    h1.innerText = arr[3];
+                    break;
+                default:
+                    h1.innerText = arr[0];}}</b></p>
+        <p><b>h1.addEventListener('click', handleClicks);</b></p>
+        <p>Al pulsar sobre el h1 (Example Domain) veremos como el receptor de eventos cambia el título original.</p>
+    </div>
+</body>
+</html>
