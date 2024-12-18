@@ -23,10 +23,20 @@ const animal = {
 const bird = Object.create(animal);
 bird.canFly = true;
 bird.hasFeathers = true;
+console.log(bird);
 
 function birdCan() {
-  for (var skills of bird) {
-    console.log(skills);
+  for (var skills of Object.keys(bird)) {
+    console.log(Object.entries(skills));
   }
 }
-birdCan();
+//birdCan();
+
+// * ---------------------------------------------
+
+/* function animalCan() {
+  for (var skills of bird) {
+    console.log(Object.entries(skills));
+  }
+}
+animalCan(); */
