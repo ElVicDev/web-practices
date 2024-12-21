@@ -1,5 +1,18 @@
 {
   "dependencies": {
     "cors": "^2.8.5"
-  }
+  },
+  "name": "web-practices",
+  "description": "Web practices using HTML, CSS, JavaScript and Bootstrap",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
