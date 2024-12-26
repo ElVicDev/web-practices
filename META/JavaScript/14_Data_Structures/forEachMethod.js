@@ -19,6 +19,5 @@ veggies.forEach(function (veggie, index) {
   console.log(`${index}. ${veggie}`);
 });
 
-/*  Esto hace que el código sea más compacto, pero quizás
-    algo más difícil de leer. Para aumentar la legibilidad,
+/*  Para aumentar la legibilidad,
     a veces se utilizan funciones de flecha. */
