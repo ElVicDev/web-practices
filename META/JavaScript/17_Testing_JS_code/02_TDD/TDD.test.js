@@ -13,8 +13,3 @@ test("test console log inside statusOfKeys", function () {
   spyConsoleLog.mockReset();
   spyConsoleLog.mockRestore();
 });
-
-function statusOfKeys(keys) {
-  // will console log the keys
-  console.log(keys);
-}
