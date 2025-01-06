@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic JavaScript</title>
+    <title>JavaScript Objects</title>
 </head>
 <body>
-    <p>One Paragraph</p>
+    <p>JavaScript Objects</p>
+    <p>js-05.html</p>
     <script type="text/javascript">
-        console.log("First log");
-        alert("YO");
+        balls = {"golf": "Golf balls",
+            "tennis": "Tennis balls", 
+            "ping": "Ping Pong balls"};
+        balls.soccer = "Soccer balls"; 
+        balls.kick = function () {
+        console.log('Boom!');
+        }
+        console.dir(balls);
+        balls.kick();
     </script>
-    <p>Two Paragraph</p>
-    <script type="text/javascript">
-        console.log("Second log");
-    </script>
-    <p>Three Paragraph</p>
 </body>
 </html>
