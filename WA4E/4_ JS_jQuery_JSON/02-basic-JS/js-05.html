@@ -3,21 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic JavaScript - Errors</title>
+    <title>JavaScript - Objects</title>
 </head>
 <body>
-    <p>One Paragraph</p>
+    <p>js-05.htm</p>
     <script type="text/javascript">
-        /*  Aquí esta el error de no cerrar con comilla doble.
-            Si quito el comentario de la primera alerta puedo verlo
-            en las herramientas del desarrollador del navegador */
-        // alert("I am broken');
-        alert("I am good");
+        balls = {"golf": "Golf balls",
+            "tennis": "Tennis balls", 
+            "ping": "Ping Pong balls"};
+        balls.soccer = "Soccer balls"; 
+        balls['lacross'] = "Lacross balls";
+        console.dir(balls);
     </script>
-    <p>Two Paragraph</p>
-    <script type="text/javascript">
-        alert("Second time");
-    </script>
-    <p>Three Paragraph</p>
 </body>
 </html>
