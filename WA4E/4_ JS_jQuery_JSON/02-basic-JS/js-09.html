@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Objects</title>
+</head>
+<body>
+   <p>JavaScript Objects</p>
+   <p>js-09.htm</p>
+   <script type="text/javascript">
+      balls = {"golf": "Golf balls",
+         "tennis": "Tennis balls", 
+         "ping": "Ping Pong balls"};
+
+      balls.kick = function () {
+         console.log('Boom!');
+      }
+
+      for (ball in balls) {
+         val = balls[ball];
+         if ( typeof val != "string" ) continue;
+         console.log(ball+' = '+balls[ball]);
+      }
+   </script>
+</body>
+</html>
