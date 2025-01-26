@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Vicente Escobar PHP</title>
+    <title>Functions</title>
 </head>
 <body>
     <h1>Prácticas de Functions</h1>

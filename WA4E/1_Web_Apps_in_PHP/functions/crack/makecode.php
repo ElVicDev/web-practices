@@ -17,7 +17,7 @@ if ( isset($_GET['code']) ) {
 }
 ?>
 <!DOCTYPE html>
-<head><title>Vicente Escobar PIN Code</title></head>
+<head><title>PIN Code</title></head>
 <body>
 <h1>MD5 PIN Maker</h1>
 <?php
