@@ -14,19 +14,97 @@ Esta es una tarea relativamente simple. No quites puntos por pequeños errores. 
 
 ## Capturas de pantalla de muestra
  
- ![alt text](image.jpg)
+ ![image](image.jpg)
 
-![alt text](image-1.jpg)
+![image-1](image-1.jpg)
  
-![alt text](image-2.jpg)
+![image-2](image-2.jpg)
 
 ## Desafíos opcionales
 Esta sección es completamente opcional y está aquí en caso de que desee explorar un poco más a fondo y ampliar sus habilidades de código. No hay nada que entregar para este desafío.
 Cree una consulta usando GROUP BY para mostrar la cantidad de pistas que tiene un artista en cada género. No es necesario que entregue una captura de pantalla de esta consulta.
  
-![alt text](image-3.jpg)
+![image-3](image-3.jpg)
 
 ## Nota sobre los recursos:
 La sección 'Recursos' contiene enlaces a los capítulos del libro y el folleto del código SQL utilizado en la lección. Para esta semana, la sección 'Recursos' se puede encontrar en:
 https://www.coursera.org/learn/intro-sql/resources/EUDlf
 
+
+ # SOLUCIÓN
+
+ ![image-4](image-4.jpg)
+
+## CONSULTAS
+~~~
+SELECT * FROM `Track`
+~~~
+
+![image-5](image-5.jpg)
+ 
+~~~
+Select track.title, artist.name, album.title, genre.name
+   from track join genre join album join artist on
+   track.genre_id = genre.genre_id and 
+   track.album_id = album.album_id and
+   album.artist_id = artist.artist_id
+ORDER BY album.title, artist.name, genre.name DESC, track.title
+~~~
+
+![image-6](image-6.jpg)
+
+~~~
+SELECT DISTINCT artist.name, genre.name FROM track
+   JOIN album JOIN genre JOIN artist ON
+   track.album_id = album.album_id and
+   track.genre_id = genre.genre_id and
+   album.artist_id = artist.artist_id WHERE
+artist.name = 'Bon Jovi'
+~~~
+
+![image-7](image-7.jpg)
+
+~~~
+SELECT artist.name, genre.name, COUNT(track.track_id) FROM track
+   JOIN album JOIN genre JOIN artist ON
+   track.album_id = album.album_id and
+   track.genre_id = genre.genre_id and
+   album.artist_id = artist.artist_id
+GROUP BY artist.name, genre.name
+~~~
+
+![image-8](image-8.jpg)
+
+
+## OTRAS CONSULTAS
+
+~~~
+SELECT Album.title, Artist.name FROM Album JOIN Artist ON
+ Album.artist_id = Artist.artist_id
+~~~
+
+![image-9](image-9.jpg)
+
+~~~
+SELECT Album.title, Album.artist_id, Artist.artist_id,Artist.name 
+FROM Album JOIN Artist ON Album.artist_id = Artist.artist_id
+~~~
+
+![image-10](image-10.jpg)
+
+~~~
+SELECT Track.title, 
+    Track.genre_id, 
+    Genre.genre_id, 
+    Genre.name 
+FROM Track JOIN Genre
+~~~
+
+![image-11](image-11.jpg)
+
+~~~
+SELECT Track.title, Genre.name FROM Track JOIN Genre 
+ON Track.genre_id = Genre.genre_id
+~~~
+
+![image-12](image-12.jpg)
