@@ -14,17 +14,17 @@ Esta es una tarea relativamente simple. No quites puntos por pequeños errores. 
 
 ## Capturas de pantalla de muestra
  
- ![image](image.jpg)
+ ![image-0](image-0.jpg)
 
-![image-1](image-1.jpg)
+![image-01](image-01.jpg)
  
-![image-2](image-2.jpg)
+![image-02](image-02.jpg)
 
 ## Desafíos opcionales
 Esta sección es completamente opcional y está aquí en caso de que desee explorar un poco más a fondo y ampliar sus habilidades de código. No hay nada que entregar para este desafío.
 Cree una consulta usando GROUP BY para mostrar la cantidad de pistas que tiene un artista en cada género. No es necesario que entregue una captura de pantalla de esta consulta.
  
-![image-3](image-3.jpg)
+![image-03](image-03.jpg)
 
 ## Nota sobre los recursos:
 La sección 'Recursos' contiene enlaces a los capítulos del libro y el folleto del código SQL utilizado en la lección. Para esta semana, la sección 'Recursos' se puede encontrar en:
@@ -33,14 +33,14 @@ https://www.coursera.org/learn/intro-sql/resources/EUDlf
 
  # SOLUCIÓN
 
- ![image-4](image-4.jpg)
+ ![image-04](image-04.jpg)
 
 ## CONSULTAS
 ~~~
 SELECT * FROM `Track`
 ~~~
 
-![image-5](image-5.jpg)
+![image-05](image-05.jpg)
  
 ~~~
 Select track.title, artist.name, album.title, genre.name
@@ -51,7 +51,7 @@ Select track.title, artist.name, album.title, genre.name
 ORDER BY album.title, artist.name, genre.name DESC, track.title
 ~~~
 
-![image-6](image-6.jpg)
+![image-06](image-06.jpg)
 
 ~~~
 SELECT DISTINCT artist.name, genre.name FROM track
@@ -62,7 +62,7 @@ SELECT DISTINCT artist.name, genre.name FROM track
 artist.name = 'Bon Jovi'
 ~~~
 
-![image-7](image-7.jpg)
+![image-07](image-07.jpg)
 
 ~~~
 SELECT artist.name, genre.name, COUNT(track.track_id) FROM track
@@ -73,7 +73,7 @@ SELECT artist.name, genre.name, COUNT(track.track_id) FROM track
 GROUP BY artist.name, genre.name
 ~~~
 
-![image-8](image-8.jpg)
+![image-08](image-08.jpg)
 
 
 ## OTRAS CONSULTAS
@@ -83,7 +83,7 @@ SELECT Album.title, Artist.name FROM Album JOIN Artist ON
  Album.artist_id = Artist.artist_id
 ~~~
 
-![image-9](image-9.jpg)
+![image-09](image-09.jpg)
 
 ~~~
 SELECT Album.title, Album.artist_id, Artist.artist_id,Artist.name 
