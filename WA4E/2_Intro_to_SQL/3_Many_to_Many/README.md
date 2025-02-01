@@ -80,6 +80,8 @@ Es un formato algo extraño: es un bit de JSON para cada tabla. No necesita edit
 
 ## DIAGRAMA
 
+![diagrama](diagrama.jpg)
+
 ### Insertamos los usuarios
 ~~~
 INSERT INTO User (name) VALUES ('Santiago');
