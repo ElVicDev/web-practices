@@ -124,3 +124,6 @@ INSERT INTO Member (user_id, course_id, role) VALUES (13, 3, 0);
 INSERT INTO Member (user_id, course_id, role) VALUES (14, 3, 0);
 INSERT INTO Member (user_id, course_id, role) VALUES (15, 3, 0);
 ~~~
+
+### roster.json
+![roster.json](image-4.jpg)
