@@ -1,2 +1,2 @@
 # web-practices
-Web practices using HTML, CSS, JavaScript and Bootstrap
+Web practices using HTML, CSS, JavaScript, jQuery, Bootstrap, SQL, PHP and React.
