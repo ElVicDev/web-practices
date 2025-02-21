@@ -20,8 +20,8 @@ div:focus {
 
 .animate {
 	background: #92B901;
-	-webkit-transition: -webkit-transform 1s, opacity 1s, background 1s, width 1s, height 1s, font-size 1s;
-	-webkit-border-radius: 5px;
+	transition: -webkit-transform 1s, opacity 1s, background 1s, width 1s, height 1s, font-size 1s;
+	border-radius: 15px;
 	-o-transition-property: width, height, -o-transform, background, font-size, opacity;
 	-o-transition-duration: 1s, 1s, 1s, 1s, 1s, 1s;
 	-moz-transition-property: width, height, -o-transform, background, font-size, opacity;
