@@ -1,0 +1,33 @@
+/*Asegúrese de desplazarse hacia abajo!*/
+div {
+	position: relative;
+	border: 5px solid black;
+	height: 300px;
+	width: 400px;
+}
+
+p {
+	border: 1px solid red;
+	width: 50%;
+	position: static;
+	top: 100px;
+	left: 100px;
+	/*El código siguiente elimina el estilo predeterminado del navegador.*/
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+}
+
+/*TEST ME!!
+	1) 	Abra esta página y mírela.
+		Todos los párrafos están en su ubicación predeterminada.
+		Los valores superiores e izquierdos se ignoran.
+	2) 	Con Inspeccionar elemento, elimine el comentario de la 
+		siguiente línea para que la posición sea relativa.
+		Todos los párrafos se han movido de su posición ORIGINAL.
+	3) 	Cambia la posición a absoluta. Ahora están ubicados 100 a 
+		la derecha, 100 hacia abajo desde su PADRE.
+	4) 	Cambia la posición a fija. 
+		Ahora están colocados 100 hacia abajo y 100 hacia la 
+		derecha desde el NAVEGADOR.*/
