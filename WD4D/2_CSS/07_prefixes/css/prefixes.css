@@ -1,5 +1,5 @@
-section{
-	width:100%;
+section {
+	width: 95%;
 	-webkit-column-count: 3;
 	-moz-column-count: 3;
 	-o-column-count: 3;
@@ -8,18 +8,28 @@ section{
 	-webkit-column-gap: 15px;
 	-moz-column-gap: 15px;
 	-o-column-gap: 15px;
-	column-gap: 15px;
+	column-gap: 45px;
 
 	-webkit-border-radius: 3;
 	-moz-border-radius: 3;
 	-o-border-radius: 3;
 	border-radius: 25px;
 
-	background: #00b7ea; /* Old browsers */
+	background: #00b7ea;
+	/* Old browsers */
 	background: -moz-linear-gradient(top, #00b7ea 0%, #D2E4E8 100%);
 	background: -webkit-linear-gradient(#00b7ea 0%, #D2E4E8 100%);
 	background: -o-linear-gradient(#00b7ea 0%, #D2E4E8 100%);
-	background: linear-gradient(#00b7ea 0%, #D2E4E8 100%); 
-  
-  /*padding:25px;*/
+	background: linear-gradient(#00b7ea 0%, #D2E4E8 100%);
+
+	padding: 25px;
+
+	outline: thick double #32a1ce;
+
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2em;
+	padding: 1em 3em;
 }
