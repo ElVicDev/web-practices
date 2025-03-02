@@ -1,7 +1,7 @@
 /*http://css-snippets.com/drop-down-navigation */
 body {
   margin: 0;
-  padding: 0;
+  padding: 50px 100px;
   background: #ccc;
 }
 
@@ -35,8 +35,8 @@ nav a {
   text-decoration: none;
   color: #fff;
   display: block;
-  padding-left: 15px;
-  transition: .5s background-color;
+  padding-left: 15px 15px;
+  transition: .5s;
 }
 
 nav a:hover {
