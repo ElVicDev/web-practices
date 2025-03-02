@@ -18,19 +18,22 @@ nav a {
 	display: inline-block;
 	height: 60px;
 	color: #FFFFFF;
-	background-color: #486B02;
+	background-color: #89AC46;
 	text-decoration: none;
 	margin: 1% 5% 1% 0;
-	padding: 1% 5%;
+	padding: 20px;
 	border-radius: 25px;
 }
 
 .current {
-	background-color: #800000;
+	background-color: #D3E671;
+	border: 1px solid #F8ED8C;
+	padding: 20px;
+	color: #09122C;
 }
 
-nav a:hover {
-	color: #000000;
-	border-radius: 0;
-
+nav a:hover:not(.current) {
+	background-color: #F8ED8C;
+	border: 1px solid #D3E671;
+	color: #09122C;
 }
