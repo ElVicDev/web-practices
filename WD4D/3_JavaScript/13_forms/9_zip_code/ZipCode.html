@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Zip Code with Patterns</title>
+	<link rel="stylesheet" href="css/ZipCode.css">
+	<!--<script src = "js/gallery.js"></script>-->
+</head>
+<body>
+	<form>
+		<!--Con este método de patterns nos aseguramos que el usuario coloque 5 dígitos en el rango del 0 al 9-->
+		zip code with pattern: <input type="text" name="zip_codeP" pattern="[0-9]{5}" required><br/>
+		<!--A diferencia dl método anterior, en este método no podemos asegurar que el usuario cumpla con la norma de colocar 5 dígitos-->
+		zip code with numbers: <input type="number" name="zip_codeN" min ="00000" max = "99999" required><br/>
+		<input type="submit">
+	</form>
+</body>
+</html>
