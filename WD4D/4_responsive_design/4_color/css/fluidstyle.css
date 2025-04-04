@@ -1,0 +1,55 @@
+main {
+	width: 95%;
+	margin: 0 auto;
+}
+
+html,
+body {
+	background-color: #ffffff;
+}
+
+body {
+	margin: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	color: #404040;
+}
+
+h1 {
+	font-size: 300%;
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+@media screen and (min-width:500px) {
+	body {
+		background-color: orangered;
+	}
+}
+
+@media screen and (min-width:800px) {
+	body {
+		background-color: steelblue;
+	}
+}
+
+@media screen and (min-width:1100px) {
+	body {
+		background-color: greenyellow;
+	}
+}
+
+@media screen and (min-width:1200px) {
+	.column {
+		width: 30%;
+		display: inline-block;
+		margin-left: 2%;
+	}
+}
