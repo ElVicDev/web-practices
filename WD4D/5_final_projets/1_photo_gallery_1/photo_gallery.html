@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Mascotas</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <style>
+      body {
+        background-color: #FAFAFA;
+      }
+        img {      
+          width: 100%;
+        }
+
+        #container{
+          min-height: 100vh;
+          margin-bottom: -115px;
+        }
+
+        #container:after{
+          content:  "";
+          display:  block;
+          height: 75px;
+        }
+
+        footer {
+          background-color: #000000;
+          color: #B5B2B2;
+          height: 75px;
+          text-align: center;
+          line-height: 75px;
+        }
+    </style>
+
+  </head>
+<body>
+  <div class="container">
+  <h2>Carousel Example</h2>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+
+        <div class="item active">
+          <img src="img/perros.jpg" alt="Perros">
+          <div class="carousel-caption">
+            <h3>Los Perros</h3>
+            <p>Siempre fieles, te cuidan y son muy divertidos!</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="img/gatos.jpg" alt="Gatos">
+          <div class="carousel-caption">
+            <h3>Los gatos</h3>
+            <p>Tranquilos y cariñosos!</p>
+          </div>
+        </div>
+      
+        <div class="item">
+          <img src="img/conejos.jpg" alt="Conejos">
+          <div class="carousel-caption">
+            <h3>Los Conejos</h3>
+            <p>Tiernos, silenciosos y adorables!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+      <!-- Menu -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> 
+        </button>
+        <a class="navbar-brand" href="#">MASCOTAS</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Galería</a></li>
+          <li><a href="#Perros">Perros</a></li>
+          <li><a href="#Gatos">Gatos</a></li> 
+          <li><a href="#Conejos">Conejos</a></li> 
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br>
+      <!-- Container pics dogs -->
+  <div class = "container">
+    <h2>Perros</h2>
+    <div class = "row">
+      <img src = "https://breed-assets.wisdompanel.com/dog/alaskan-malamute/Alaskan_Malamute2.png" alt="Alaskan_Malamute"
+      class="col-sm-6 col-md-4 col-lg-2 img-thumbnail" title="Alaskan malamute o malamute de Alaska">
+      <img src = "https://t2.ea.ltmcdn.com/es/razas/6/0/0/bichon-frise_6_0_300_square.webp" alt="Bichon_Frise"
+      class="col-sm-6 col-md-4 col-lg-2 img-thumbnail" title="Bichón frisé">
+      <img src = "https://t1.ea.ltmcdn.com/es/razas/7/5/0/chow-chow_57_0_300_square.webp" alt="Chow_Chow"
+      class="col-sm-6 col-md-4 col-lg-2 img-thumbnail" title="  Chow chow">
+      <img src = "https://t2.ea.ltmcdn.com/es/razas/7/7/1/boerboel_177_0_300_square.webp" alt="Boerboel"
+      class="col-sm-6 col-md-4 col-lg-2 img-thumbnail" title="Boerboel">
+      <img src = "https://t1.ea.ltmcdn.com/es/razas/2/1/1/rottweiler_112_0_300_square.webp" alt="Rotweiler"
+      class="col-sm-6 col-md-4 col-lg-2 img-thumbnail" title="Rottweiler">
+      <img src = "https://t1.ea.ltmcdn.com/es/razas/0/7/0/pit-bull-terrier-americano_70_0_300_square.webp" alt="Pit_bull_terrier_americano"
+      class="col-sm-6 col-md-4 col-lg-2 img-thumbnail" title="Pit bull terrier americano">
+    </div>
+  </div>
+  <br>
+      <!-- Container pics cats -->
+  <div class = "container">
+    <h2>Gatos</h2>
+    <div class = "row">
+      <img src = "https://t2.ea.ltmcdn.com/es/razas/1/8/1/gato-persa_181_0_300_square.webp"
+      class="col-sm-6 col-md-4 col-lg-2 img-thumbnail" title="Gato persa">
+      <img src = "https://t2.ea.ltmcdn.com/es/razas/8/9/1/himalayo_198_0_300_square.webp"
+      class="col-sm-6 col-md-4 col-lg-2 img-thumbnail" title="Himalayo">
+      <img src = "https://t2.ea.ltmcdn.com/es/razas/3/5/8/gato-thai-o-siames-tradicional_853_0_300_square.webp"
+      class="col-sm-6 col-md-4 col-lg-2 img-thumbnail" title="Gato thai o siamés tradicional">
+      <img src = "https://t1.ea.ltmcdn.com/es/razas/3/8/1/gato-angora-turco_183_0_300_square.webp"
+      class="col-sm-6 col-md-4 col-lg-2 img-thumbnail" title="Gato angora turco">
+      <img src = "https://t2.ea.ltmcdn.com/es/razas/3/0/2/gato-sphynx-o-esfinge_203_0_300_square.webp"
+      class="col-sm-6 col-md-4 col-lg-2 img-thumbnail" title="Gato sphynx o esfinge">
+      <img src = "https://t2.ea.ltmcdn.com/es/razas/6/3/6/gato-selkirk-rex_636_0_300_square.webp"
+      class="col-sm-6 col-md-4 col-lg-2 img-thumbnail" title="Gato selkirk rex">
+    </div>
+  </div>
+  <br>
+      <!-- Container pics rabbits -->
+  <div class = "container">
+    <h2>Conejos</h2>
+    <div class = "row">
+      <img src = "https://t1.ea.ltmcdn.com/es/razas/8/3/7/conejo-gigante-continental_738_0_300_square.webp"
+      class="col-sm-6 col-md-4 col-lg-2 img-thumbnail" title="Conejo gigante continental">
+      <img src = "https://t1.ea.ltmcdn.com/es/razas/6/1/8/conejo-mini-lion-lop_816_0_300_square.webp"
+      class="col-sm-6 col-md-4 col-lg-2 img-thumbnail" title="Conejo mini lion lop">
+      <img src = "https://t1.ea.ltmcdn.com/es/razas/6/8/6/conejo-blanco-de-florida_686_0_300_square.webp"
+      class="col-sm-6 col-md-4 col-lg-2 img-thumbnail" title="Conejo blanco de florida">
+      <img src = "https://t2.ea.ltmcdn.com/es/razas/4/8/6/conejo-californiano_684_0_300_square.webp"
+      class="col-sm-6 col-md-4 col-lg-2 img-thumbnail" title="Conejo californiano">
+      <img src = "https://t2.ea.ltmcdn.com/es/razas/0/8/6/conejo-angora_680_0_300_square.webp"
+      class="col-sm-6 col-md-4 col-lg-2 img-thumbnail" title="Conejo angora">
+      <img src = "https://t2.ea.ltmcdn.com/es/razas/3/0/5/american-chinchilla_503_0_300_square.webp"
+      class="col-sm-6 col-md-4 col-lg-2 img-thumbnail" title="American Chinchilla">
+    </div>
+  </div>
+  <br><br><br><br>
+  
+  <div class="container">
+    <h2 id="Perros">Datos importantes sobre las Razas de Perros</h2>
+    <table class="table">
+      <tr class = "success"><td >Hogareño</td></tr>
+      <tr class = "warning"><td>De cuidado</td></tr>
+      <tr class = "danger"><td>Peligroso</td></tr>
+    </table>
+  </div>
+
+  <div class="container">
+    <table class="table table-striped table-bordered table-hover ">
+      <tr><th>Foto</th><th>Nombre</th><th>Origen</th><th>Características</th><th>Altura (cm)</th><th>Peso adulto (kg)</th><th>Esperanza vida (años)</th><th>Caracter</th><th>Ideal para:</th><th>Recomendaciones</th></tr>
+      <tr class = "success"><td ><img src = "https://t1.ea.ltmcdn.com/es/razas/9/3/3/alaskan-malamute-o-malamute-de-alaska_339_12_150_square.webp" alt="Alaskan_Malamute"></td><td>Alaskan malamute o malamute de Alaska</td><td>America, Estados Unidos</td><td>Rústico, proporcionado, musculoso, orejas cortas</td><td>55-70</td><td>25-45</td><td>10-12</td><td>equilibrado, muy fiel, activo, sociable, inteligente, cariñoso</td><td>Niños, casa, vigilancia, casas, personas discapacitadas</td><td>Bozal, arnés</td></tr>
+      <tr class = "success"><td ><img src = "https://t1.ea.ltmcdn.com/es/razas/6/0/0/bichon-frise-396668_150_square.webp" alt="Bichón frisé"></td><td>Bichón frisé</td><td>Europa, Bélgica, Francia</td><td>Fino, proporcionado, musculoso</td><td>15-35</td><td>3-10</td><td>12-14</td><td>Sociable, activo, inteligente, cariñoso</td><td>Pisos, personas mayores, casas</td><td>Ninguno</td></tr>
+      <tr class = "success"><td ><img src = "https://t2.ea.ltmcdn.com/es/razas/7/5/0/chow-chow_57_2_150_square.webp" alt="Chow chow"></td><td>Chow chow</td><td>Asia, China, Mongolia</td><td>Rústico, proporcionado, musculoso, orejas cortas</td><td>45-55</td><td>25-45</td><td>10-12</td><td>Equilibrado, tranquilo, muy fiel</td><td>Niños, casa, pastor, pisos, caza, vigilancia</td><td>Arnés</td></tr>
+      <tr class = "warning"><td ><img src = "https://t1.ea.ltmcdn.com/es/razas/7/7/1/boerboel_177_1_150_square.webp" alt="Boerboel"></td><td>Boerboel</td><td>Africa, Sudáfrica</td><td>Rústico, proporcionado, musculoso, orejas cortas</td><td>55-70</td><td>45-100</td><td>10-12</td><td>Equilibrado, muy fiel, inteligente, cariñoso</td><td>Casa, vigilancia, senderismo, pastor</td><td>Bozal, arnés</td></tr>
+      <tr class = "danger"><td ><img src = "https://t1.ea.ltmcdn.com/es/razas/2/1/1/rottweiler_112_3_150_square.webp" alt="Rottweiler"></td><td>Rottweiler</td><td>Europa, Alemania</td><td>Rústico, proporcionado</td><td>55-70</td><td>45-100</td><td>10-12</td><td>Equilibrado, activo, inteligente, dominante</td><td>Pisos, senderismo, deporte,casas, vigilancia</td><td>Bozal, arnés</td></tr>
+      <tr class = "danger"><td ><img src = "https://t2.ea.ltmcdn.com/es/razas/0/7/0/pit-bull-terrier-americano_70_7_150_square.webp" alt="Pit bull terrier americano"></td><td>Pit bull terrier americano</td><td>America, Estados Unidos</td><td>Musculoso, alargado</td><td>45-55</td><td>25-45</td><td>10-12</td><td>Equilibrado, muy fiel, activo, sociable, inteligente</td><td>Casa, senderismo, pastor</td><td>Bozal, arnés</td></tr>         
+    </table>
+  </div>
+
+
+  <div class="container">
+    <h2 id="Gatos"><br><br>Datos importantes sobre las Razas de Gatos</h2>
+    <table class="table table-striped table-bordered table-hover ">
+      <tr><th>Foto</th><th>Nombre</th><th>Origen</th><th>Características</th><th>Tamaño</th><th>Peso medio (kg)</th><th>Esperanza vida (años)</th><th>Caracter</th><th>Clima recomendado</th><th>Tipo pelo</th></tr>
+      <tr><td ><img src = "https://t2.ea.ltmcdn.com/es/razas/1/8/1/gato-persa_181_5_150_square.webp" alt="Gato persa"></td><td>Gato persa</td><td>Africa, Asia, Europa</td><td>Cola gruesa, fuerte, orejas pequeñas</td><td>Mediano</td><td>3-5</td><td>10-15</td><td>Extrovertido, curioso, afectuoso, calmado</td><td>Frío</td><td>Largo</td></tr>
+
+      <tr><td ><img src = "https://t2.ea.ltmcdn.com/es/razas/8/9/1/himalayo_198_5_150_square.webp" alt="Himalayo"></td><td>Himalayo</td><td>Europa, Reino Unido, Suecia</td><td>Cola gruesa, fuerte, orejas pequeñas</td><td>Mediano</td><td>5-6</td><td>10-15</td><td>Calmado</td><td>Frío</td><td>Largo</td></tr>
+
+      <tr><td ><img src = "https://t2.ea.ltmcdn.com/es/razas/3/5/8/gato-thai-o-siames-tradicional_853_3_150_square.webp" alt="Gato thai o siamés tradicional"></td><td>Gato thai o siamés tradicional</td><td>Asia, Tailandia</td><td>Cola fina, fuerte, orejas grandes</td><td>Mediano</td><td>3-5</td><td>18-20</td><td>Extrovertido, curioso, afectuoso, inteligente, activo</td><td>Templado</td><td>Corto</td></tr>
+
+      <tr><td ><img src = "https://t2.ea.ltmcdn.com/es/razas/3/8/1/gato-angora-turco_183_1_150_square.webp" alt="Gato angora turco"></td><td>Gato angora turco</td><td>Asia, Europa, Turquía</td><td>Cola gruesa, fino</td><td>Mediano</td><td>3-5</td><td>15-18</td><td>Activo, curioso, afectuoso, calmado</td><td>Templado</td><td>Medio, largo</td></tr>
+
+      <tr><td ><img src = "https://t1.ea.ltmcdn.com/es/razas/3/0/2/gato-sphynx-o-esfinge_203_2_150_square.webp" alt="Gato sphynx o esfinge"></td><td>Gato sphynx o esfinge</td><td>América, Canada</td><td>Cola fina, fuerte, orejas grandes</td><td>Mediano</td><td>5-6</td><td>10-15</td><td>Extrovertido, inteligente, curioso, afectuoso, calmado</td><td>Calurosoo</td><td>Sin pelo</td></tr>
+
+      <tr><td ><img src = "https://t2.ea.ltmcdn.com/es/razas/6/3/6/gato-selkirk-rex_636_5_150_square.webp" alt="Gato selkirk rex"></td><td>Gato selkirk rex</td><td>América, Estados Unidos</td><td>Cola gruesa, fuerte</td><td>Grande</td><td>6-8</td><td>10-15</td><td>Extrovertido, curioso, afectuoso, calmado</td><td>Templado</td><td>Corto, medio</td></tr>     
+      
+    </table>
+    </div>
+
+
+  <div class="container">
+    <h2 id="Conejos"><br><br>Datos importantes sobre las Razas de Conejos</h2>
+    <table class="table table-striped table-bordered table-hover ">
+      <tr><th>Foto</th><th>Nombre</th><th>Origen</th><th>Características</th></tr>
+      <tr><td ><img src = "https://t1.ea.ltmcdn.com/es/razas/8/3/7/conejo-gigante-continental_738_0_150_square.webp" alt="Conejo gigante continental"></td><td>Conejo gigante continental</td><td>Europa, Bélgica</td><td>Son increíblemente cariñosos y simpáticos, algo que hace que sean muy valorados por aquellos que aman tener conejos en sus hogares.</td></tr>
+
+      <tr><td ><img src = "https://t2.ea.ltmcdn.com/es/razas/6/1/8/conejo-mini-lion-lop_816_1_150_square.webp" alt="Conejo mini lion lop"></td><td>Conejo mini lion lop</td><td>Europa, Reino Unido</td><td>Son amigables, tranquilos, activos, juguetones y sociales. Son muy cariñosos y adoran estar cerca de sus cuidadores, por lo que la atención diaria frecuente es muy importante para ellos.</td></tr>
+
+      <tr><td ><img src = "https://t2.ea.ltmcdn.com/es/razas/6/8/6/conejo-blanco-de-florida_686_1_150_square.webp" alt="Conejo blanco de florida"></td><td>Conejo blanco de florida</td><td>America, Estados Unidos</td><td>Estos conejitos son unas de las razas albinas de conejos, siendo característicos su color blanco y el rojo de sus ojos.</td></tr>
+
+      <tr><td ><img src = "https://t2.ea.ltmcdn.com/es/razas/4/8/6/conejo-californiano_684_3_150_square.webp" alt="Conejo californiano"></td><td>Conejo californiano</td><td>Europa, Bélgica</td><td>Carácter amigable y cariñoso. El rasgo más característico de los conejos californianos es su abundante manto formado por dos capas de manto que, a pesar de ser denso y grueso, debe resultar suave y agradable al tacto.</td></tr>
+
+      <tr><td ><img src = "https://t2.ea.ltmcdn.com/es/razas/0/8/6/conejo-angora_680_3_150_square.webp" alt="Conejo angora"></td><td>Conejo angora</td><td>Europa, Bélgica</td><td>Son fáciles de socializar, ya que suelen disfrutar la compañía de sus familiares y pueden llegar a adaptarse muy bien con otros animales. Pueden convertirse en una excelente mascota para los niños.</td></tr>
+
+      <tr><td ><img src = "https://t2.ea.ltmcdn.com/es/razas/3/0/5/american-chinchilla_503_3_150_square.webp" alt="American Chinchilla"></td><td>American Chinchilla</td><td>Europa, Bélgica</td><td>Afable y cariñoso con los niños. En general hablamos de un conejo tranquilo.</td></tr>    
+      
+    </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>  
+
+  <footer>
+    Copyright &copy; 2025 Vicente Escobar, todos los derechos reservados.
+  </footer>
+</body>
+</html>
