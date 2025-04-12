@@ -1,0 +1,12 @@
+i {
+	margin: 2%;
+}
+
+.fa-bus, .fa-calculator {
+	color: #00FF00;
+}
+
+.fa-bullseye {
+	color: #FF0000;
+	opacity: .25;
+}
