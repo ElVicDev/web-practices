@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sticky Footer with Known Footer Size</title>
+	<style>
+		body{
+			display: flex;
+			min-height: 100vh;
+			flex-direction: column;
+		}
+
+		#container{
+			flex: 1;
+		}
+
+		footer {
+			background-color: #CCFF00;
+			text-align: center;	
+		}
+	</style>
+</head>
+<body>
+	<!-- 	Para que funcione mi footer necesito que mi body este en un contenedor
+			en este caso NO CONOCEMOS la altura del footer -->
+	<div id = "container">
+		<h1>Ejemplo de footer pegajoso en la parte inferior de mi HTML</h1>
+	</div>
+</body>
+<footer>
+	<p>Sticky Footer</p>
+</footer>
+</html>
