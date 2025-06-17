@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valida texto - Campos vacios</title>
+</head>
+<script type="text/javascript">
+    function validaTexto() {
+        var texto = document.getElementById("texto").value;
+        if (texto === "") {
+            alert("El campo de texto no puede estar vacío.");
+        } else {
+            alert("El texto ingresado es: " + texto);
+        }
+    }
+</script>
+<body>
+    <input type="text" id="texto" placeholder="Ingrese un texto aquí">
+    <input type="button" value="Validar Texto" onclick="validaTexto()">
+</body>
+</html>
