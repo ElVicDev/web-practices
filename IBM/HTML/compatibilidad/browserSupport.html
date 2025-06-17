@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 browser support example</title>
+</head>
+<body>
+    <form id="thisform"></form>
+    <script>
+        var datepicker = document.createElement('input');
+        var formelement = document.getElementById('thisform');
+        datepicker.setAttribute('type', 'date');
+        formelement.appendChild(datepicker);
+        if (datepicker.type !== 'date') {
+            alert('Your browser does not support HTML5 date input type.');
+        } else {
+            alert('Your browser supports HTML5 date input type.');
+        }
+    </script>
+</body>
+</html>
