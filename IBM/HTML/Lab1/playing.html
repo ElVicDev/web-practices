@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Playing with HTML, CSS and JS</title>
+
+	<style>
+		body {
+			background-color: tan
+		}
+
+		p {
+			font-family: 'Times New Roman', Times, serif;
+			font-size: 18px;
+			color: white;
+		}
+
+		div {
+			background-color: white;
+			width: 400px;
+			color: black;
+		}
+	</style>
+
+</head>
+<body>
+	<h1>
+		Welcome to ElVicDev's HTML Practices
+	</h1>
+	<hr>
+	<p>
+			I am on my way to become a great cloud application developer.
+	</p>
+	<div>
+		I know a little bit of html, css and javascript.<br>
+		Check out the javascript I have written by clicking the button below.
+	</div><br>
+	<button onclick="hello()">
+		Wish
+	</button>
+	<button onclick="showtime()">
+		Show Time
+	</button>
+	<hr>
+	<footer>
+		&copy; 2025
+		<a href="https://www.elvicdev.com">Visita ElVicDev.com</a>
+	</footer>
+
+	<script>
+		function hello() {
+			alert("I hope becoming a great cloud application developer in a few months.");
+		}
+
+		function showtime() {
+			var now = new Date();
+			alert(now);
+		}
+	</script>
+
+</body>
+</html>
