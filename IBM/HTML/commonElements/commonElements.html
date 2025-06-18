@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata goes here -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title goes here -->
+    <title>Common HTML Elements</title>
+    <style>
+        .tags {
+            color: brown;
+            font-size:larger;
+        }
+
+        .bg {
+            background-color: lightblue;
+            border: 5px double gray;
+            margin: 10px auto;
+            width: 88%;
+            padding: 5px 15px;
+            line-height: 1.1;
+            border-radius: 10px;
+        }
+
+        body {
+            background-color: gainsboro;
+        }
+
+        h3 {
+            text-shadow: 1px 1px 3px gray;
+            color:black;
+        }
+        
+        body>h1 {
+            text-align: center;
+            text-shadow: 3px 3px 4px gray;
+        }
+
+        img {
+            display:inline-block;
+            width: 100%;
+            height: 100%;
+            object-fit: scale-down;
+        }
+    </style>
+</head>
+<body>
+    <!-- Content goes here -->
+    <h1 style="text-align: center;">Common HTML Elements</h1>
+    <div class="bg">
+        <h3>You can use the <span class="tags"><code>&lth1&gt</code></span> tag to write the largest heading
+        and you can use the <span class="tags"><code>&lth6&gt</code></span> tag to write the smallest heading.</h3>
+        <img src="./img/heading.jpg" alt="Headings" >
+        <h1 id="top">Most Important (and Largest) Heading</h1>
+        <h6>Least Important (and Smallest) Heading</h6>
+    </div>
+
+    <div class="bg">
+        <h3>You can use the <span class="tags"><code>&ltp&gt</code></span> tag to write some text.</h3>
+        <img src="./img/paragraph.jpg" alt="Tag p" >
+        <p>The content within this paragraph element can be as short or as long as needed.</p>
+    </div>
+
+    <div class="bg">
+        <h3>You can use the <span class="tags"><code>&ltbr&gt</code></span> tag to insert a line break in HTML</h3>
+        <img src="./img/br.jpg" alt="Tag br" >
+        <p>This is some text that needs to be split up <br>here, <br>here, and <br>here.</p>
+    </div>
+
+    <div class="bg">
+        <h3>The <span class="tags"><code>&lta&gt</code></span> tag defines a hyperlink.</h3>
+        <p>Link to other places on the same page
+        <a href="https://www.ibm.com">IBM</a></p>
+            <img src="./img/tag_a.jpg" alt="Tag a" >
+        <p>Open a certain destination in a new tab
+        <a href="https://www.ibm.com" target="_blank">IBM</a></p>
+            <img src="./img/target.jpg" alt="Hyperlinks" >
+        <p>You can use the <span class="tags"><code>&lt#&gt</code></span> or 
+            <span class="tags"><code>&lt#top&gt</code></span> for example, to go 
+            to <a href="#top">Top of Page</a> or a different section of the page.</p>
+            <img src="./img/hyperlink.jpg" alt="Target">
+            <img src="./img/section.jpg" alt="Section">
+    </div>
+
+    <div class="bg">
+        <h3>You can use the <span class="tags"><code>&ltol&gt</code></span> (ordered list) tag for numbered lists and 
+            the <span class="tags"><code>&ltul&gt</code></span> (unordered list) tag for bulleted lists.</h3>
+            <h3>Each point within a list will be enclosed by a <span class="tags"><code>&ltli&gt</code></span> opening and
+            closing tag, which represents a list item.</h3>
+            <h3>This same tag is used for both ordered and unordered lists.</h3>
+        <img src="./img/lists.jpg" alt="Tag br" >
+        <p>Unordered List</p>
+        <ul>
+            <li>This is a bullet point </li>
+            <li>The items in this list have no particular order </li>
+            <li>Each item will appear as a bullet, rather than a number </li>
+        </ul>
+        <p>Ordered List</p>
+        <ol>
+            <li>This is an ordered list </li>
+            <li>The items in this list have a particular order </li>
+            <li>Each item will be numbered, starting from 1 </li>
+            <li>This is the fourth point in the list </li>
+        </ol>
+    </div>
+
+    <div class="bg">
+        <h3>You can use the <span class="tags"><code>&ltbr&gt</code></span> tag to insert a line break in HTML</h3>
+        <img src="./img/br.jpg" alt="Tag br" >
+        <p>This is some text that needs to be split up <br>here, <br>here, and <br>here.</p>
+    </div>
+</body>
+</html>
