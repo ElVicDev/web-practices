@@ -13,13 +13,25 @@
         }
 
         .bg {
+            display: block;
             background-color: lightblue;
             border: 5px double gray;
             margin: 10px auto;
             width: 88%;
-            padding: 5px 15px;
-            line-height: 1.1;
-            border-radius: 10px;
+            padding: 0 15px;
+            line-height: 0.9;
+        }
+
+        .bg img {
+                display: block;
+                margin: auto;
+
+            }
+
+        @media (min-width: 500px) and (max-width: 1070px) {
+            .bg img {
+                width: 100%;
+            }
         }
 
         body {
@@ -34,13 +46,6 @@
         body>h1 {
             text-align: center;
             text-shadow: 3px 3px 4px gray;
-        }
-
-        img {
-            display:inline-block;
-            width: 100%;
-            height: 100%;
-            object-fit: scale-down;
         }
     </style>
 </head>
@@ -78,8 +83,8 @@
         <p>You can use the <span class="tags"><code>&lt#&gt</code></span> or 
             <span class="tags"><code>&lt#top&gt</code></span> for example, to go 
             to <a href="#top">Top of Page</a> or a different section of the page.</p>
-            <img src="./img/hyperlink.jpg" alt="Target">
-            <img src="./img/section.jpg" alt="Section">
+            <img src="./img/hyperlink.jpg" alt="Target"><br>
+            <img src="./img/section.jpg" alt="Section"><br>
     </div>
 
     <div class="bg">
@@ -88,7 +93,7 @@
             <h3>Each point within a list will be enclosed by a <span class="tags"><code>&ltli&gt</code></span> opening and
             closing tag, which represents a list item.</h3>
             <h3>This same tag is used for both ordered and unordered lists.</h3>
-        <img src="./img/lists.jpg" alt="Tag br" >
+        <img src="./img/lists.jpg" alt="Lists" >
         <p>Unordered List</p>
         <ul>
             <li>This is a bullet point </li>
@@ -105,9 +110,41 @@
     </div>
 
     <div class="bg">
-        <h3>You can use the <span class="tags"><code>&ltbr&gt</code></span> tag to insert a line break in HTML</h3>
-        <img src="./img/br.jpg" alt="Tag br" >
-        <p>This is some text that needs to be split up <br>here, <br>here, and <br>here.</p>
+        <h3>A table is created with HTML using the <span class="tags"><code>&lttable&gt</code></span> tag.</h3>
+        <h3>Within the table, each row of data is represented using the <span class="tags"><code>&lttr&gt</code></span> (table row) tag.</h3>
+        <h3>The column or row headings can be specified by the <span class="tags"><code>&ltth&gt</code></span> (table heading) element.</h3>
+        <h3>Finally, each data element within the table cells is specified using the <span class="tags"><code>&lttd&gt</code></span> (table data) tag.</h3>
+        <img src="./img/table.jpg" alt="Table" >
+        <table>
+            <tr>
+                <th>Heading 1</th>
+                <th>Heading 2</th>
+                <th>Heading 3</th>
+            </tr>
+            <tr>
+                <td>H1 - Data Item 1</td>
+                <td>H2 - Data Item 1</td>
+                <td>H3 - Data Item 1</td>
+            </tr>
+            <tr>
+                <td>H1 - Data Item 2</td>
+                <td>H2 - Data Item 2</td>
+                <td>H3 - Data Item 2</td>
+            </tr>
+            <tr>
+                <td>H1 - Data Item 3</td>
+                <td>H2 - Data Item 3</td>
+                <td>H3 - Data Item 3</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="bg">
+        <h3>Images can be added within a web page by using the <span class="tags"><code>&ltimg&gt</code></span> tag.</h3>
+        <img src="./img/image.jpg" alt="Tag br" width="100%" height="auto">
+        <br>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/440px-IBM_logo.svg.png" alt="IBM Logo" width="300" height="auto" style="display: flexbox;">
+        <br>
     </div>
 </body>
 </html>
