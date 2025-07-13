@@ -6,8 +6,10 @@ int main(void)
   return 0;
 }
 
-/*  Compilar el código usando:
-    gcc -o hello helloworld.c
-    -o especifica el nombre del archivo de salida
-    Para ejecutar el archivo compilado teclear:
-    ./hello   */
+/*
+ * Compilar el código usando:
+ * gcc -o hello helloworld.c
+ * -o especifica el nombre del archivo de salida
+ * Para ejecutar el archivo compilado teclear:
+ * ./hello
+ */
